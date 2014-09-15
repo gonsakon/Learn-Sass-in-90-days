@@ -1,7 +1,10 @@
-Sass教學手冊
-====================
+#grid-setting
 
-Susy2
---------------------------
+我們來看看一個簡單的例子。我們先透過以下指令快速建立一個擁有兩個版本的 Git 儲存庫與工作目錄：
 
-* [Grid settings](docs/susy2/1.markdown)
+    .one
+    	+border-radius(5px)
+    	.color
+    		color: #fff
+  
+  	
