@@ -1,7 +1,7 @@
 # susy2 - Grid settings
-susy1到susy2又是一個可怕的里程碑，
-原本覺得susy1已經很強大了，
-但在susy2面前，susy1就像是玩具一樣，
+susy1到susy2又是一個可怕的里程碑，  
+原本覺得susy1已經很強大了，  
+但在susy2面前，susy1就像是玩具一樣，  
 首先我們就先從他的變數設定來一一說起吧，  
 
 ***
