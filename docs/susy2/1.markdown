@@ -1,10 +1,15 @@
 #susy2-grid-setting
-[youtube影片教學](https://www.youtube.com/watch?v=cOrNTZ05FL4&list=UU7A-C1EwjVfGbCOK5u8AlwA)  
+ter.com/gist/5a455bcc79a743599f8e)  
 susy1到susy2又是一個可怕的里程碑，
 原本覺得susy1已經很強大了，
 但在susy2面前，susy1就像是玩具一樣，
 首先我們就先從他的變數設定來一一說起吧，  
-[susy2 settings](http://susydocs.oddbird.net/en/latest/settings/#settings)
+
+***
+
+* [susy2 settings](http://susydocs.oddbird.net/en/latest/settings/#settings)
+* [youtube影片教學](https://www.youtube.com/watch?v=cOrNTZ05FL4&list=UU7A-C1EwjVfGbCOK5u8AlwA)
+* [sassmeister範例](http://sassmeister.com/gist/4f26651ea0af7dd04e64)
 
 ##環境建置
 * Sass 3.3以上
