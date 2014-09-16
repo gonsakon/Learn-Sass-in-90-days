@@ -8,7 +8,7 @@ susy1到susy2又是一個可怕的里程碑，
 
 * [susy2 settings](http://susydocs.oddbird.net/en/latest/settings/#settings)
 * [youtube影片教學](https://www.youtube.com/watch?v=cOrNTZ05FL4&list=UU7A-C1EwjVfGbCOK5u8AlwA)
-* [sassmeister範例](http://sassmeister.com/gist/4f26651ea0af7dd04e64)
+* [sassmeister範例](http://sassmeister.com/gist/5a455bcc79a743599f8e)
 
 ##環境建置
 * Sass 3.3以上
