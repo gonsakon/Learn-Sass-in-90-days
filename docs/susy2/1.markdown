@@ -45,14 +45,15 @@ susy1到susy2又是一個可怕的里程碑，
       gutter-position: inside,
     );
 columns與gutters在susy1就已經有其概念了，
-這裡我主要先要來講`gutter-position`與`math`的屬性，
+這裡我主要先要來講`gutter-position`的屬性，
 ###gutter-position的各種功能
 * `before`：推左外間距(margin-left)
 * `after` ：推右外間距，同susy1(margin-right)
 * `split` ：左右外間距各推gutter的一半，同[960grid](http://960.gs/demo.html)
 * `inside`：推欄的左右內距(padding-left、padding-right)
-* `inside-static` ：用`inside`會用`%`來推padding，這則是以單位來推，例：`px`、`em`，看你的`column-width`是用什麼單位
+* `inside-static` ：用`inside`會用`%`來推padding，這則是以單位來推，例：`px`、`em`，看你的`column-width`是用什麼單位  
 
+透過`gutter-position`，我們就能依照自己的開發習慣，來編譯出自己開發習慣的gutter出來。
 
 ###如何設計你要的Grid總寬度
 1.  你可直接在css上面寫`.wrap{ @include container(960px) }`  
