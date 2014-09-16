@@ -1,4 +1,4 @@
-# susy2 - Grid settings
+# susy2 - Grid settings(上)
 susy1到susy2又是一個可怕的里程碑，  
 原本覺得susy1已經很強大了，  
 但在susy2面前，susy1就像是玩具一樣，  
@@ -35,7 +35,7 @@ susy1到susy2又是一個可怕的里程碑，
 輸入變數後，使用他的container mixin就會自動幫你加總他的寬度。
 欄與欄之間則是用margin-right來推gutter。
 
-官網介紹的簡易版設定長得如下
+官網介紹的susy2簡易版設定如下：
 
     $susy: (
       columns: 12,
