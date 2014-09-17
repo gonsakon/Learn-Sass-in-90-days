@@ -42,8 +42,8 @@ $susy: (
 上面的Global Defaults就會自動載入，
 接著我再來針對一些我個人常用的設定來進行解說
 
-`flow`
-預  設：`ltr`
+### flow
+預  設：`ltr`  
 設定選項：`ltr`、`rtl`，
 
 
