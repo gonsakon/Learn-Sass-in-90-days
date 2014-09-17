@@ -90,8 +90,9 @@ container可以直接寫Grid的總寬度進去，
 因為不懂content-box的原理，  
 導致欄變寬，就變成不是依照比例去排，  
 例如下圖都是一欄的寬度，  
-
-但今天在黑色的div推擠了左右padding，就不符比例，  
+![](/images/susy2-2-1.png)
+但如果在黑色的div推擠了左右padding，就不符比例，
+![](/images/susy2-2-2.png)  
 這問題在以前也相當困擾網頁設計師，  
 直到CSS3多了box-sizing的語法，  
 在susy2的文件也有介紹到，  
