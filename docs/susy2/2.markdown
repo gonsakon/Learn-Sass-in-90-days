@@ -44,6 +44,38 @@ $susy: (
 
 ### flow
 預設：`ltr`  
-選項：`ltr`、`rtl`，
-這個設定
+選項：`ltr`、`rtl`
+
+susy2預設是用float:left從左到右來排列Grid，  
+而susy1也是一樣，  
+如果你希望你的欄是從右邊排到左邊，
+再把設定改為`rtl`即可。
+
+### container
+預設：`auto`  
+選項：可自行設定grid的寬度，例：`960px`、`60em`
+
+container可以直接寫Grid的總寬度進去，  
+他會依照你`columns`與`gutters`的設定，  
+自動算出數值，
+所以如果你不想要透過`column-width`來算出總寬的話，  
+那也可以使用container的功能。
+
+### container-position
+預設：`center`  
+選項：`left`、`center`、 `right`、 `<length>`
+
+預設是`center`，也就是讓你的Grid水平置中，  
+`left`、`right`則是可讓你的Grid靠左或靠右對齊，  
+而`length`則是自己寫一個自訂數值，  
+這樣你的margin-left、與margin-right則會改為你的數值。
+
+### global-box-sizing
+預設：`content-box`  
+選項：`content-box`、`border-box`
+
+這個設定有點奇怪，  
+不曉得是不是我設定錯了還是怎樣，  
+所以我弄不起來，  
+所以這個設定我是自己用CSS寫的，  
 
