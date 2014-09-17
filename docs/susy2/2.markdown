@@ -74,8 +74,72 @@ container可以直接寫Grid的總寬度進去，
 預設：`content-box`  
 選項：`content-box`、`border-box`
 
+這個這跟盒模型(Box Model)有關，  
 這個設定有點奇怪，  
 不曉得是不是我設定錯了還是怎樣，  
 所以我弄不起來，  
-所以這個設定我是自己用CSS寫的，  
+這個設定我是自己用CSS寫的，  
 
+但這裡的原理我個人認為還蠻重要的，  
+這跟盒模型(Box Model)有關，
+瀏覽器預設都是content-box的設定，
+也就是如果你今天有個div設定寬50px後，
+但又下了padding-left:10px與padding-right:10px後  
+該div會變成70px，  
+所以有些設計師在使用Grid的時候，  
+因為不懂content-box的原理，  
+導致欄變寬，就變成不是依照比例去排，  
+例如下圖都是一欄的寬度，  
+
+但今天在黑色的div推擠了左右padding，就不符比例，  
+這問題在以前也相當困擾網頁設計師，  
+直到CSS3多了box-sizing的語法，  
+在susy2的文件也有介紹到，  
+他提到如果你的網頁只要兼容到IE8以上，  
+建議你可以在reset.css上加上這行，  
+```
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+```
+這樣子你的盒模型只要設定一個寬度，  
+不管你是用padding或border，  
+他的寬度就都不會受到影響了。 
+
+我自己是都習慣用box-size: border-box了，  
+但如果你的客源都還是必須兼容ie7以下，  
+那就沒辦法使用這個設定了。
+
+###last-flow
+預設：`to`    
+選項：`to`、`from`  
+
+預設是`to`的情況下，
+寫了下面的語法，  
+.content就會變成與float:right，  
+如果改成`from`的話，則會變成float:left，
+如果你的gutter-position設定成`after`或`before`的話，  
+那就可能有機會會改到這個設定，
+PS：這裡的last就等於susy1的omega
+```
+.conetne{
+  @include span(1 last)
+}
+```
+###use-custom clearfix
+預設：`false`    
+選項：`true`、`false`
+
+susy2會自動抓取compass預設的clearfix的mixin，  
+但如果你不希望susy2使用compass的clearfix，  
+你可以在這設定寫true後，  
+自己寫一個名稱為`clearfix`的mixin，
+susy2會優先抓取你的mixin設定
+
+***
+
+下一章節會再來針對debug模式，  
+搭配compass vertical rhythm來做詳細的解說。  
