@@ -3,8 +3,7 @@
 接著我們來看它預設的[全域設定](http://susydocs.oddbird.net/en/latest/settings/#global-defaults)，
 
 ***
-
-[![ScreenShot](/images/video/susy2-2-1.png)](https://www.youtube.com/watch?v=66Yb8TgNzYk&feature=youtu.be)
+<a href="https://www.youtube.com/watch?v=66Yb8TgNzYk&feature=youtu.be" target="_blank">![](/images/video/susy2-2-1.png)</a>
 
 ***
 
