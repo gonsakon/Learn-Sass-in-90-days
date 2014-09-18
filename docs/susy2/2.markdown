@@ -2,6 +2,10 @@
 上個章節講了susy2的簡易設定方式，
 接著我們來看它預設的[全域設定](http://susydocs.oddbird.net/en/latest/settings/#global-defaults)，
 
+##youtube影片教學
+<a href="https://www.youtube.com/watch?v=66Yb8TgNzYk&feature=youtu.be" target="_blank">![](/images/video/susy2-2-1.png)</a>
+
+
 ## Global Defaults
 ```
 $susy: (
@@ -141,5 +145,3 @@ susy2會優先抓取你的mixin設定
 下一章節會再來針對debug模式，  
 搭配compass vertical rhythm來做詳細的解說。  
 
-##youtube影片教學
-<a href="https://www.youtube.com/watch?v=66Yb8TgNzYk&feature=youtu.be" target="_blank">![](/images/video/susy2-2-1.png)</a>
