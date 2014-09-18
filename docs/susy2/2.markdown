@@ -4,8 +4,7 @@
 
 ***
 
-* [susy2 global-defaults](http://susydocs.oddbird.net/en/latest/settings/#global-defaults)
-* [youtube影片教學](https://www.youtube.com/watch?v=66Yb8TgNzYk&feature=youtu.be)
+[![ScreenShot](/images/video/susy2-2-1.png)](https://www.youtube.com/watch?v=66Yb8TgNzYk&feature=youtu.be)
 
 ***
 
