@@ -1,0 +1,41 @@
+# susy2 - Grid settings(下) debug Compass Vertical Rhythm 
+這一個章節主要是要講susy2的Debug模式，  
+除了維持susy1就有的column顯示外，  
+還多了baseline的設定，  
+有關聯到Compass的vertical rhythm設定。
+
+##程式碼連結
+* [susy2文件 - debug](http://susydocs.oddbird.net/en/latest/settings/#debug)
+* [sassmeister範例程式碼](http://sassmeister.com/gist/032b0b4a2e9964dee044)
+* [垂直韻律](http://www.slideshare.net/sfismy/vertical-rhythm)
+* [css vertical rhythm](http://codepen.io/liao/pen/pHyhg)
+* [compass vertical rhythm](http://sassmeister.com/gist/032b0b4a2e9964dee044)
+* [Sass開發流程設計-(12) Compass Vertical Rhythm & Susy other setting](http://ithelp.ithome.com.tw/question/10140181)
+
+##youtube影片教學
+<a href="https://www.youtube.com/watch?v=O3g9DK6DQS0&feature=youtu.be" target="_blank">![](/images/video/susy2-3-1.png)</a>
+
+
+## Global Defaults
+```
+  debug: (
+    image: hide,
+    color: rgba(#66f, .25),
+    output: background,
+    toggle: top right,
+  )
+);
+```
+
+### debug image
+預設：`hide`  
+選項：`show`、`hide`、`show-columns`、`show-baseline`
+
+在susy1的時候就有`show-columns`了，  
+而在susy2則又多了baseline的debug模式，  
+如果今天你的Sass有使用到`$base-font-size`、`$base-line-height`的話  
+那susy2的debug模式就會看到基準線了， 
+他會依照你的`$base-line-height`的高度來畫水平線，  
+提供給網頁設計師瀏覽網頁排版是否有遵守垂直韻律。
+
+再來`color`則是提供給你看是否要變換debug模式的grid背景顏色。
