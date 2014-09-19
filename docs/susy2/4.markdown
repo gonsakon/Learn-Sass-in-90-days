@@ -1,0 +1,151 @@
+# susy2 - 960Grid固定版型(Fixed layout)設計
+我遇過許多朋友都提到，  
+他們很想要學好susy，  
+但是真的有案子要用的時候，  
+卻又不知道該如何下手，  
+就我觀察下來其原因有二，  
+一則是因為對Grid的觀念不熟悉，  
+所以不曉得它的原理，  
+二則是susy能變化出的Grid太廣泛了，  
+導致你不曉得該如何設計出自己要的Grid。  
+
+所以接下來的章節，     
+我會透過susy2來設計出各種坊間常用的Grid，  
+同時也會加入一些CSS的基本原理，  
+這樣便能更加深入了解Grid的世界，  
+同時也知道該如何透過susy2設計你要的Grid。  
+
+而這個章節，  
+就要來講到有關於歷史上頗為知名的Grid system，960 Grid，  
+##程式碼連結
+* [susy2文件 - span mixin](http://susydocs.oddbird.net/en/latest/toolkit/#span-mixin)
+* [sassmeister範例程式碼](http://sassmeister.com/gist/85959f326b8b1501aa74)
+* [960grid官網](http://960.gs/)
+* [960grid 12欄demo頁](http://960.gs/demo.html)
+* [960線上服務工具](http://grids.heroku.com/)
+
+##youtube影片教學
+<a href="https://www.youtube.com/watch?v=xegzBNxbZkY&feature=youtu.be" target="_blank">![](/images/video/susy2-4-1.png)</a>
+
+首先我們就先到960Grid的[官網網頁範例](http://960.gs/demo.html)來瀏覽他設計手法，  
+透過chrome檢視工具，  
+你可以看出來說他一欄是60px，而margin左右則各推10px，
+12欄 * 80 = 960px，  
+今天你的版型如果是左側三欄，右側九欄的話，
+那CSS就只要下這樣即可：
+
+```
+<div class="grid_3"></div>
+<div class="grid_9"></div>
+```
+
+我們繼續深入探討為什麼它下了這些Class，  
+就會有這樣的效果，  
+首先就來看他`grid_3`寫了什麼CSS，  
+從裡面就可以看出來他的CSS寬度寫了 (3欄 * 60)+ (2gutter * 30) = 240px，  
+
+最後再透過float讓div能夠併排。  
+![](/images/susy2-4-1.png)
+既然都曉得原理了，  
+那就可以開始思考該如何透過susy2來做960grid，  
+我們一步步來，  
+從上面的資訊你已經獲得了
+* 欄數是12欄
+* 欄寬是60px
+* 欄與欄的間距是透過margin-right與margin-left 10px設計出來的
+
+首先我們就在susy的變數裡面來寫上面的資訊，  
+一開始就把欄數與欄寬給騰上去，
+再來960Grid是使用左右各給margin值，
+這個設計方式剛好符合`gutter-position: split`的方式，
+所以就依序寫入進去：
+```
+$susy:(
+  columns: 12,
+  column-width: 60px,
+  gutter-position: split,
+)
+```
+960px的gutter左右是各給10px，
+但假使你真的在susy變數裡面寫`gutters: 20px`的話，  
+編譯就會出錯，  
+原因就是susy2只接受欄寬(column-width)幾分之幾的方式來設定，
+欄寬是60px，三分之一就是20px，  
+所以gutters就寫1/3即可，  
+如果你算數不好，也可以寫成這樣來計算，`20px(你想要的gutter間距)/60px(欄寬)`  
+所以你的susy變數就會變成這樣：  
+```
+$susy: (
+ columns:12,
+ column-width:60px,
+ gutter-position: split,
+ gutters:1/3
+);
+
+```
+
+這樣子你如果寫`.container{@include container}`的話，  
+susy2就會依照你的規則編輯出960px出來了。 
+
+備註：上面程式碼編譯出來的寬度會是等比%數， 
+但你用chrome開發人員工具去看盒模型，他的欄寬和gutter仍有符合我們的設定，    
+如果你希望編譯出來是px，請再加上這個設定，`math:static`。 
+
+##  @mixin span()
+
+再來要來介紹一個susy的Mixin，`@include span(欄數)`，  
+這個mixin的功能就是，今天你要幾欄的寬度，  
+就可以透過他來去做計算，  
+例如我透過上面susy變數設定完後，  
+程式碼就可以寫成這樣：
+```
+// scss程式碼
+.box{@include span(3)}
+
+//編譯出來的CSS
+.box{
+  width: 220px;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+```
+從上面你可以看出，  
+span mixin幫我們做的事情就是幫我們計算3欄所佔的寬度，  
+同時透過`gutter-position: slite`的方式，  
+計算出margin-left與right的px數，  
+透過span mixin我們就擁有960grid的設定了，  
+你甚至可以用SASS的for迴圈來設計一組Grid設定：  
+```
+//scss程式碼
+@for $i from 1 through 12{
+  .grid_#{$i}{
+    @include span($i);
+  }
+}
+//編譯出來的CSS
+.grid_1 {
+  width: 60px;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.grid_2 {
+  width: 140px;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+//..後面以此類推
+```
+透過這樣的方式，
+你就可以創造出你自己想要的Grid system出來，  
+你想要1180grid、980grid，  
+都可以用這樣的方式來設計，  
+960grid也有個[線上服務工具](http://grids.heroku.com/)，  
+你可以試著用他來計算你想要的Grid以後，  
+再嘗試用susy2來設計出來，  
+如果你每次都能隨心所意設計出你想要的Grid，  
+那就代表你就更熟悉susy2這個工具哩。  
