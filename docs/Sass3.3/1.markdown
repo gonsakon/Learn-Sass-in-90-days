@@ -1,0 +1,82 @@
+# 參考父選擇符：&
+##youtube影片教學
+<a href="https://www.youtube.com/watch?v=ieW3NN6qX8I&feature=youtu.be" target="_blank">![](/images/video/sass3.3-1.png)</a>
+先來介紹以前Sass3.2的語法，  
+```
+//scss
+.box{
+	color:black;
+	&:hover{
+		color:blue;
+	}
+}
+//編譯出的css
+.box{color:black;}
+.box:hover{color:black;}
+```
+
+`&`的作用是提取父元素選擇器，  
+&:hover的上一層因為是.box，  
+所以編譯出來自然會是`.box:hover``。
+
+再來你甚至可以這個樣子
+```
+//scss
+.box{
+	color:black;
+	.ie8 &{
+		color: blue;
+	}
+}
+//編譯出的CSS
+.box{color:black}
+.ie8 .box{color:blue}
+```
+`&`也可以穿插在選擇器裡面，  
+所以你可以看得出來，  
+這個設定再來配合像[modernizr](http://modernizr.com/)的framework，  
+如果使用者用的瀏覽器是ie8，他就會在html tag加上一個class為ie8，  
+這樣你就可以透過`&`把邏輯寫在.box裡面，而不用再拉出來額外寫。  
+
+而Sass3.3新增的功能則是能讓`&`能夠連接字串，  
+因為Sass3.2的`&`後面只能連接`：`而已(`:hover`、`:nth-childe(3n)`)，
+範例如下：  
+```
+//[..]代表程式碼
+//scss
+.box{
+	&__block{..}
+	&-module{..}
+	&None{..}
+}
+.box2{
+	..
+	&-menu{
+	..
+		&-link{..}
+	}
+}
+//編譯出的CSS
+.box{..}
+.box__block{..}
+.box-module{..}
+.boxNone{..}
+
+.box2{..}
+.box2-menu{..}
+.box2-menu-link{..}
+```
+在Sass3.3還沒出來前，  
+有許多的CSS設計模式像是`Bem`，  
+如果有一個模組底下有子功能或子狀態，  
+都會利用一兩個下底線`_`或中線`-`來代表他的狀態，  
+你可以發現如果是以前在撰寫的時候，  
+我們每次要寫子模組就都一樣要寫前面的`.box`才能繼續寫下去，  
+但是透過Sass 3.3讓`&`能夠連接字串的功能後，  
+Sass開發者就又能節省不少調整code的時間，  
+今天如果這個.box的名稱要改掉，  
+只要把.box名稱改掉，  
+底下的子模組Class便能一起修改其名稱，  
+在使用便變得更加方便了！  
+
+
