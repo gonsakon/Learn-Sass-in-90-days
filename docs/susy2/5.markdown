@@ -1,0 +1,117 @@
+# 960Grid 流體版型(Fulid layout)，susy1>susy2轉換
+
+這次我們要來使用susy2的核心來實作susy1的grid system，  
+同時會介紹`span`這個Mixin的延伸用法。
+
+##程式碼連結
+* [sassmeister-susy2 960grid fulid、gutter-position after ](http://sassmeister.com/gist/037ece0b553e10befe0f)
+* [sassmeister-susy1 960grid](http://sassmeister.com/gist/652b5171628ad6da1880)
+
+
+
+##youtube影片教學
+<a href="https://www.youtube.com/watch?v=ieW3NN6qX8I&feature=youtu.be" target="_blank">![](/images/video/susy2-4-1.png)</a>
+
+在上個章節我們使用了`gutter-position:split`來完整實踐960 grid system，  
+以前susy1則是用`gutter-position: after`來設計Grid的，  
+`split`是margin-left與right來推擠出gutter，  
+`after`則是直接用margin-right來推。  
+
+我們先來看[susy1](http://sassmeister.com/gist/652b5171628ad6da1880)是怎麼設計Grid的：  
+
+```
+@import 'compass';
+@import 'susyone'; 
+$total-columns : 12;
+$column-width  : 60px;
+$gutter-width  : 20px;
+$grid-padding  : 10px;
+.container {
+  @include container() ;
+  padding: 0 10px;
+  height:500px; 
+  @include susy-grid-background;
+}
+.black {
+  background:#000;
+  color:#fff;
+  @include span-columns(1);
+  height:100px;
+}
+.blue{
+  background:blue;
+  color:#fff;
+  @include span-columns(11 omega); //用omega消掉margin-right的gutter
+  height: 100px;
+}
+//編譯出的css
+.black {
+  background: #000;
+  color: #fff;
+  width: 6.38298%;
+  float: left;
+  margin-right: 2.12766%;
+  display: inline;
+  height: 100px;
+}
+.blue {
+  background: blue;
+  color: #fff;
+  width: 91.48936%;
+  float: right;
+  margin-right: 0;
+  *margin-left: -20px;
+  display: inline;
+  height: 100px;
+}
+
+```
+你可以從上面程式碼編譯出的.black看出來，  
+susy1在gutter處理上就只是單純用`margin-right`來去做推擠，    
+如果你今天要設計雙欄滿版的Grid的時候，  
+你必須在span-columns(11 omega)括號裡面的數字後面加上個omega，  
+這樣編譯出來的Div就會變成float:right;margin-right:0，
+因為12欄只有11個gutter，  
+所以你必須把最後一個div的gutter用omega消掉才可以，    
+
+
+
+而[susy2](http://sassmeister.com/gist/037ece0b553e10befe0f)則是這樣子寫，  
+```
+@import 'compass';
+@import 'susy'; 
+$susy: (
+ columns:12,
+ math: fulid,
+ column-width:60px,
+ gutter-position: after,
+ gutters:1/3,
+);
+.container {
+  @include container() ;
+  padding: 0 10px;
+   height:500px; 
+}
+.black {
+  background:#000;
+  color:#fff;
+  @include span(1);
+  height:100px;
+}
+.blue{
+  background:blue;
+  color:#fff;
+  @include span(11 last);
+  height: 100px;
+}
+```
+susy1的`span-columns`和susy2的`span`Mixin功能是一樣的，  
+但`span`的Mixin又多了很多功能可以使用，  
+這個後面再來一次講，  
+我們先來一一拆解上面的程式碼：  
+上面的.container編譯出來的寬度會是940px，  
+因為我希望左右邊他會留白，  
+但susy的變數並沒有提供這個功能，  
+所以我就自己在.container上加上padding:0 10px，  
+這樣加起來就剛好等於960px，  
+Grid就能剛好等於susy1的Grid。  
