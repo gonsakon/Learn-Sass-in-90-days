@@ -1,0 +1,199 @@
+# SMACSS - Base、Layout
+
+##程式碼連結
+* [SMACSS - Base](https://smacss.com/book/type-base)
+* [SMACSS - Layout](https://smacss.com/book/type-layout)
+
+##youtube影片教學
+<a href="https://www.youtube.com/watch?v=O3g9DK6DQS0&feature=youtu.be" target="_blank">![](/images/video/smacss-1.png)</a>
+
+[SMACSS](https://smacss.com/)是Jonathan Snook所發表的一個CSS/SASS的設計模式，  
+就連我自己開發CSS的過程中，  
+也有融會他的一些觀念來設計網頁，  
+
+學習CSS設計模式的目的並不是要全然參考對方的作法，  
+然後一股腦的都參考該模式，  
+通常來說還是會因應專案的需求來設計你的CSS架構，  
+所以希望透過講解SMACSS的過程中，  
+讓各位能夠更加了解此設計模式，  
+並找到最佳屬於自己的開發流程。  
+
+首先SMACSS則是以這樣子的架構來規劃它的CSS
+```
+1.Base
+2.Layout
+3.Module
+4.State
+5.Theme
+```
+這一個章節主要來講Base與Layout的部份，  
+
+## Base
+如果你是網頁設計師，  
+想必都曉得關於[CSS Reset](http://ithelp.ithome.com.tw/question/10129547)的觀念，  
+由於瀏覽器本身都有一些預設的CSS設定，  
+為了確保我們設計的頁面在各個瀏覽器都具有一致性，  
+所以都會在CSS最前面先放reset css，  
+將一些預設有margin、padding的值都給歸零清空，  
+設計的出來在各個瀏覽器才會一致化，  
+
+而`Base`所強調的觀念是，  
+今天你除了使用了Reset CSS外，  
+也可以去思考有哪些HTML tag時常會用到哪些設定，  
+並直接在上面寫上CSS，  
+例如SMACSS上面的所寫的範例碼：
+
+```
+body, form {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #039;
+}
+
+a:hover {
+    color: #03F;    
+}
+```
+今天你在設計網頁時，  
+你可能就會思考到今天設計的這個頁面，  
+在一些共用的區塊上，  
+連結的顏色的複用性會比較高，  
+所以就直接在a連結上面直接寫顏色，  
+這樣就不必在每個區塊上還要再寫一次顏色設定。  
+
+像以前我還不會Sass時，  
+當美術給我視覺稿時，  
+我就真的這樣來設計CSS。
+```
+.header a{
+  color: #434343;
+}
+.content a{
+  color: #434343;
+}
+.footer a{
+  color: #434343;
+}
+.content a{
+  color: #434343
+}
+...後面50個設定都是如此
+```
+
+你可以看出來因為這樣子我的CSS多了一兩百行，  
+但實際上假使每個區塊的連結顏色都一樣的話，  
+那我只要設定個`a{color: #434343}`不就得了？  
+如果真的少部分一兩個地方要調整，  
+那再用CSS權重概過去即可，  
+在管理上就變得更加方便了。  
+
+所以在`Base`這個章節，  
+作者希望網頁開發者除了使用reset.css外，  
+自己也要設計一種專屬於自己設計習慣的reset.css，  
+例如在a連結都下相同顏色，  
+在article都下clearfix，  
+只要是p段落都預設margin-bottom一個行距，首行縮排兩個字等等，  
+透過這些基本的全域HTML的設定，  
+便可節省你不少寫code的時間。  
+
+##layout
+layout在這裡可分為兩個部分來解說，  
+一種是`你在每頁上都一定會出現的元素`，
+也就是就是網頁上的共通區塊，  
+例如表頭(.header)、表尾(.footer)，  
+以我自己寫Sass的習慣，  
+我會@import一個_layout.sass的檔案，  
+裡面就單純只寫Layout的共通元素，  
+通常也會是你的HTML架構的前兩層，  
+這樣我要修改layout時，  
+就能很直覺去找到_layout的sass進行修改動作。  
+
+另外一種是`這個元素組合會套用在兩頁以上，但並不是全部`，
+我們先來看SMACSS提供的範例碼
+```
+//HTML
+<div id="featured">
+<h2>Featured</h2>
+<ul>
+    <li><a href="…">…</a></li>
+    <li><a href="…">…</a></li>
+    …
+</ul>
+</div>
+//CSS
+div#featured ul { 
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+div#featured li {
+    float: left;
+    height: 100px;
+    margin-left: 10px;
+}
+```
+作者提到這樣的設計方式會有三個問題：
+1.因為他用`ID`設定了這個列表，由於ID在一頁上不能有兩個，這樣會導致今天如果這個列表在同一頁上有兩個區塊需要用到時就會出錯。 
+2.#featured所有的li都會吃到`float: left`的設定
+3.它將高度給寫死了
+
+因此他建議改成這樣子比較好：
+
+```
+.l-grid {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.l-grid > li {
+    display: inline-block;
+    margin: 0 0 10px 10px; 
+    
+    /* IE7 hack to mimic inline-block on block elements */
+    *display: inline;
+    *zoom: 1;
+}
+```
+這樣的優點有：
+
+<strong>1.語意化的改善：</strong>  
+作者用前綴+抽象的名字來定義這個列表，  
+把`featured`改成`grid`的好處是，  
+當你今天在設計其他頁面，像是訂單頁也有用到`featured`，  
+你把`featured`拿來放在訂單頁的列表後，  
+過了幾天太久沒寫你回頭看你的程式碼可能就會納悶，  
+咦為什麼`featured`的class會跑到訂單頁？  
+這樣就容易造成開發者的混亂且還必須回憶一下。  
+但用抽象的名字改成`grid`的話，  
+就好懂多了，再搭配前綴`l-`，  
+往後只要看到`l-`開頭就能直覺想到他是一個共通的grid列表，
+
+
+<strong>2.提升程式碼的靈活性</strong>  
+在上面的程式碼是使用`div#featured`來設定，  
+但這樣就變成說今天我就只能使用div來套`featured`，  
+但有時候網頁上的seo語意需要調整時，  
+div要改成article、section就變得很不方便，  
+再來把id改成class的話，一個頁面上就能顯示兩個以上的列表了，
+靈活性相對來說提高很多。
+
+再來則是用`>`來指定li， 
+這樣就是指定下一層的li，  
+而並不是使用`.l-grid li`來設定所有的li，  
+這樣以後這個區塊裡面又有子模組時，li在二三層就不會吃到該設定了。  
+不過作者有提到`>`這個CSS選擇器不支援ie6，  
+所以如果你設計的網站還有支援ie6的話，  
+那就可能不適合這樣子寫。(是說現在也應該沒人在用ie6了
+
+再來把高度給拿掉，  
+讓li可以隨著塊狀推擠，  
+讓他自適應延伸高度即可，  
+通常來說寫一個區塊模組或module時，  
+都不太會將元素用px寫死， 
+而是盡量用%數或乾脆不寫自適應塊狀延伸，  
+這樣才能提升模組的靈活性。
