@@ -1,67 +1,104 @@
-# span[mixin]
+# mobile to desktop responsive grid with Breakpoint
+
+由於我們即將要來介紹如何透過susy2來設計responsive grid，    
+在那之前我想先花一章篇幅來講一下breakpoint這個framework，  
+因為susy2的responsive mixin是透過他來設計的，  
+所以有必要了解一下他的原理，  
+你才知道該如何透過他來設計你想要的grid出來。  
+
 ##程式碼連結
+* [Breakpoint](http://breakpoint-sass.com/)
+* [sassmeister-breakpoint](http://sassmeister.com/gist/652b5171628ad6da1880)
 
-* [sassmeister-susy2 span mixin about of](http://sassmeister.com/gist/448934cde32366806a1d)
-###Grid Widths
+##youtube影片教學
+<a href="https://www.youtube.com/watch?v=YMX6HlPupsc&feature=youtu.be" target="_blank">![](/images/video/susy2-6.png)</a>
+
+我們先到[Breakpoint](http://breakpoint-sass.com/)的官網，  
+其中一個範例如下：  
 ```
-.box{
-  @include span(25%)
-  /*
-  如果沒設定Grid，CSS會編譯出：
-  float:left
-  width:25%
-  */
+$high-tide: 500px;
+.johnny-utah {
+  @include breakpoint($high-tide) {
+    content: 'Whoa.';
+  }
 }
-
-.box{
-  @include span(1) //依照Grid設定，產生一欄寬度
+//編譯出的CSS
+@media (min-width: 500px) {
+  .johnny-utah {
+    content: 'Whoa.';
+  }
 }
+```  
+Breakpoint就是一個Mixin，  
+他可以讓你透過設定變數，  
+再藉由他的Mixin來編譯出media Queries 語法，  
+所以如果你有幾個斷點，  
+就設計幾個變數，  
 
-```
-###last
-當 `gutter-position`是`right`、或`after` 時， 
-如果你今天要設計一個左1右12滿版的版型，
-這部份[官網](http://susy.readthedocs.org/en/latest/toolkit/#row-edges)也有提到。
-```
-.left{@include span(1)}
-.right{@include span(11 last)}
-```
-susy2的`last`與`omega`的功能是一樣的，  
-但在susy2也有保留些susy1的語意，  
-所以你也可以把last改為omega，  
-功能也會正常work。
+Breakpoint預設是mobile first的設定，  
+所以你可以看他編譯出來是`min-width: 500px`
+也就是先從手機開始做起，
 
-### context `of`
+如果你今天要設計一個mobile first的responsive網站的話，  
+其設計方式如下：
 ```
-.box{
-  @include span(10 of 12) 
-}
-```
-`of`是依照你的父元素設定的欄寬來跑。  
-
-這裡舉個例子，  
-如果你要設計成這樣子的話，  
-你的`.agi`寬度不能直接寫`span(3)`， 
-因為你要設定的寬度是`.content`的3欄，  
-而不是`.container`的3欄，  
-所以你的`at1`必須寫成：
-```
-.at1{@include span(3 of 9)}
-
-//或包在.content裡面
-.content{
-  @include span(9){
-    .at1{
-      @include span(3);
-    }
-  };
+$pad: 569px;
+$pc: 1024px;
+.container{
+  width:300px;
+  height:300px;
+  margin: 0 auto;
+  background: orange;
+  @include breakpoint($pad){
+    background: black;
+  }
+  @include breakpoint($pc){
+    background: blue;
+  }
 }
 ```
-上面和下面的程式碼，  
-結果是一樣的，  
-可以到此[範例程式碼](http://sassmeister.com/gist/448934cde32366806a1d)來瀏覽， 
-你可以看到範例程式碼我為了讓他可以依序排列下來，  
-用了`nth-child(3n)`的CSS設定，  
-這意思則是說每到第三個div就會用[last mixin](http://susy.readthedocs.org/en/latest/toolkit/#last)清除掉gutter。  
+首先我一開始寫的設定自然就是先撰寫手機的CSS設定，  
+再來當螢幕解析大於569px後，  
+就開啟該media Queries的設定，  
+當有兩個class設定一樣時，  
+後面的程式碼會覆蓋掉前面的設定，  
+藉由這樣的方式來設計響應式網站，  
 
+所以如果是做mobile first網站，  
+你就可以看出你的數值一定是從小慢慢慢變大，  
+再一一去覆蓋。  
+
+而假使你要設計的responsive網頁版型是desktop first的話，  
+那就必須用`max-width`的設定。  
+如果是用Breakpoint的話，  
+變數設定則會是：  
+```
+$pad2: max-width 767px;
+.conetent{
+  width:100px;
+  @include breakpoint($pad2){
+    width:200px;
+  }
+}
+//編譯出來的CSS
+.conetent {
+  width: 100px;
+}
+@media (max-width: 767px) {
+  .conetent {
+    width: 200px;
+  }
+}
+```
+假使你的斷點是介於多少到多少之間的話，  
+變數則是設定`$mobile: 600px 800px;`，  
+這樣編譯出來就會變成`@media (min-width: 600px) and (max-width: 800px) {}`。  
+看到這裡，  
+你就已經曉得Breakpoint主要是拿來協助我們寫RWD斷點的Mixin，  
+所以susy2 的 RWD Mixin也有結合他的東西來設計。
+
+如果你設計的網頁版型不想用類似susy2 的framework，  
+也可以考慮看看單純使用Breakpoint的Breakpoint的工具，  
+要設計幾個斷線就設計幾個變數即可，  
+透過變數來進行統一管理也非常方便嘍。  
 
