@@ -10,7 +10,7 @@ Susy2
 * [960Grid 固定版型(Fixed layout)設計](docs/susy2/4.markdown)
 * [960Grid 流體版型(Fulid layout)設計，susy1>susy2轉換](docs/susy2/5.markdown)
 * [mobile to desktop responsive grid with breakpoint](docs/susy2/6.markdown)
-
+* [透過susy-breakpoint、layout設計RWD Grid](docs/susy2/7.markdown)
 
 Sass 3.3
 --------------------------

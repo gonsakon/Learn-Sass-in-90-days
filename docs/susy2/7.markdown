@@ -1,0 +1,123 @@
+# 透過susy breakpoint、layout設計RWD Grid 
+
+這章主要是來分享用susy2來設計responsive grid，    
+一開始會先介紹susy2的`latouy`設定後，  
+才會來講如何透過`susy-breakpoint`來寫responsive的斷點設定。  
+
+##程式碼連結
+* [susy2 - layout mixin](http://susydocs.oddbird.net/en/latest/settings/#layout-function)
+* [susy2 - susy-breakpoint Mixin](http://susydocs.oddbird.net/en/latest/toolkit/#breakpoint)
+* [sassmeister-程式碼範例](http://sassmeister.com/gist/54f4769a34f66ceab3f7)
+
+##youtube影片教學
+<a href="https://www.youtube.com/watch?v=tdEyKwWMYlg&list=UU7A-C1EwjVfGbCOK5u8AlwA" target="_blank">![](/images/video/susy2-7.png)</a>
+
+## Layout
+
+susy2的`layout`有好幾種設定方式，  
+但不管是哪種[設定方式](http://susydocs.oddbird.net/en/latest/settings/#layout)，  
+他都是拿來覆蓋預設$susy的Sass maps用的，  
+在susy2的文件裡面，  
+當介紹完[Global Defaults](http://susydocs.oddbird.net/en/latest/settings/#global-defaults)後，  
+接著就在講layout的部份，  
+當初我在看的時候就很納悶，  
+我就直接在預設的$susy修改不就好了，  
+幹嘛還要用layout來覆蓋？  
+後來我看了`susy-breakpoint`的Mixin才知道，   
+susy2可以藉由斷點的設定，  
+來去設計各種不同的Grid！  
+
+像是susy1、960Grid，  
+如果你gutter有設定值後，  
+那今天不管是怎麼調整你的grid，  
+gutter就仍還是會有間距，  
+
+但susy2則能夠過在每個斷點加入Layout的設定，  
+這樣每個斷點就又能產生出新的Grid的規則出來！
+
+首先我們就先把`layout`搞懂吧，
+
+在之前的教學，  
+我都只有提到要自訂Grid的話，  
+你必須到susy的Global Defaults調整Sass Maps，  
+但透過Layout Mixin，你也可以用這樣縮寫來覆蓋掉$susy的設定。
+```
+ // columns一定要放在gutters的前面
+@include layout(12 1/4 fluid float inside);
+
+//所以你也可以這樣子寫
+@include layout(fluid float inside 12 1/4);
+
+//如果你想要gutter是px的話，可以這樣子寫
+@include layout(12 (60px,20px))  // 60px=欄寬 20px=gutter寬
+
+
+//你也可以自訂Sass maps變數
+$desktop: (
+  columns:12,
+  gutters: 1/3,
+  gutter-position: after
+)
+//或者
+$desktop:(12 1/3 after);
+
+//將$desktop導入到layout去
+@include layout($medium);
+```
+這些設定你可以直接放在外面覆蓋掉$susy的Sass maps，  
+或者你在寫RWD的時候，  
+將layout設定放進去。
+
+## susy-breakpoint Mixin
+這個Mixin的核心就如同[官網](http://susydocs.oddbird.net/en/latest/toolkit/#breakpoint)所寫的，  
+他有使用了`Breakpoint`的framwework，  
+
+我們先來看他的範例：
+```
+@include susy-breakpoint(30em, 8) {
+  // 當螢幕解析度在30em以上時，欄數會變為8欄
+  .example { @include span(3); }
+}
+```
+有些人文件沒看清楚，  
+就會以為那個8好像就只能單純寫數字提供欄數的變化，  
+但實際上他可以載入Sass Map進去的，  
+這樣你就能在某個斷點下，變化整個Grid的設定，  
+例如像這樣子：  
+```
+$susy: (
+ columns:8,
+ math: fulid,
+ column-width:60px,
+ gutter-position: inside,
+ gutters:0,
+ debug:(image:true) 
+);
+$desktop:(12 1/3 after); //用來做為 pc以上斷點要載入的Sass maps設定
+.container{
+  height:500px;
+  @include container(); //吃到 $susy的sass maps設定
+  @include susy-breakpoint(1024px,$desktop){
+    //因為載入到$desktop的Grid，所以根據$desktop規則重新編譯container 
+    @include container(); 
+  }
+}
+.at1{
+  @include span(2); //吃到 $susy的sass maps設定
+  @include susy-breakpoint(1024px,$desktop){
+    //這裡也必須再寫一次span是幾欄，因為上面的span2是吃到$susy的設定，編譯出來的值自然不會是$desktop的規則，觀念也就和.container就是。
+    @include span(2); 
+  }
+}
+```
+
+從上面的程式碼你就可以看得出來，  
+當我是手機版型時，我的Grid是沒有guuter，  
+是以8欄無縫方式設計的，  
+但當我是PC以上螢幕解析度時，
+因為吃到$desktop的設定，  
+所以就變成有gutter，且欄數變為12的方式來設計。
+
+從這裡你就可以看出，  
+susy2可以針對各個斷點來設定grid真的強大到不行， 
+下個章節我們再繼續講解如何優化`susy-breakpoint`的設定。
