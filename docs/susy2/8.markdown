@@ -1,0 +1,85 @@
+# 設計不對稱(Asymmetrical) RWD Grid
+
+這章是要來講使用`isolate`來設定不對稱的 RWD Grid，  
+像有些網頁設計師會覺得不希望版型都是死板板固定欄寬，  
+如果希望是設計左2欄寬、中8欄寬、右2欄寬，總計三欄的Gird，  
+那就相當適合使用`isolate`來設計Grid。
+
+##程式碼連結
+* [sassmeister-程式碼範例](http://sassmeister.com/gist/af7bf98abf56cc17494d)
+
+##youtube影片教學
+<a href="https://www.youtube.com/watch?v=ANoWjTDkN0w&feature=youtu.be" target="_blank">![](/images/video/susy2-8.png)</a>
+
+## columns
+
+如果我要設定12欄，每欄欄寬都固定對稱的Grid，  
+設定方式自然就像這樣子：  
+```
+$susy:(
+  columns: 12,
+  gutter-position: after,
+  column-width: 60px,
+  gutters: 1/3,
+  debug:(image:true)
+)
+```
+畫面就會如下：
+![](/images/susy2-8-1.png)
+
+但如果希望是設計左2欄寬、中8欄寬、右2欄寬，總計三欄的Gird，
+就可以這樣子設定
+```
+$susy:(
+  columns: (2,8,2),   //數字為欄寬，共3欄
+  output: isolate // 預設是float
+  gutter-position: after,
+  column-width: 60px,
+  gutters: 1/3,
+  debug:(image:true)
+)
+```
+畫面就會變成這個樣子：
+
+設計出Grid出來，  
+假如你要將自己設計的div排到自己想要的位置上，  
+也是使用`span`這個Mixin，
+假設我新增一個`.at1`的DIV，  
+要讓他寬度一共佔住2、3欄，那就必須這樣寫：  
+```
+.at1{
+  @include span(2 at 2) 
+  // 2是佔2欄，at 2是代表這個div會定位到從左數來第二欄位
+  //試著改裡面的數值就可了解他所代表的意思
+}
+
+//編譯出來的CSS
+.at1{
+  width: 81.5789473684%;
+  float: left;
+  margin-left: 18.4210526316%;
+  margin-right: -100%;
+}
+//由於sass map是使用 `output:isolate`的方式來設定，  
+//所以grid推移上也變化成這個樣子。
+```
+就會變成下圖的樣子：  
+
+
+再來如果你需要在`.at1`裡面設定左右欄各佔1column div的話，  
+就必須這樣子寫：
+```
+.at1{
+  @include span(2 at 2){
+    .at2{
+      @include span(1 at 1) //佔1欄，at 1定位在第一欄
+    }
+    .at3{
+      @include span(1 at 2) //佔1欄，at 2定位在第二欄
+    }
+  } 
+}
+// @span(){@content}，這樣`span`裡面的程式碼就會依照.at1所下的寬度來對應.at2與.at3編譯出來的寬度。
+```
+編譯出來就會變成如下圖：  
+
