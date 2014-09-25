@@ -83,7 +83,8 @@ $susy:(
 // @span(){@content}，這樣`span`裡面的程式碼就會依照.at1所下的寬度來對應.at2與.at3編譯出來的寬度。
 ```
 編譯出來就會變成如下圖：  
-![](/images/susy2-8-4.png)
+![](/images/susy2-8-4.png)  
+
 透過這樣的方式，  
 你就可以設定自己的不對稱版型出來，  
 然後再藉由`susy-breakpoint`將自己設定的不對稱 Sass map帶進去layout裡面，  
