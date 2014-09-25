@@ -40,8 +40,9 @@ $susy:(
 )
 ```
 畫面就會變成這個樣子：
-![](/images/susy2-8-2.png)
-設計出Grid出來，  
+![](/images/susy2-8-2.png)  
+
+設計出Grid出來後，  
 假如你要將自己設計的div排到自己想要的位置上，  
 也是使用`span`這個Mixin，
 假設我新增一個`.at1`的DIV，  
