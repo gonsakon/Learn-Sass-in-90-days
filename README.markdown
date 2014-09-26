@@ -19,7 +19,7 @@ Sass 3.3
 
 Sass 初階功能
 --------------------------
-*[@content](docs/Sass/@content.markdown)
+* [@content](docs/Sass/@content.markdown)
 
 SMACSS
 --------------------------
