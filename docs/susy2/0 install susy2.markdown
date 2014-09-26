@@ -1,0 +1,108 @@
+# 如何打造susy2開發環境
+
+##youtube影片教學
+<a href="https://www.youtube.com/watch?v=ANoWjTDkN0w&feature=youtu.be" target="_blank">![](/images/video/susy2-8.png)</a>
+
+## 進入主題
+目前已經有軟體可以編譯`Sass`與`Susy2`，  
+例如[Fire.app](http://fireapp.kkbox.com/)、[codekit](http://incident57.com/codekit/index.html)等等，  
+你不用安裝繁瑣的環境，透過軟體就可以直接編譯Sass，  
+我目前用的軟體是Fire.app，而目前他也已釋出了Sass3.4、Compass 1.0的版本，  
+更重要的是它內建就安裝好了Susy 2和Breakpoint的功能，開發上也變得相當方便，  
+在去年我也曾經為了Fire.app寫了一篇[圖影教學](https://www.youtube.com/watch?v=Z_CmIMAiSiI)，  
+
+如果你希望能夠自己在電腦建立環境的話，  
+那就可以照著我的教學來逐步學習：
+
+## 安裝流程
+Mac內建就有安裝Ruby，  
+如果你是用Windows的話，  
+則就再必須安裝[Ruby環境](http://rubyinstaller.org/downloads/)，  
+確認好Ruby環境後，  
+打開Mac的terminal、Windows的命令提示字元輸入：
+```
+gem install sass
+//送出後就會開始下載，接著再輸入
+
+gem install compass
+
+gem install susy
+
+gem install breakpoint
+
+//susy有用到breakpoint，所以也必須安裝
+```
+如果都安裝好後，  
+要確認有沒有安裝成功， 
+可以輸入`gem list`後可以看到你裝了哪些gem，  
+如果發現四個都有安裝，那就表示你安裝成功了。
+
+## 建立專案
+
+首先你必須先在terminal上先到你指定的位置去，
+mac的指定方式如下：
+```
+cd /Users/gonsakon/Desktop 
+// cd後面接路徑， gonsakon要換成你的電腦名稱
+
+```
+好了後，要建立專案就輸入：
+```
+compass create project 
+//project是你命名的資料夾名稱
+```
+輸入完後你就會發現桌面上多了一個`project`的資料夾， 
+裡面就會有一些相關的檔案，  
+打開project資料夾後，  
+裡面會有一個`config.rb`的檔案，  
+把他打開以後，  
+在最上面寫上這兩行後儲存，
+這是為了讓Compass專案能夠載入susy與breakpoint的功能，  
+```
+require 'susy'
+require 'breakpoint'
+```
+
+輸入好以後，  
+在到terminal上輸入`cd project`進入到project資料夾後，
+再打：
+```
+compass watch
+
+```  
+這個語法的用意是，  
+關注你目前所在的資料夾，  
+當你編譯儲存時，compass會自動幫你編譯Sass檔案成CSS檔，  
+
+接著我們就到sass檔案寫：
+```
+@import 'susy';
+@import 'breakpoint';
+$susy: (
+    columns: 12,
+    gutters: 1/3,      
+    column-width:60px,
+    math: fluid,      
+    output: float,
+    gutter-position: after,
+);
+.wrap{
+    @include container;
+}
+
+//編譯出來的CSS
+.wrap {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.wrap:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+```
+如果CSS有成功編譯出來，  
+那就代表你成功了，enjoy it！
+
+
