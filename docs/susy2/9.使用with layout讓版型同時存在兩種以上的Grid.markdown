@@ -16,7 +16,7 @@
 
 
 ## With Layout
-格式：`with-layout($layout, $clean) { @content }  `
+格式：`with-layout($layout, $clean) { @content }`  
 `$layout`就是放進你自訂的Sass Maps設定， 
 在預設下，`with-layout`會覆蓋全域`$susy`的變數， 
 如果開啟$clean的話意思則是不倚賴susy設定，  
@@ -48,8 +48,8 @@ $content:(
 
 ```
 這樣子做的話，  
-裡面的code就不會被susy2預設的Sass Maps所污染，  
-當然你在這個Grid裡面還是可以繼續用`susy-breakpoint`寫RWD，只要再套入RWD的`$layout`變數進去就可以了：
+裡面的code就不會被susy2預設的Sass Maps所污染，    
+當然你在這個Grid裡面還是可以繼續用`susy-breakpoint`寫RWD，只要再套入RWD的`$layout`變數進去就可以了：  
 ```
 $content:(
   column-width:60px,
@@ -77,7 +77,8 @@ $desktop: 1024px;
 看到上面的程式碼，  
 你可能會懷疑如果我單純只有寫columns:12，  
 難道其他的變數不會被susy2的Sass Maps覆蓋掉嗎？  
-其實是不會的，因為我的Grid都被with-layout包裹起， 
+其實是不會的，  
+因為我的Grid都被with-layout包裹起， 
 所以他會優先去找with-alyout的`$layout`設定來覆蓋。  
 
 看到這邊相信你已經了解了，  
@@ -113,7 +114,8 @@ $content:(
 $content-pad:(
   columns: 14,
 );
-//$photo是下面圖片牆的Grid、$content-pad是他的斷點所載入的$layout，當他在平板解析度以上時，就變成滿版無縫圖片牆，所以gutters改為0，column-width:false則是會讓版型變成100%滿版來設計。
+//$photo是下面圖片牆的Grid、$content-pad是他的斷點所載入的$layout，當他在平板解析度以上時，
+//就變成滿版無縫圖片牆，所以gutters改為0，column-width:false則是會讓版型變成100%滿版來設計。
 $photo:(
   column-width:60px,
   gutters:1/3,
