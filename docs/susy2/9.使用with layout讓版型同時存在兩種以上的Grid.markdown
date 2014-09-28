@@ -7,7 +7,7 @@
 該如何透過suys2的`With Layout`Mixin來實作，  
 
 ##程式碼連結
-* [susy2 - With Layout mixin](http://susy.readthedocs.org/en/latest/settings/#layout)
+* [susy2 - With Layout mixin](http://susy.readthedocs.org/en/latest/settings/#with-layout)
 * [susy2 - Gallery mixin](http://susy.readthedocs.org/en/latest/toolkit/#gallery)
 * [sassmeister-程式碼範例](http://sassmeister.com/gist/811f5337cca7702f3fde)
 
