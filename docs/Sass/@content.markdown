@@ -1,11 +1,5 @@
 # @content
 
-##程式碼連結
-* [sassmeister-程式碼範例](http://sassmeister.com/gist/af7bf98abf56cc17494d)
-
-##youtube影片教學
-<a href="" target="_blank">![](/images/video/susy2-8.png)</a>
-
 ## 進入主題
 
 @content的用途主要是拿來傳遞內容到Mixin裡面去的， 
