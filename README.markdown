@@ -12,7 +12,7 @@ Susy2
 * [mobile to desktop responsive grid with breakpoint](docs/susy2/6.markdown)
 * [透過susy-breakpoint、layout設計RWD Grid](docs/susy2/7.markdown)
 * [不對稱(Asymmetrical) RWD Grid](docs/susy2/8.markdown)
-* [使用with layout讓版型同時存在兩種以上的Grid](docs/susy2/9 使用with layout讓版型同時存在兩種以上的Grid.markdown)
+* [使用with layout讓版型同時存在兩種以上的Grid](docs/susy2/9.使用with layout讓版型同時存在兩種以上的Grid.markdown)
 
 Sass 3.3
 --------------------------
