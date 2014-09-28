@@ -3,7 +3,7 @@ Sass教學手冊
 
 Susy2
 --------------------------
-* [打造Susy 2開發環境](docs/susy2/0 install susy2.markdown)
+* [如何打造susy2開發環境](docs/susy2/0.如何打造susy2開發環境.markdown)
 * [Grid settings(上)](docs/susy2/1.markdown)
 * [Grid settings(中)](docs/susy2/2.markdown)
 * [Grid settings(下) debug Compass Vertical Rhythm ](docs/susy2/3.markdown)

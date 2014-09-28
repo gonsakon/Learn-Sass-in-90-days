@@ -1,7 +1,7 @@
 # 如何打造susy2開發環境
 
 ##youtube影片教學
-<a href="https://www.youtube.com/watch?v=ANoWjTDkN0w&feature=youtu.be" target="_blank">![](/images/video/susy2-8.png)</a>
+<a href="https://www.youtube.com/watch?v=YpDfbtdwmpY&feature=youtu.be" target="_blank">![](/images/video/susy2-0.png)</a>
 
 ## 進入主題
 目前已經有軟體可以編譯`Sass`與`Susy2`，  
