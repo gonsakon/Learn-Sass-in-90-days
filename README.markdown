@@ -25,3 +25,7 @@ Sass 初階功能
 SMACSS
 --------------------------
 * [Base、layout](docs/SMACSS/1.markdown)
+
+Sass心法
+---------------------------
+* [@extend 與 @Mixin的差異性與使用時機](docs/Sass/@extend與@Mixin的使用時機.markdown)
