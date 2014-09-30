@@ -13,12 +13,12 @@
 
 我們先來瀏覽Bootstrap的Grid詳細設定：
 
-斷點  | Class 前綴 | 欄寬 | 總寬 | Gutter
-------------- | -------------
-(<768px) | .col-xs-| Auto |  None (auto)|30px(padding:0 15px)
-(≥768px) | .col-sm-| ~62px| 750px| 30px(padding:0 15px)
-(≥768px) | .col-md-| ~81px| 970px|30px(padding:0 15px)
- (≥1200px)| .col-lg-| ~97px| 1170px|30px(padding:0 15px)
+斷點  | Class 前綴 | 欄寬 | 總寬 | Gutter  
+------------- | -------------  | -------------  | -------------  | -------------  
+(<768px) | .col-xs-| Auto |  None (auto)|30px(padding:0 15px)  
+(≥768px) | .col-sm-| ~62px| 750px| 30px(padding:0 15px)  
+(≥768px) | .col-md-| ~81px| 970px|30px(padding:0 15px)  
+ (≥1200px)| .col-lg-| ~97px| 1170px|30px(padding:0 15px)  
  
 透過上面的訊息我們可以得知，  
 1. 這是Mobilde to Desktop的版型設定  
