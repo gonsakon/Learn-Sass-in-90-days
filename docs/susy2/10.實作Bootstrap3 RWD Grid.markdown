@@ -7,7 +7,7 @@
 * <a href="http://sassmeister.com/gist/9c24e9b9e2522950bf28" target="_blank">Susy2 - Bootstrap3 RWD Grid</a>
 
 ##youtube影片教學
-<a href="https://www.youtube.com/watch?v=cdbCvQwkHHc&feature=youtu.be" target="_blank">![](/images/video/susy2-10.png)</a>
+<a href="https://www.youtube.com/watch?v=9kY4EZG4ry0&feature=youtu.be" target="_blank">![](/images/video/susy2-10.png)</a>
 
 ## Bootstrap3 RWD Grid
 
