@@ -46,10 +46,8 @@ $susy:(
   padding-right: 15px;
 }
 ```
-為什麼不直接在裡面寫gutter的原因是，  
-Bootstrap在`.col-xs-`的斷點，   
-也就是768px以下是，  
-是滿版100%的方式來設計的話，  
+為什麼不直接在裡面寫gutter的原因是Bootstrap在`.col-xs-`的斷點，  
+是滿版100%的方式來設計，  
 再加上gutter只能用幾分之幾來設定，  
 所以我則是透過選擇器的方式，  
 當class前面有`col-xs`的文字時，  
