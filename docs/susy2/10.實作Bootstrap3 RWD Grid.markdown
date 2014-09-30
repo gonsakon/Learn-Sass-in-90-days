@@ -25,7 +25,7 @@
 2. 每欄的gutter是固定`padding-left:15`與`padding-right:15px`來設定  
 3. 每個斷點都有設定class前墜
 
-獲得這樣的資訊，我們就足夠用Susy2來設計我們要的樣子了：
+獲得這樣的資訊，我們就足夠用Susy2來設計規劃的樣子了：
 
 ## Susy2設定目標
   * 設計`.col-xs-`與`.col-sm-`的斷點
@@ -33,7 +33,7 @@
   
 我們從上表可以得知，  
 Bootstrap3是從手機版開始做，  
-所以我的可以將預設$susy的Sass Maps來設計 `.col-xs`的設定，  
+所以就可以將預設$susy的Sass Maps來設計 `.col-xs`的設定，  
 ```
 $susy:(
   debug:(image:show),
