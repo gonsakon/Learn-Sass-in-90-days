@@ -1,0 +1,132 @@
+# 實作Bootstap3 RWD Grid
+這個章節主要是要來講如何透過Susy2來設計Bootstrap的版型，  
+透過模仿別人設計好的RWD Grid來練習，  
+也有助於你在用Susy2客製化自己要的版型可以變得更加得熟練。
+
+##程式碼連結
+* <a href="http://sassmeister.com/gist/9c24e9b9e2522950bf28" target="_blank">Susy2 - Bootstrap3 RWD Grid</a>
+
+##youtube影片教學
+<a href="https://www.youtube.com/watch?v=cdbCvQwkHHc&feature=youtu.be" target="_blank">![](/images/video/susy2-10.png)</a>
+
+## Bootstrap3 RWD Grid
+
+我們先來瀏覽Bootstrap的Grid詳細設定：
+
+斷點  | Class 前綴 | 欄寬 | 總寬 | Gutter
+------------- | -------------
+(<768px) | .col-xs-| Auto |  None (auto)|30px(padding:0 15px)
+(≥768px) | .col-sm-| ~62px| 750px| 30px(padding:0 15px)
+(≥768px) | .col-md-| ~81px| 970px|30px(padding:0 15px)
+ (≥1200px)| .col-lg-| ~97px| 1170px|30px(padding:0 15px)
+ 
+透過上面的訊息我們可以得知，  
+1. 這是Mobilde to Desktop的版型設定  
+2. 每欄的gutter是固定`padding-left:15`與`padding-right:15px`來設定  
+3. 每個斷點都有設定class前墜
+
+獲得這樣的資訊，我們就足夠用Susy2來設計我們要的樣子了：
+
+## Susy2設定目標
+  * 設計`.col-xs-`與`.col-sm-`的斷點
+  * 設定`.col-xs`與`.col-sm-`的1~12的欄寬
+  
+我們從上表可以得知，  
+Bootstrap3是從手機版開始做，  
+所以我的可以將預設$susy的Sass Maps來設計 `.col-xs`的設定，  
+```
+$susy:(
+  debug:(image:show),
+  columns:12,
+  gutters: 0,
+  gutter-position: inside,
+);
+[class^=col-xs]{
+  padding-left: 15px;
+  padding-right: 15px;
+}
+```
+為什麼不直接在裡面寫gutter的原因是，  
+Bootstrap在`.col-xs-`的斷點，   
+也就是768px以下是，  
+是滿版100%的方式來設計的話，  
+再加上gutter只能用幾分之幾來設定，  
+所以我則是透過選擇器的方式，  
+當class前面有`col-xs`的文字時，  
+則自動加上padding左右的設定，  
+
+再來第二個斷點則是`.col-sm-`，  
+斷點則是在`768px`以上，
+```
+$Small-device:(12 (32.5px 30px));
+$break-Small-device: 768px; //等等要拿來設定susy-breakpoint斷點用
+```
+$Small-device這樣的寫法也是Sass Maps的方式，  
+他可以支援這樣子的簡寫方式， 
+白話文的意思是12欄，欄寬是32.5，Gutter的寬度是30px，  
+你可能會想說欄寬不是62嗎，  
+為什麼我只設定32.5？  
+原因是在`gutter-position:inside`的設定上，  
+這樣的設定方式欄寬會變成加總起來，  
+所以真正欄寬會變成62.5，  
+加了0.5的關係是我發現這樣編譯出來的值才會剛好等於`750px`，  
+就會剛好符合`.col-sm`的總Grid寬度。
+
+接著再來寫總寬度：
+```
+.content{
+  height: 50px;
+  @include container;
+  @include susy-breakpoint($break-Small-device,$Small-device){
+    @include container;
+  }
+}
+```
+做到這裡你就已經達成Bootstrap3斷點的功能了，  
+接著我們要再來做Boostrap3能透過class來切換寬度的功能，例如像下面程式碼：
+```
+<div class="content">
+	<div class="col-xs-6 col-sm-4"></div>
+	<div class="col-xs-6 col-sm-8"></div>
+</div>
+```
+這是Bootstrap3在控制欄寬的功能，  
+假設我現在螢幕解析度是320px的手機時，  
+他就會吃到`.col-xs-6`的class，
+又因為Bootstrap3是12欄，  
+所以兩個DIV就會各佔一半並排在一起，
+而為什麼`.col-sm-4`沒有吃到設定的原因是他css寫到了media設定裡面，  
+當解析度在768以上時，裡面的CSS設定才會開啟，  
+進而覆蓋掉`col-xs.6`的設定。
+
+接著我們就來寫透過@for迴圈來寫這設定：
+```
+@for $i from 1 through 12 {
+    .col-xs-#{$i}{
+      @include span($i)
+    }
+}
+@include breakpoint($break-Small-device){
+  @for $i from 1 through 12 {
+    @include with-layout($Small-device){  
+      .col-sm-#{$i}{
+        @include span($i);
+      }
+    }  
+  }
+}
+```
+@include breakpoint不是susy2的@mixin，  
+而是來自breakpoint，  
+這樣子編譯出來就會變成`@media (min-width:768px){CSS程式碼}`，  
+所寫的程式碼都會包在裡面，  
+再來你看到我裡面又@include with-alyout($Small-device)的設定，  
+這樣子寫我編譯出來的`span`才會依照$Small-device的設定來編譯出來寬度，  
+如果你不寫他就跑回去找$susy的global default的Sass maps的設定哩。
+
+這樣子我們就已經做完了，  
+你可以再到此<a href="http://sassmeister.com/gist/9c24e9b9e2522950bf28" target="_black">連結</a>看效果。  
+
+當然這並不是Bootstrap的完整Grid設定，  
+但是你可以看得出來透過Susy2來寫出和其他RWD Grid System的效果也是蠻容易的事情，  
+如果你想對Susy2有更深入的了解，建議也可以去多找一些Grid System來試著用Susy2排排看哩。
