@@ -13,7 +13,8 @@ Susy2
 * [7.透過susy-breakpoint、layout設計RWD Grid](docs/susy2/7.markdown)
 * [8.不對稱(Asymmetrical) RWD Grid](docs/susy2/8.markdown)
 * [9.使用with layout讓版型同時存在兩種以上的Grid](docs/susy2/9.使用with layout讓版型同時存在兩種以上的Grid.markdown)
-* [10.實作Bootstrap3 RWD Grid](docs/susy2/10.實作Bootstrap3 RWD Grid.markdown)  
+* [10.實作Bootstrap3 RWD Grid](docs/susy2/10.實作Bootstrap3 RWD Grid.markdown)
+* [11.shorthand(簡寫)](docs/susy2/11.shorthand(簡寫).markdown)   
 
 Sass 3.3
 --------------------------

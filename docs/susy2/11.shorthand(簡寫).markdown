@@ -1,0 +1,88 @@
+# shorthand(簡寫)
+
+##範例程式碼 
+* <a href="http://susy.readthedocs.org/en/latest/shorthand/" target="_blank">susy2 - shorthand</a>
+*  <a href="http://sassmeister.com/gist/71f07f3ac51aeb49ea19" target="_blank">sassmeister-程式碼範例</a>
+
+##youtube影片教學  
+<a href="https://www.youtube.com/watch?v=er2evZqsvbg&feature=youtu.be" target="_blank">![](/images/video/susy2-11.png)</a>
+
+## shorthand(簡寫)
+如果你是循序漸進瀏覽我的susy2教學，  
+就可以發現到susy2在設定上有點繁瑣，  
+還好susy2有提供簡寫的方式，  
+讓開發者可以透過它快速產生出想要的樣式出來。  
+
+## Grid setting
+在之前的教學，  
+我們在設定$susy的時候，  
+都必須中規中矩得一一設定他的樣式，  
+例如像這樣子：
+```
+$pad: (
+  columns: 12,
+  gutters: 1/4,
+  math: fluid,
+);
+```
+而susy2則提供了簡寫的方法，  
+像上面的寫法你可以這樣子寫：
+```
+$pad: 12 1/4 fulid
+```
+寫法上變得直覺多了，  
+另外簡寫方式有提供keyword(關鍵字)的用法，  
+如下圖：  
+<img src="images/susy/2-11.png" />  
+所以實際上你不用擔心這樣簡寫的方法是否會因為`變數載入的先後順序`而導致衝突，  
+也是舉上面的例子：  
+```
+$pad: 12 1/4 fulid;
+
+//關鍵字放最前面最後面都沒關係
+$pad: fulid inside 12 1/4;
+
+//如果要設定column-width的話，則要這樣寫
+$pad: 12 (4em 1em) fulid inside;
+
+//唯一要注意的事，gutter不能放columns前面
+//因為shorthand會依數字順序抓columns與gutter
+//所以如果你寫下面的簡寫，反而會變成你columns欄數變1/4欄，gutter寬度變12欄
+//雖然不會造成編譯錯誤，但編譯出來就不會是自己想要的了
+$pad: 1/4 12 fulid;
+
+```
+
+##span  
+`span`也是susy2裡面常用的一個功能，  
+也就是計算出該class的所佔得欄寬，  
+像之前的章節，都是介紹比較簡單的用法：  
+```
+//佔兩欄寬
+.sidebar{@include span(2);}
+
+//佔三欄且強制靠右
+.sidebar{@include span(2 last)}
+```  
+但如果你今天希望span的設定可以更加靈活的話，  
+它提供這樣的寫法
+
+```
+// $span是所佔欄數
+// $location是定位到第幾欄位
+// $layout可以寫grid setting，也就是上面介紹的部份
+// $layout也可以只寫單一數字，那意思就代表總欄數的意思
+// 如果你要follow原本Sass Maps的設定，那也可以不寫
+
+$pad: $span at $location of $layout;
+.main{
+	@include span($pad)
+}
+
+//佔兩欄，定位在第三欄，12是總欄數，沒打算改變總欄數可不寫
+//如果你想用到at來定位，就必須用到isolate的設定來排版
+
+.sidebar{
+	@include span(2 at 3 of 12 isolate);
+}
+```
