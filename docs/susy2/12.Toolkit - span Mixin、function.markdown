@@ -1,0 +1,126 @@
+# Toolkit - span Mixin、function
+##範例程式碼 
+* <a href="http://susydocs.oddbird.net/en/latest/toolkit/#span-mixin" target="_blank">susy2 - span Mixin、function</a>
+
+
+##youtube影片教學  
+<a href="https://www.youtube.com/watch?v=sIHco29ZhVk" target="_blank">![](/images/video/susy2-12.png)</a>
+
+
+## Span [mixin]
+
+格式：`span($span) { @content }`    
+在之前幾個章節其實就使用了很多span的用法，  
+這次則是一次將他大部分的設定方式做個總整理。
+
+首先是比較常見的設定：  
+```
+.box{@include(2)} //佔兩欄寬
+.box{@include(25%)} //也可以直接在裡面寫寬度
+```
+再來如果你的`gutter-position`是設定`before`或`after`的時候，  
+就必須用到`last`與`first`來清除掉最後一欄的margin gutter，  
+像是這樣：  
+```
+$susy:(columns:12,gutter-position:after);
+.sidebar{@include span(4)};
+.main{@include span(8 last)} //為了讓.sidebar與.main滿版，所以就必須清掉.main的margin-right
+```
+如果你的子元素也有需要用到span的話，  
+這樣的寫法是錯的：
+```
+$susy:(columns:12,gutter-position:after);
+.main{
+	@include span(5);
+	.left{
+		@include span(2);
+	}
+}
+```
+原因是susy預設是fulid排版，  
+也就是以%數來設定寬度，  
+.main與.left都是以預設$susy的12欄來編譯span，  
+但這樣就不對了，  
+因為`.left`的父元素只有5欄，  
+所以你必須依照他父元素的設定來寫span才對。  
+在這裡susy2則提供了兩種寫法：  
+```
+$susy:(columns:12,gutter-position:after);
+.main{
+	@include span(5);
+	.left{
+		@include span(2 of 5);  //利用of告知總欄數
+	}
+}
+```
+或者：  
+```
+$susy:(columns:12,gutter-position:after);
+.main{
+	@include span(5){
+		.left{
+			@include span(2);  //因為包在.main的父元素span裡面，所以就不用寫of了
+		}
+	};
+}
+```
+
+### Nesting
+如果你的`gutter-position`是用`split`、`inside`、`inside-static`的話，就不用使用`last`或`first`來消除gutter，  
+但會有個問題是像`gutter-position:inside`如果使用`span()`的話，  
+會產生出padding-left、padding-right的gutter值，  
+但有的時候我們希望在裡面繼續寫排版元素，  
+就會希望把該元素的padding給清除，  
+如果你有這樣的需求，  
+就可以使用`nest`。
+```
+$susy:(columns:12,gutter-position:inside);
+.main{
+	@include span(5 nest); //加上關鍵字 nest清除padding的gutter
+	.left{
+		@include span(2);  		
+	}
+}
+```
+
+### Location
+如果你的span使用到isolation排版方式的話，  
+那就可以透過`at`定位到第幾欄：
+```
+//總共佔三欄，定位在第二欄的位置
+.index { @include span(isolate 3 at 2); }
+```
+
+###narrow, wide, and wider
+這三個值代表著你希望span編譯出來的寬度是多少，  
+`narrow`是1column的寬度，  
+`wide`是1column+1gutter的寬度，  
+`wider`是1column+1gutter的寬度，    
+寫法如下：
+```
+// grid span
+.narrow { @include span(2); } 
+.wide { @include span(2 wide); }
+.wider { @include span(2 wider); }
+
+//編譯出來的CSS
+.narrow { width: 22.5%; }
+.wide { width: 25%; }
+.wider { width: 27.5%; }
+```
+但這個東西我比較常用span提供的function來使用，  
+例如：   
+```
+.box{
+	@include span(1);
+	margin-left:span(1 wide);
+}
+```
+這樣子編譯出來的CSS就會margin-left推1column+1gutter的寬度。
+
+##總結
+各位可以看出`span`的用法非常的多元，  
+如果你是初次使用susy2，  
+建議至少要了解`at`、`of`、`last`的用法，  
+在設計上才比較得心應手，    
+等到摸熟以後再去玩些進階的`$span`設定。

@@ -15,6 +15,7 @@ Susy2
 * [9.使用with layout讓版型同時存在兩種以上的Grid](docs/susy2/9.使用with layout讓版型同時存在兩種以上的Grid.markdown)
 * [10.實作Bootstrap3 RWD Grid](docs/susy2/10.實作Bootstrap3 RWD Grid.markdown)
 * [11.shorthand(簡寫)](docs/susy2/11.shorthand(簡寫).markdown)   
+* [12.Toolkit - span Mixin、function](docs/susy2/12.Toolkit - span Mixin、function.markdown)   
 
 Sass 3.3
 --------------------------
