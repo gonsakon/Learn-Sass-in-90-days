@@ -95,7 +95,7 @@ $susy:(columns:12,gutter-position:inside);
 這三個值代表著你希望span編譯出來的寬度是多少，  
 `narrow`是1column的寬度，  
 `wide`是1column+1gutter的寬度，  
-`wider`是1column+1gutter的寬度，    
+`wider`是1column+2gutter的寬度，    
 寫法如下：
 ```
 // grid span
