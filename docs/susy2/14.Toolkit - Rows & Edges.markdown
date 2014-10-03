@@ -1,0 +1,100 @@
+# Toolkit - Rows & Edges
+##範例程式碼 
+* <a href="http://susydocs.oddbird.net/en/latest/toolkit/#rows-edges" target="_blank">susy2 - Rows & Edges</a>
+
+##youtube影片教學  
+<a href="https://www.youtube.com/watch?v=rF2bhT5Z6n0" target="_blank">![](/images/video/susy2-14.png)</a>
+
+## Rows & Edges
+
+
+### Break
+**格式：**`break()`  
+**清除：**`nobreak()`  
+**keyword：**`break`|`nobreak`  
+主要就是拿來清除浮動用的，  
+他也可以寫在`span()`裡面，  
+這個語法我自己在RWD Grid時常會用到，  
+```
+.new-line{@include break} //編譯出 clear:both
+
+.no-new-line {@include nobreak} //編譯出clear:none
+```
+
+### First、last
+讓元素可以強制置左(first)與靠右(last)，  
+並會清除掉gutter，  
+同時也可以當作`keyword`關鍵字寫在`span()`裡面，  
+也可使用@mixin語法：  
+```
+.first{@include first};
+
+.last{@include span(5 last)};
+```
+
+### Full
+**格式：**`full($context)`  
+**$context：**`<layout>`  
+這個語法可以將元素設定成滿版，  
+同時也可以當作`keyword`關鍵字寫在`span()`裡面：  
+```
+.main{
+	@include full
+}
+.content{
+	@include span(full)
+}
+
+//這兩者唯一的差異是前者會多增加一行 clear:both的設定
+```
+
+##Margin
+###pre、Post、Pull Squish
+**格式：**`pre($span)`    
+**$span：**`<span>`  
+```
+@include pre(1); //margin-left推1column+1gutter
+
+@include pre(25%); //也可以寫%數
+@include pre(2 of 6) //或者是用of改變裡面的gutter;
+
+@include post(1) //margin-right推1column+1gutter
+
+@inlcude pull(1) // margin-left 產生負值推 1column+1gutter
+
+@inlcude squish(1,1) // margin-left與margin-right推 1column+1gutter
+
+```
+
+##Padding
+###Prefix、Suffix、Pad
+**格式：**`prefix($span)` 
+**$span：**`<span>`  
+```
+@include prefix(1); // padding-left推1column+1gutter
+
+@include suffix(1); // padding-right推1column+1gutter
+
+@include pad(1); // padding-left與padding-right推1column+1gutter
+```
+
+##Bleed、Bleed-x、Bleed-y
+**格式：**`bleed($bleed)` 
+**$bleed：**TRBL <span>
+這個功能我不常用，  
+且在設計上找不到使用的時機點，  
+如果你想補充這段可再fork我的Github，  
+
+`Bleed`主要是把你的版型透過出血的方式擴大，  
+例如像這樣子：  
+```
+.content{
+	@include span(5);
+	@include Bleed(0 1);
+
+}
+	//Bleed第一個是Y值，第二個是X值
+	//這個範例是要將左右個多一個column的方式，  
+	//用負margin再用padding把文本移動進來，
+	//如果你希望只要更改X值，可用Bleed-x的Mixin。
+```

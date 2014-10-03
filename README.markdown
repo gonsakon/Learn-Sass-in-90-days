@@ -17,6 +17,7 @@ Susy2
 * [11.shorthand(簡寫)](docs/susy2/11.shorthand(簡寫).markdown)   
 * [12.Toolkit - span Mixin、function](docs/susy2/12.Toolkit - span Mixin、function.markdown)   
 * [13.Toolkit - gutter、container](docs/susy2/13.Toolkit - gutter、container.markdown) 
+* [14.Toolkit - Rows & Edges](docs/susy2/14.Toolkit - Rows & Edges.markdown)
 
 Sass 3.3
 --------------------------
