@@ -1,4 +1,4 @@
-# Toolkit - gutter、container.markdown
+# Toolkit - gutter、container
 ##範例程式碼 
 * <a href="http://susydocs.oddbird.net/en/latest/toolkit/#gutters" target="_blank">susy2 - Gutters</a>
 
