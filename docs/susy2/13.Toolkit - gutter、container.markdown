@@ -21,7 +21,7 @@ margin-left: gutter(10);
 
 //這樣寫並不是左推一個gutter的意思
 //gutter裡面寫的數字意思是你父欄佔了你幾個columns的意思
-//margin-left: gutter(1);  
+margin-left: gutter(1);  
 ```
 上面的用法是function的寫法，  
 你也可以使用Mixin的方式，  
