@@ -1,0 +1,137 @@
+# Toolkit - gutter、container.markdown
+##範例程式碼 
+* <a href="http://susydocs.oddbird.net/en/latest/toolkit/#gutters" target="_blank">susy2 - Gutters</a>
+
+##youtube影片教學  
+<a href="https://www.youtube.com/watch?v=V5qGtIcw23Q" target="_blank">![](/images/video/susy2-13.png)</a>
+
+##Gutters
+支援`function`、`mixin`的寫法，  
+**格式：**`gutters($span)`  
+**備用：**`gutter($span)`  
+**$span：**`<span>`  
+使用`gutter`與`gutters`的目的是如果你希望獲得1gutter的寬度時，  
+那就很適合使用他，例如下述程式碼：  
+```
+//編譯出來會向左推一個gutter
+margin-left: gutter();
+
+//如果今天你設定的元素所在的父欄是10欄，就必須這樣子寫  
+margin-left: gutter(10);
+
+//這樣寫並不是左推一個gutter的意思
+//gutter裡面寫的數字意思是你父欄佔了你幾個columns的意思
+//margin-left: gutter(1);  
+```
+上面的用法是function的寫法，  
+你也可以使用Mixin的方式，  
+但編譯出來的gutter則會依照你的`gutter-position`設定而有所變化，  
+如下程式碼：  
+```
+//如果gutter-position是after則會編譯margin-right
+//假使是split，則是編譯padding-left與padding-right
+.item { @include gutters; }
+
+
+//你也可以直接寫固定值上去
+.item{@include guttters(3em)}
+
+```
+或者你想改變gutter的屬性，  
+也可以使用`$span`來改寫，
+```
+// 強制gutter是gutter-position為inside
+.item { @include gutters(3em inside); }
+
+// 將gutter-position為after，是以10欄，guuter寬是1/3來編譯出來
+.item { @include gutters(10 1/3 after); }
+```
+
+
+## container
+支援`function`、`mixin`的寫法，  
+**格式：**`container($layout)`  
+**$layout：**`<layout>`
+
+container也有functioin與mixin的寫法：  
+```
+//依照你的Sass Maps的設定編譯出寬度
+.main{
+	width: container()
+}
+
+//也可以寫container是幾個column的寬度
+$large-breakpoint: container: container(12);
+```
+使用mixin的話，可以這樣子寫：  
+```
+//直接寫死總寬度，Sass Maps的column-width會依照gutter自行編譯出對應寬度
+body{
+	@include container(960px);
+}
+
+//也可以直接在裡面載入Sass Maps進去
+body{
+	@include container(12 1/3 center)
+}
+```
+
+## Nested Context
+支援`function`、`mixin`的寫法，  
+**格式：**`nested($span)`  
+**備用：**`nested($span)`  
+**$span：**`<span>`  
+
+在上個章節講`span`的時候就有提到，  
+如果你父元素佔了5 columns的話，  
+子元素要寫佔1 columns時，  
+如果你這樣寫就錯了：  
+```
+//此為錯誤程式碼
+.main{
+	@include span(5)
+	.inner{
+		@include span(1)
+	}
+}
+
+```
+.main裡面的子排版元素.inner如果是這樣編譯會是錯的，
+因為susy並不知道.inner是在.main裡面，  
+所以你可以這樣子寫：  
+```
+.main{
+	@include span(5)
+	.inner{
+	//加上of，span就會依照它來編譯
+		@include span(1 of 5) 	}
+}
+```
+或者寫到`span(5){@content}`裡面：  
+```
+.main{
+	@include span(5){
+		.inner{
+			//因為是包在span裡面，所以在5cloumns裡面編譯，所以就不用寫of了
+			@include span(1)
+		}
+	}
+}
+```
+但如果你是用`nested`的寫法的話，  
+可以這樣子寫：  
+```
+.main{
+	@include span(5);
+	@include nested(5) {
+  		.inner { @include span(1); }
+	}
+}
+
+```
+可以看得出來`nested`就是建立一個總columns的環境，  
+裡面編譯出來的`span`就會依照該條件去編譯對應的程式碼。  
+
+我自己是沒有在用這個方法，  
+應該說是我找不太時機使用，  
+所以我都還是用前兩個`span(1 of 5)`與`span(){@content}`來解決這樣的問題。  

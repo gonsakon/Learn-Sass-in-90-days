@@ -16,6 +16,7 @@ Susy2
 * [10.實作Bootstrap3 RWD Grid](docs/susy2/10.實作Bootstrap3 RWD Grid.markdown)
 * [11.shorthand(簡寫)](docs/susy2/11.shorthand(簡寫).markdown)   
 * [12.Toolkit - span Mixin、function](docs/susy2/12.Toolkit - span Mixin、function.markdown)   
+* [13.Toolkit - span Mixin、function](docs/susy2/13.Toolkit - gutter、container.markdown) 
 
 Sass 3.3
 --------------------------
