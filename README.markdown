@@ -19,7 +19,7 @@ Susy2
 * [13.Toolkit - gutter、container](docs/susy2/13.Toolkit - gutter、container.markdown) 
 * [14.Toolkit - Rows & Edges](docs/susy2/14.Toolkit - Rows & Edges.markdown)
 * [15.susy2語法速記表(編輯中)](docs/susy2/15.susy語法速記表.markdown)
-* [16.Susy2 網路教學資源](docs/susy2/16.Susy2 線上教學資源.markdown)
+* [16.Susy2 網路教學資源](docs/susy2/16.Susy2 網路教學資源.markdown)
 
  
 
