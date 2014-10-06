@@ -41,7 +41,7 @@ $susy: (
 ------------- | -------------  | -------------  
 $grid | [columns] [gutter] [column-width] | $grid: 12<br />$grid: 12 1/3 <br />$grid: 12 (60px 10px)<br />$grid: (1 2 3 2 1) .25
 $span | [span] at [location] of [layout] <br /> [欄數] at [位置] of [版型設定]  | $span: 8<br /> $span:8 of 12<br />$span: 3 at 4 of 12 .25 fluid <br />$span: 30%;
-$Layout | [grid] [keywords]  | $layout:8<br />$layout:4 (4em 1em) fluid inside-static rtl
+$layout | [grid] [keywords]  | $layout:8<br />$layout:4 (4em 1em) fluid inside-static rtl
 
 ## 排版
 名稱  |功能 |格式|範例
