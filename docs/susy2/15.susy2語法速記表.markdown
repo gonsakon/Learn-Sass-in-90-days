@@ -1,0 +1,39 @@
+# susy2 語法速記表
+
+## $susy預設版型設定
+
+```
+$susy: (
+  flow: ltr、rtl,
+  math: fluid、static,
+  output: float、isolate,
+  gutter-position: after,
+  container: auto,
+  container-position: center、left、right,
+  columns: 4,
+  gutters: .25,
+  column-width: false 自訂,
+  global-box-sizing: content-box,
+  last-flow: to,
+  debug: (
+    image: hide,
+    color: rgba(#66f, .25),
+    output: background,
+    toggle: top right,
+  ),
+  use-custom: (
+    background-image: true,
+    background-options: false,
+    box-sizing: true,
+    clearfix: false,
+    rem: true,
+  )
+);
+```
+
+斷點  | Class 前綴 | 欄寬 | 總寬 | Gutter  
+------------- | -------------  | -------------  | -------------  | -------------  
+(<768px) | .col-xs-| Auto |  None (auto)|30px(padding:0 15px)  
+(≥768px) | .col-sm-| ~62px| 750px| 30px(padding:0 15px)  
+(≥768px) | .col-md-| ~81px| 970px|30px(padding:0 15px)  
+ (≥1200px)| .col-lg-| ~97px| 1170px|30px(padding:0 15px)  

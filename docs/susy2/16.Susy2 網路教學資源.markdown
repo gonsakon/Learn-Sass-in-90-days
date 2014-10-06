@@ -1,0 +1,43 @@
+# Susy2 線上教學資源
+
+## zell-weekeat
+連結：<a href="http://www.zell-weekeat.com/" target="_black">網址點此</a>  
+這位作者的blog是我目前瀏覽最為豐富的，  
+若要封他為Susy2的傳教士也真的夠格，  
+就連Susy2的官網教學，  
+也引述了他很多的<a href="http://susy.oddbird.net/demos/" target="_black">教學文章</a>，  
+ 
+同時他也有在販售Susy2的電子書，  
+你可以先下載他前5章的免費試閱版，  
+裡頭的內容是從根本開始教起，  
+歷史的Grid介紹、SCSS的寫法等等，  
+另外他的電子書還有數種的販售方案，  
+完整版的甚至有提供程式碼Sample，  
+有興趣的朋友可以瀏覽此<a href="http://zell-weekeat.com/learnsusy/" target="_black">連結</a>，  
+
+
+## Sass Bites
+Sass Bite 是一個線上Youtube分享 Sass技術的影片，  
+我個人目前也有在follow，  
+當然Susy2的部份他們也有花幾個篇幅來介紹它：
+
+* <a href="https://www.youtube.com/watch?v=O8APW7ogrIw" target="_black">Susy 2 Grid介紹</a>
+* <a href="https://www.youtube.com/watch?v=rBKfH8UTn7w" target="_black">Putting Susy Grids to Work</a>
+* <a href="https://www.youtube.com/watch?v=B31uLW6Vg24" target="_black">Susy Grids - Layout Settings</a>
+
+## leveluptuts
+連結：<a href="http://leveluptuts.com/tutorials/susy-tutorials" target="_black">網址點此</a> 
+這個線上教學影音網站分享了相當多的前端技術，  
+我當初在碰Susy2的時候，老實說看文件看很久有點看不出所以然來，  
+所以搭配這影片再加上技術文件後才慢慢看懂Susy2該如何使用，  
+相當推薦想學Susy2的朋友先來瀏覽過一遍。
+
+## 霜憶錄 Susy2 使用筆記、簡單教學
+連結：<a href="http://blog.yuxin.tw/blog/2014/06/01/susy2-introduction/" target="_black">網址點此</a> 
+這篇文章也紀錄了不少Susy2的使用方式，
+也是我在之前搜尋中文資源時，  
+比較完整的一篇有提到Susy2的速記表。  
+
+
+如果有其他的教學資源，  
+再請Fork補充。
