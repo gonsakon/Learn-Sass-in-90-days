@@ -26,7 +26,7 @@ Sass Bite 是一個線上Youtube分享 Sass技術的影片，
 * <a href="https://www.youtube.com/watch?v=B31uLW6Vg24" target="_black">Susy Grids - Layout Settings</a>
 
 ## leveluptuts
-連結：<a href="http://leveluptuts.com/tutorials/susy-tutorials" target="_black">網址點此</a> 
+連結：<a href="http://leveluptuts.com/tutorials/susy-tutorials" target="_black">網址點此</a>   
 這個線上教學影音網站分享了相當多的前端技術，  
 我當初在碰Susy2的時候，老實說看文件看很久有點看不出所以然來，  
 所以搭配這影片再加上技術文件後才慢慢看懂Susy2該如何使用，  
@@ -43,8 +43,8 @@ Sass Bite 是一個線上Youtube分享 Sass技術的影片，
 * <a href="http://jsnwork.kiiuo.com/archives/1562/css-susy2-%E5%BF%AB%E9%80%9F%E9%96%8B%E7%99%BC%E6%A8%A1%E6%9D%BF" target="_blank">SUSY2 – 快速開發模板</a>
 * <a href="http://jsnwork.kiiuo.com/archives/1565/jquery-css-%E4%BD%BF%E7%94%A8jquery%E4%B8%A6%E9%85%8D%E5%90%88susy2%E4%BE%86%E5%88%A4%E6%96%B7%E7%95%B6%E5%89%8D%E5%B1%8F%E5%B9%95%E7%A8%AE%E9%A1%9E" target="_blank">使用jQuery並配合SUSY2來判斷當前屏幕種類</a>
 
-## 霜憶錄 Susy2 使用筆記、簡單教學
-連結：<a href="http://blog.yuxin.tw/blog/2014/06/01/susy2-introduction/" target="_black">網址點此</a> 
+## 霜憶錄 Susy2 使用筆記、簡單教學  
+連結：<a href="http://blog.yuxin.tw/blog/2014/06/01/susy2-introduction/" target="_black">網址點此</a>   
 這篇文章也紀錄了不少Susy2的使用方式，
 也是我在之前搜尋中文資源時，  
 比較完整的一篇有提到Susy2的速記表。  
