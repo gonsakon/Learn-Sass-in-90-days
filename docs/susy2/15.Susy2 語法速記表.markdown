@@ -43,13 +43,27 @@ $grid | [columns] [gutter] [column-width] | $grid: 12<br />$grid: 12 1/3 <br />$
 $span | [span] at [location] of [layout] <br /> [欄數] at [位置] of [版型設定]  | $span: 8<br /> $span:8 of 12<br />$span: 3 at 4 of 12 .25 fluid <br />$span: 30%;
 $Layout | [grid] [keywords]  | $layout:8<br />$layout:4 (4em 1em) fluid inside-static rtl
 
-## 常見排版元素
+## 排版
 名稱  |功能 |格式|範例
 -------------|-------------|-------------|-------------|
 Layout |載入新的排版設定 | layout($layout) |@include layout(12 1/4 inside-static);
 with-layout|在特定元素載入單一排版設定| with-layout($layout, $clean) { @content }| @include with-layout(8 static) {..};
-span|產生欄數寬度|span($span) { @content }|@include span(25%); <br /> @include span(3); <br /> @include span(last 3);<br /><a href="https://github.com/gonsakon/Learn-Sass-in-90-days/blob/master/docs/susy2/12.Toolkit%20-%20span%20Mixin%E3%80%81function.markdown" target="_blank">其他..</a>
+Span|產生欄數寬度|span($span) { @content }|@include span(25%); <br /> @include span(3); <br /> @include span(last 3);<br /><a href="https://github.com/gonsakon/Learn-Sass-in-90-days/blob/master/docs/susy2/12.Toolkit%20-%20span%20Mixin%E3%80%81function.markdown" target="_blank">其他..</a>
 Gutters|產生gutter寬度|gutter($span)|margin-left: gutter(); <br />margin-left: gutter(10); <br />@include gutters; <br /> @include gutters(3em);
+Susy-breakpoint|設定RWD斷點|susy-breakpoint($query, $layout, $no-query)|@include susy-breakpoint(30em, 8) {..}
+Isolate|輸出isolate排版|isolate($isolate)|margin-left: isolate(2 of 7 .5 after);，<br/>@include isolate(25%);
+Gallery|設定圖片Gird排版|gallery($span, $selector)|@include gallery(3 of 12);
 
-
-
+##推擠
+名稱  |功能 |格式|範例
+-------------|-------------|-------------|-------------|
+Pre |margin-left:$span | pre($span) |@include pre(25%);
+Post|margin-right:$span| post($span)|@include post(25%); <br />@include post(2 of 7);
+Pull|margin-left:-$span(負值)|pull($span)|@include pull(25%);
+Squish|margin-left:$span; <br/>margin-right:$span|squish($pre [, $post])|@include squish(25%); <br/>@include squish(1, 3); 	
+Prefix|padding-left:$span|prefix($span)|@include prefix(25%); <br/>@include prefix(2 of 7);
+Suffix|padding-right:$span|suffix($span)|@include suffix(25%); <br/>@include suffix(2 of 7);
+Pad|padding-left:$span;<br />padding-right:$span|pad($prefix [, $suffix])|@include pad(25%); <br/>@include pad(1, 3);
+Bleed|上下左右都出血|bleed($bleed)|@include bleed(1em);<br />@include bleed(1em 2 20px 5% of 8 .25);
+Bleed-x|左右出血|bleed-x($bleed)|@include bleed-x(1em 2em);<br/>
+Bleed-y|上下出血|bleed-y($bleed)|@include bleed-y(1em 2em); 
