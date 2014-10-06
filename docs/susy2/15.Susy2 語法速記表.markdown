@@ -1,0 +1,56 @@
+# Susy2 語法速記表
+
+## $susy預設版型設定
+* 第一個參數為預設值，頓號後面則是其他選擇
+* 除了數值外，其他像是`ltr`、`float`的選項都可當作為`keyword(關鍵字)`
+
+
+```
+$susy: (
+  flow: ltr、rtl,
+  math: fluid、static,
+  output: float、isolate,
+  gutter-position: after,
+  container: auto,
+  container-position: center、left、right,
+  columns: 4,
+  gutters: .25,
+  column-width: false 自訂,
+  global-box-sizing: content-box,
+  last-flow: to,
+  debug: (
+    image: hide,
+    color: rgba(#66f, .25),
+    output: background,
+    toggle: top right,
+  ),
+  use-custom: (
+    background-image: true,
+    background-options: false,
+    box-sizing: true,
+    clearfix: false,
+    rem: true,
+  )
+);
+```
+## Shorthand (簡寫)
+要先看得懂簡寫格式，  
+才知道其他Susy功能如何延伸應用： 
+   
+名稱  | 格式 | 範例  
+- | - | - |
+$grid | [columns] [gutter] [column-width] | $grid: 12<br />$grid: 12 1/3 <br />$grid: 12 (60px 10px)<br />$grid: (1 2 3 2 1) .25  
+$span | [span] at [location] of [layout] <br /> [欄數] at [位置] of [版型設定]  | $span: 8<br /> $span:8 of 12<br />$span: 3 at 4 of 12 .25 fluid <br />$span: 30%;
+$Layout | [grid] [keywords]  | $layout:8<br />$layout:4 (4em 1em) fluid inside-static rtl
+
+
+## 常見排版元素
+名稱  |功能 |格式|範例
+- | - | -|-|
+Layout |載入新的排版設定 | layout($layout) |@include layout(12 1/4 inside-static);
+with-layout|在特定元素載入單一排版設定| with-layout($layout, $clean) { @content }| @include with-layout(8 static) {..};
+span|產生欄數寬度|span($span) { @content }|@include span(25%); <br /> @include span(3); <br /> @include span(last 3);<br /><a href="https://github.com/gonsakon/Learn-Sass-in-90-days/blob/master/docs/susy2/12.Toolkit%20-%20span%20Mixin%E3%80%81function.markdown" target="_blank">其他..</a>
+Gutters|產生gutter寬度|gutter($span)|margin-left: gutter(); <br />margin-left: gutter(10); <br />@include gutters; <br /> @include gutters(3em);
+
+
+
