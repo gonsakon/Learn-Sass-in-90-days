@@ -47,7 +47,7 @@ $Layout | [grid] [keywords]  | $layout:8<br />$layout:4 (4em 1em) fluid inside-s
 名稱  |功能 |格式|範例
 -------------|-------------|-------------|-------------|
 Layout |載入新的排版設定 | layout($layout) |@include layout(12 1/4 inside-static);
-<a href="https://github.com/gonsakon/Learn-Sass-in-90-days/blob/master/docs/susy2/9.%E4%BD%BF%E7%94%A8with%20layout%E8%AE%93%E7%89%88%E5%9E%8B%E5%90%8C%E6%99%82%E5%AD%98%E5%9C%A8%E5%85%A9%E7%A8%AE%E4%BB%A5%E4%B8%8A%E7%9A%84Grid.markdown" target>With-layout</a>|在特定元素載入單一排版設定| with-layout($layout, $clean) { @content }| @include with-layout(8 static) {..};
+<a href="https://github.com/gonsakon/Learn-Sass-in-90-days/blob/master/docs/susy2/9.%E4%BD%BF%E7%94%A8with%20layout%E8%AE%93%E7%89%88%E5%9E%8B%E5%90%8C%E6%99%82%E5%AD%98%E5%9C%A8%E5%85%A9%E7%A8%AE%E4%BB%A5%E4%B8%8A%E7%9A%84Grid.markdown" target="_blank">with-layout</a>|在特定元素載入單一排版設定| with-layout($layout, $clean) { @content }| @include with-layout(8 static) {..};
 Span|產生欄數寬度|span($span) { @content }|@include span(25%); <br /> @include span(3); <br /> @include span(last 3);<br /><a href="https://github.com/gonsakon/Learn-Sass-in-90-days/blob/master/docs/susy2/12.Toolkit%20-%20span%20Mixin%E3%80%81function.markdown" target="_blank">其他..</a>
 Gutters|產生gutter寬度|gutter($span)|margin-left: gutter(); <br />margin-left: gutter(10); <br />@include gutters; <br /> @include gutters(3em);
 Susy-breakpoint|設定RWD斷點|susy-breakpoint($query, $layout, $no-query)|@include susy-breakpoint(30em, 8) {..}
