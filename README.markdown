@@ -20,6 +20,8 @@ Susy2
 * [14.Toolkit - Rows & Edges](docs/susy2/14.Toolkit - Rows & Edges.markdown)
 * [15.Susy2 語法速記表](docs/susy2/15.Susy2 語法速記表.markdown)
 * [16.Susy2 網路教學資源](docs/susy2/16.Susy2 網路教學資源.markdown)
+* [17.使用Susy2前，你必須要懂的CSS觀念](docs/susy2/17.使用Susy2前，你必須要懂的CSS觀念.markdown)
+
 
  
 

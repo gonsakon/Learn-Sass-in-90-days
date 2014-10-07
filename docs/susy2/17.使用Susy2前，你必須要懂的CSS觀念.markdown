@@ -1,0 +1,154 @@
+# 使用Susy2前，你必須要懂的CSS觀念
+
+在使用Susy前，  
+這裡有一些CSS觀念希望你能夠先了解，  
+同時也是我自己整理起來許多設計師在導入Susy時，  
+時常會遇到的問題。  
+
+## 並不是使用Susy2，就表示所有和layout有關的都必須全部導入
+Susy2確實是一個強大的Gird framework(格線框架系統)，  
+但你要記得他始終是一個Framework，  
+有些你希望能夠更客製化來設定版型，  
+還是必須自己手寫一些基本的CSS，  
+才能夠達成你要的效果，  
+在這裡也舉一些案例， 
+提供大家參考。
+
+## 固定版型與滿版版型的結合
+今天你希望設計一個960Grid的版型，  
+但你又希望表頭header能夠滿版隨著螢幕解析度延伸，  
+像是這樣子，  
+<img src="./images/susy2-17.png" >
+有些網頁設計師可能就傻了，  
+因為Gird都設960px了，  
+怎麼可能再延伸呢？  
+但其實要做得事情只是在Grid外面再多包一層，  
+由於DIV是塊狀元素(block)，  
+所以自然會隨著螢幕解析度自適應延伸，  
+<a href="http://sassmeister.com/gist/028cea6a21a5609cf839" target="_blank">程式碼</a>如下：
+```
+@import 'compass';
+@import 'susy'; 
+$susy: (
+ columns:12,
+ math: fulid,
+ column-width:60px,
+ gutter-position: after,
+ gutters:1/3,
+ debug:(image:true) 
+);
+.header{
+  background: pink;  //第一層DIV父元素是瀏覽器，所以會隨著螢幕解析度自適應延伸
+}
+.header-inner {
+  @include container() ;
+
+   height:80px; 
+}
+.container{
+	@include container
+}
+.sidebar{
+	@include span(3);
+	height: 50px;
+	background:blue;
+}
+.main{
+	@include span(9 last); 
+	background:black;
+	color:#fff; 
+	height: 50px;
+}
+```
+這部份則是很基本的行內元素(inline)、塊狀元素(Block)的觀念，
+所以並不是每個DIV都一定要寫寬度，  
+有的時候也可以讓塊狀元素隨著父元素限制來自適應延伸，  
+這樣才不會導致要寬度使得要改很多的地方。  
+
+這個問題是我時常被問Susy觀念的第一名，  
+老實說連我自己也很驚訝，      
+這裡還是要強調Susy只是一個格線框架，  
+實際上的運用方式還是必須自己規劃，  
+再結合一些原生的CSS觀念，才能夠更加凸顯出Susy的優勢。
+
+
+## 使用Padding推擠Column時，導致欄寬設定跑掉
+Susy2的版型預設是`content-box`的Layout，  
+瀏覽器預設也是`content-box`，  
+也就是下面的程式碼，  
+你覺得`.box`的寬度是多少呢？  
+```
+.box{
+	width: 50px;
+	padding-left:10px;
+	padding-right:10px;
+	border-right:3px solid #000;
+}
+```
+答案是73px，  
+原因是padding會破壞原本設定的寬度，  
+再往外延伸，加上border也有佔寬度，  
+加起來就剛好等於73px。  
+
+所以在CSS3出來以後，  
+則出了一個新的屬性是`box-sizing:border-box`，  
+如果你在上面的程式碼加上這行，  
+這樣`.box`就會依照你設定的`width`是多少，  
+寬度就還是維持那樣，  
+使用padding與border的話，  
+他就會向內縮來呈現，就不會破壞設定好的寬度了，  
+
+所以當你寫了這樣的程式碼：
+```
+.box{
+	@include span(5); // width: 5column
+	@include Prefix(1); //padding-left:1 column
+}
+```
+會發現你的columns佔了6欄，  
+原因就是Susy2預設是`content-box`的設定，  
+如果你要避免這樣的問題發生，  
+Susy2官網與<a href="http://css-tricks.com/build-web-layouts-easily-susy/" target="_blank">css-tricks</a>建議你這樣子來設定：
+```
+$susy:(
+	global-box-sizing: border-box,
+);
+@include border-box-sizing;
+//編譯出來的CSS
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; 
+}
+```
+`*`代表所有元素的意思，  
+這樣就能讓你所有的元素都吃到`border-box`的效果，  
+現在你想設定幾欄就都不用怕欄寬設定跑掉了。  
+
+## Susy2是使用Float排版的
+這是要講`clear`清除float的觀念，  
+所以如果你排版有使用到`span`Mixin，  
+產生出來的Grid就會是使用Float排版，  
+但有的時候，你後面設定的元素並沒有打算用Float的時候，  
+就必須用clear清除浮動，  
+像是Susy2有`break`、`nobreak`的Mixin，  
+但其實他們編譯出來Code也就只有一行而已，  
+也就是`clear:both`與`clear:none`，  
+清除浮動的觀念可以再瀏覽此<a href="https://doggy8088.github.io/csslayoutsite/clear.html" target="_blank">排版教學</a>。  
+
+
+##總結  
+Susy2他的性質和Bootstrap不太一樣，  
+Bootstrap是已經設定好規則，  
+他follow他的規則就可以排出好看的版型，  
+但Susy2只負責`Grid`的設計，  
+其他的部分你必須很了解網頁排版觀念，  
+才能夠信手拈來設計出你想要的Grid，  
+若是你朋友也想學Susy2的話，  
+不妨先問他`塊狀、行內元素`、`content-box、border-box`、`clear清除float`的觀念看看， 
+如果他都一知半解的話，那可能要再好好把基礎打穩再來學，學習曲線會比較低哩。  
+
+
+
+
+  
