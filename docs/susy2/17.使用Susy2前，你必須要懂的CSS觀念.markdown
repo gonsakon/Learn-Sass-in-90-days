@@ -17,7 +17,7 @@ Susy2確實是一個強大的Gird framework(格線框架系統)，
 在這裡也舉一些案例， 
 提供大家參考。
 
-## 固定版型與滿版版型的結合
+## 1.固定版型與滿版版型的結合
 今天你希望設計一個960Grid的版型，  
 但你又希望表頭header能夠滿版隨著螢幕解析度延伸，  
 像是這樣子，  
@@ -75,7 +75,7 @@ $susy: (
 再結合一些原生的CSS觀念，才能夠更加凸顯出Susy的優勢。
 
 
-## 使用Padding推擠Column時，導致欄寬設定跑掉
+## 2.使用Padding推擠Column時，導致欄寬設定跑掉
 Susy2的版型預設是`content-box`的Layout，  
 瀏覽器預設也是`content-box`，  
 也就是下面的程式碼，  
@@ -128,7 +128,7 @@ $susy:(
 這樣就能讓你所有的元素都吃到`border-box`的效果，  
 現在你想設定幾欄就都不用怕欄寬設定跑掉了。  
 
-## Susy2是使用Float排版的
+## 3.Susy2是使用Float排版的
 這是要講`clear`清除float的觀念，  
 所以如果你排版有使用到`span`Mixin，  
 產生出來的Grid就會是使用Float排版，  
