@@ -1,5 +1,6 @@
 # 使用Susy2前，你必須要懂的CSS觀念
-
+##youtube影片教學  
+<a href="https://www.youtube.com/watch?v=g99nvxlk6sk&feature=youtu.be" target="_blank">![](/images/video/susy2-17.png)</a>
 在使用Susy前，  
 這裡有一些CSS觀念希望你能夠先了解，  
 同時也是我自己整理起來許多設計師在導入Susy時，  
