@@ -1,4 +1,4 @@
-Susy2教學手冊
+Susy 2教學手冊
 --------------------------
 * <a target="_blank" href="docs/susy2/Susy2學習摘要.markdown">Susy2學習摘要</a>
 * <a target="_blank" href="docs/susy2/0.如何打造susy2開發環境.markdown">0.如何打造Susy2開發環境</a>
@@ -23,7 +23,7 @@ Susy2教學手冊
 
 
  
-Susy1教學手冊
+Susy 1教學手冊
 --------------------------
 假使用Susy 2核心，import時須寫`@import "susyone";`。
 * <a target="_blank" href="http://ithelp.ithome.com.tw/question/10139425">Susy Grid教學(上)</a>
