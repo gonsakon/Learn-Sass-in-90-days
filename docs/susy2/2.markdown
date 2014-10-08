@@ -71,11 +71,31 @@ container可以直接寫Grid的總寬度進去，
 預設：`content-box`  
 選項：`content-box`、`border-box`
 
-這個這跟盒模型(Box Model)有關，  
-這個設定有點奇怪，  
-不曉得是不是我設定錯了還是怎樣，  
-所以我弄不起來，  
-這個設定我是自己用CSS寫的，  
+這個設定有點像是你告訴Susy2你的版型是用哪種方式排版的， 
+如果你選擇`border-box`的話，  
+那就還必須在你的SASS裡面加上Susy2的Mixin`@include border-box-sizing;`，  
+也就是如下程式碼：
+```
+$susy: (
+  global-box-sizing: border-box 
+  );
+@include border-box-sizing;
+//編譯出來的CSS
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; 
+}
+```
+如果你是使用預設的`content-box`的話，  
+在`gutter-position:inside、inside-static`的設定來排版的時候，  
+你會發現用`span`編譯出來的程式碼，  
+都會加上`box-sizing:border-box`的設定，  
+這會造成語法太多造成CSS量變得太大，  
+但如果你設定你的設定是`border-box`的話，  
+就不會編譯出這些code，  
+因為`*, *:before, *:after`所代表的意思就是所有元素都可以吃到這設定，  
+這樣編譯出來的code也乾淨多了。
 
 但這裡的原理我個人認為還蠻重要的，  
 這跟盒模型(Box Model)有關，
@@ -99,9 +119,6 @@ container可以直接寫Grid的總寬度進去，
 他提到如果你的網頁只要兼容到IE8以上，  
 建議你可以在reset.css上加上這行，  
 ```
-html {
-  box-sizing: border-box;
-}
 *, *:before, *:after {
   box-sizing: inherit;
 }
