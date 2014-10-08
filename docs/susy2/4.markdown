@@ -111,7 +111,7 @@ susy2就會依照你的規則編輯出960px出來了。
 ```
 從上面你可以看出，  
 span mixin幫我們做的事情就是幫我們計算3欄所佔的寬度，  
-同時透過`gutter-position: slite`的方式，  
+同時透過`gutter-position: split`的方式，  
 計算出margin-left與right的px數，  
 透過span mixin我們就擁有960grid的設定了，  
 你甚至可以用SASS的for迴圈來設計一組Grid設定：  
