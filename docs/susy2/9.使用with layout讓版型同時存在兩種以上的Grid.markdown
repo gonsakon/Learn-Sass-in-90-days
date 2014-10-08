@@ -1,19 +1,18 @@
-# 使用With Layout讓版型同時存在兩種以上的Grid
+# 9.使用With Layout讓版型同時存在兩種以上的Grid
 
 在講第七、八章的時候，  
 各位可以看出我都是將Grid在RWD 斷點的時候修改它的狀態，  
 但這個章節我主要是要來分享，  
 如果你的網頁同時要存在兩種以上的Grid時，  
-該如何透過suys2的`With Layout`Mixin來實作，  
+該如何透過suys2的`With Layout`Mixin來實作， 
 
-##程式碼連結
+##youtube影片教學
+<a href="https://www.youtube.com/watch?v=9K7cr3SlOMc&feature=youtu.be" target="_blank">![](/images/video/susy2-9.png)</a> 
+
+##範例程式碼
 * [susy2 - With Layout mixin](http://susy.readthedocs.org/en/latest/settings/#with-layout)
 * [susy2 - Gallery mixin](http://susy.readthedocs.org/en/latest/toolkit/#gallery)
 * [sassmeister-程式碼範例](http://sassmeister.com/gist/811f5337cca7702f3fde)
-
-##youtube影片教學
-<a href="https://www.youtube.com/watch?v=9K7cr3SlOMc&feature=youtu.be" target="_blank">![](/images/video/susy2-9.png)</a>
-
 
 ## With Layout
 格式：`with-layout($layout, $clean) { @content }`  

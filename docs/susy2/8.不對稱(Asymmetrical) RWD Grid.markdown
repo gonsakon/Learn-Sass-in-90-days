@@ -1,15 +1,15 @@
-# 設計不對稱(Asymmetrical) RWD Grid
+# 8.設計不對稱(Asymmetrical) RWD Grid
 
 這章是要來講使用`isolate`來設定不對稱的 RWD Grid，  
 像有些網頁設計師會覺得不希望版型都是死板板固定欄寬，  
 如果希望是設計左2欄寬、中8欄寬、右2欄寬，總計三欄的Gird，  
-那就相當適合使用`isolate`來設計Grid。
-
-##程式碼連結
-* [sassmeister-程式碼範例](http://sassmeister.com/gist/af7bf98abf56cc17494d)
+那就相當適合使用`isolate`來設計Grid。  
 
 ##youtube影片教學
-<a href="https://www.youtube.com/watch?v=ANoWjTDkN0w&feature=youtu.be" target="_blank">![](/images/video/susy2-8.png)</a>
+<a href="https://www.youtube.com/watch?v=ANoWjTDkN0w&feature=youtu.be" target="_blank">![](/images/video/susy2-8.png)</a>  
+
+##範例程式碼
+* [sassmeister-程式碼範例](http://sassmeister.com/gist/af7bf98abf56cc17494d)
 
 ## 進入主題
 

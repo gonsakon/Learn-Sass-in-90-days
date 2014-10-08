@@ -1,11 +1,9 @@
-# Toolkit - span Mixin、function
+# 12.Toolkit - span Mixin、function  
+##youtube影片教學  
+<a href="https://www.youtube.com/watch?v=sIHco29ZhVk" target="_blank">![](/images/video/susy2-12.png)</a>  
+
 ##範例程式碼 
 * <a href="http://susydocs.oddbird.net/en/latest/toolkit/#span-mixin" target="_blank">susy2 - span Mixin、function</a>
-
-
-##youtube影片教學  
-<a href="https://www.youtube.com/watch?v=sIHco29ZhVk" target="_blank">![](/images/video/susy2-12.png)</a>
-
 
 ## Span [mixin]
 

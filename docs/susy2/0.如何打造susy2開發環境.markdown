@@ -1,4 +1,4 @@
-# 如何打造susy2開發環境
+# 0.如何打造Susy2開發環境
 
 ##youtube影片教學
 <a href="https://www.youtube.com/watch?v=YpDfbtdwmpY&feature=youtu.be" target="_blank">![](/images/video/susy2-0.png)</a>
@@ -30,7 +30,7 @@ gem install susy
 
 gem install breakpoint
 
-//susy有用到breakpoint，所以也必須安裝
+//Susy有用到breakpoint，所以也必須安裝
 ```
 如果都安裝好後，  
 要確認有沒有安裝成功， 

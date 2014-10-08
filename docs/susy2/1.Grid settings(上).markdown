@@ -1,13 +1,13 @@
-# susy2 - Grid settings(上)
-susy1到susy2又是一個可怕的里程碑，  
-原本覺得susy1已經很強大了，  
-但在susy2面前，susy1就像是玩具一樣，  
+# 1.Grid settings(上)
+Susy1到Susy2又是一個可怕的里程碑，  
+原本覺得Susy1已經很強大了，  
+但在Susy2面前，Susy1就像是玩具一樣，  
 首先我們就先從他的變數設定來一一說起吧，  
+##youtube影片教學
+<a href="https://www.youtube.com/watch?v=cOrNTZ05FL4&list=UU7A-C1EwjVfGbCOK5u8AlwA">![](/images/video/susy2-2-1.png)</a>
 
-***
-
-* [susy2 settings](http://susydocs.oddbird.net/en/latest/settings/#settings)
-* [youtube影片教學](https://www.youtube.com/watch?v=cOrNTZ05FL4&list=UU7A-C1EwjVfGbCOK5u8AlwA)
+##範例程式碼
+* [Susy2 settings](http://susydocs.oddbird.net/en/latest/settings/#settings)
 * [sassmeister範例](http://sassmeister.com/gist/5a455bcc79a743599f8e)
 
 ##環境建置
@@ -17,8 +17,8 @@ susy1到susy2又是一個可怕的里程碑，
 * 如果你不想安裝ruby環境，[Fire.app](http://fireapp.kkbox.com/)可以直接撰寫Sass與Susy2
   
   	
-##susy2 settings
-在看susy2的變數設定前，
+##Susy2 settings
+在看Susy2的變數設定前，
 我們再回頭看一下[susy1](http://susydocs.oddbird.net/en/latest/susyone/#basic-settings)的設定：
 
     @import "susy";
@@ -35,7 +35,7 @@ susy1到susy2又是一個可怕的里程碑，
 輸入變數後，使用他的container mixin就會自動幫你加總他的寬度。
 欄與欄之間則是用margin-right來推gutter。
 
-官網介紹的susy2簡易版設定如下：
+官網介紹的Susy2簡易版設定如下：
 
     $susy: (
       columns: 12,
@@ -62,7 +62,7 @@ columns與gutters在susy1就已經有其概念了，
 $susy: (
     columns: 12,
     gutters: 1/3,      //只能用幾分之幾，不能用單位
-    column-width:60px, //預設是false，但要透過susy2自動計算出總寬此變數必加
+    column-width:60px, //預設是false，但要透過Susy2自動計算出總寬此變數必加
     math: fluid,       //使用fluid的話，所有編譯出來的單位都是%，但使用[static]再配合column-width則就會變成px、em
     output: float,
     gutter-position: after,

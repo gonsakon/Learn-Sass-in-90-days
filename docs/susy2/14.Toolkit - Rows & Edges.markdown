@@ -1,12 +1,12 @@
-# Toolkit - Rows & Edges
+# 14.Toolkit - Rows & Edges
+
+##youtube影片教學  
+<a href="https://www.youtube.com/watch?v=rF2bhT5Z6n0" target="_blank">![](/images/video/susy2-14.png)</a>  
+
 ##範例程式碼 
 * <a href="http://susydocs.oddbird.net/en/latest/toolkit/#rows-edges" target="_blank">susy2 - Rows & Edges</a>
 
-##youtube影片教學  
-<a href="https://www.youtube.com/watch?v=rF2bhT5Z6n0" target="_blank">![](/images/video/susy2-14.png)</a>
-
 ## Rows & Edges
-
 
 ### Break
 **格式：**`break()`  

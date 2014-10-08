@@ -1,4 +1,4 @@
-# susy2 - 960Grid固定版型(Fixed layout)設計
+# 4.960Grid固定版型(Fixed layout)設計
 我遇過許多朋友都提到，  
 他們很想要學好susy，  
 但是真的有案子要用的時候，  
@@ -17,15 +17,15 @@
 
 而這個章節，  
 就要來講到有關於歷史上頗為知名的Grid system，960 Grid，  
-##程式碼連結
+##youtube影片教學
+<a href="https://www.youtube.com/watch?v=xegzBNxbZkY&feature=youtu.be" target="_blank">![](/images/video/susy2-4-1.png)</a>  
+
+##範例程式碼
 * [susy2文件 - span mixin](http://susydocs.oddbird.net/en/latest/toolkit/#span-mixin)
 * [sassmeister範例程式碼](http://sassmeister.com/gist/85959f326b8b1501aa74)
 * [960grid官網](http://960.gs/)
 * [960grid 12欄demo頁](http://960.gs/demo.html)
 * [960線上服務工具](http://grids.heroku.com/)
-
-##youtube影片教學
-<a href="https://www.youtube.com/watch?v=xegzBNxbZkY&feature=youtu.be" target="_blank">![](/images/video/susy2-4-1.png)</a>
 
 首先我們就先到960Grid的[官網網頁範例](http://960.gs/demo.html)來瀏覽他設計手法，  
 透過chrome檢視工具，  

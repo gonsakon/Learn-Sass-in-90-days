@@ -1,19 +1,18 @@
-# 透過susy breakpoint、layout設計RWD Grid 
+# 7.透過susy breakpoint、layout設計RWD Grid 
 
 這章主要是來分享用susy2來設計responsive grid，    
 一開始會先介紹susy2的`latouy`設定後，  
 才會來講如何透過`susy-breakpoint`來寫responsive的斷點設定。  
 
-##程式碼連結
-* [susy2 - layout mixin](http://susydocs.oddbird.net/en/latest/settings/#layout-function)
-* [susy2 - susy-breakpoint Mixin](http://susydocs.oddbird.net/en/latest/toolkit/#breakpoint)
-* [sassmeister-程式碼範例](http://sassmeister.com/gist/54f4769a34f66ceab3f7)
-
 ##youtube影片教學
 <a href="https://www.youtube.com/watch?v=tdEyKwWMYlg&list=UU7A-C1EwjVfGbCOK5u8AlwA" target="_blank">![](/images/video/susy2-7.png)</a>
 
-## Layout
+##範例程式碼
+* [susy2 - layout mixin](http://susydocs.oddbird.net/en/latest/settings/#layout-function)
+* [susy2 - susy-breakpoint Mixin](http://susydocs.oddbird.net/en/latest/toolkit/#breakpoint)
+* [sassmeister-程式碼範例](http://sassmeister.com/gist/54f4769a34f66ceab3f7)  
 
+## Layout
 susy2的`layout`有好幾種設定方式，  
 但不管是哪種[設定方式](http://susydocs.oddbird.net/en/latest/settings/#layout)，  
 他都是拿來覆蓋預設$susy的Sass maps用的，  

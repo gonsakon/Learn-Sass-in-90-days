@@ -1,16 +1,14 @@
-# 960Grid 流體版型(Fulid layout)，susy1>susy2轉換
+# 5.960Grid 流體版型(Fulid layout)，susy1>susy2轉換
 
 這次我們要來使用susy2的核心來實作susy1的grid system，  
-同時會介紹`span`這個Mixin的延伸用法。
-
-##程式碼連結
-* [sassmeister-susy2 960grid fulid、gutter-position after ](http://sassmeister.com/gist/037ece0b553e10befe0f)
-* [sassmeister-susy1 960grid](http://sassmeister.com/gist/652b5171628ad6da1880)
-
-
+同時會介紹`span`這個Mixin的延伸用法。  
 
 ##youtube影片教學
 <a href="https://www.youtube.com/watch?v=ieW3NN6qX8I&feature=youtu.be" target="_blank">![](/images/video/susy2-4-1.png)</a>
+
+##範例程式碼
+* [sassmeister-susy2 960grid fulid、gutter-position after ](http://sassmeister.com/gist/037ece0b553e10befe0f)
+* [sassmeister-susy1 960grid](http://sassmeister.com/gist/652b5171628ad6da1880)
 
 在上個章節我們使用了`gutter-position:split`來完整實踐960 grid system，  
 以前susy1則是用`gutter-position: after`來設計Grid的，  

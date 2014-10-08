@@ -1,20 +1,19 @@
-# susy2 - Grid settings(下) debug Compass Vertical Rhythm 
+# 3.Grid settings(下) debug Compass Vertical Rhythm 
 這一個章節主要是要講susy2的Debug模式，  
 除了維持susy1就有的column顯示外，  
 還多了baseline的設定，  
-有關聯到Compass的vertical rhythm設定。
+有關聯到Compass的vertical rhythm設定。  
 
-##程式碼連結
+##youtube影片教學
+<a href="https://www.youtube.com/watch?v=O3g9DK6DQS0&feature=youtu.be" target="_blank">![](/images/video/susy2-3-1.png)</a>  
+
+##範例程式碼
 * [susy2文件 - debug](http://susydocs.oddbird.net/en/latest/settings/#debug)
 * [sassmeister範例程式碼](http://sassmeister.com/gist/032b0b4a2e9964dee044)
 * [垂直韻律](http://www.slideshare.net/sfismy/vertical-rhythm)
 * [css vertical rhythm](http://codepen.io/liao/pen/pHyhg)
 * [compass vertical rhythm](http://sassmeister.com/gist/032b0b4a2e9964dee044)
 * [Sass開發流程設計-(12) Compass Vertical Rhythm & Susy other setting](http://ithelp.ithome.com.tw/question/10140181)
-
-##youtube影片教學
-<a href="https://www.youtube.com/watch?v=O3g9DK6DQS0&feature=youtu.be" target="_blank">![](/images/video/susy2-3-1.png)</a>
-
 
 ## Global Defaults
 ```

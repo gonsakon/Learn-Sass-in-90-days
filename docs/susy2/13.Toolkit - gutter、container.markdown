@@ -1,9 +1,9 @@
-# Toolkit - gutter、container
+# 13.Toolkit - gutter、container  
+##youtube影片教學  
+<a href="https://www.youtube.com/watch?v=V5qGtIcw23Q" target="_blank">![](/images/video/susy2-13.png)</a>  
+
 ##範例程式碼 
 * <a href="http://susydocs.oddbird.net/en/latest/toolkit/#gutters" target="_blank">susy2 - Gutters</a>
-
-##youtube影片教學  
-<a href="https://www.youtube.com/watch?v=V5qGtIcw23Q" target="_blank">![](/images/video/susy2-13.png)</a>
 
 ##Gutters
 支援`function`、`mixin`的寫法，  

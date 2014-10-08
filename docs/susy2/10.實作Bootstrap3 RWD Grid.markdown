@@ -1,13 +1,13 @@
-# 實作Bootstap3 RWD Grid
+# 10.實作Bootstap3 RWD Grid
 這個章節主要是要來講如何透過Susy2來設計Bootstrap的版型，  
 透過模仿別人設計好的RWD Grid來練習，  
-也有助於你在用Susy2客製化自己要的版型可以變得更加得熟練。
-
-##程式碼連結
-* <a href="http://sassmeister.com/gist/9c24e9b9e2522950bf28" target="_blank">Susy2 - Bootstrap3 RWD Grid</a>
+也有助於你在用Susy2客製化自己要的版型可以變得更加得熟練。  
 
 ##youtube影片教學
-<a href="https://www.youtube.com/watch?v=N9CbX3Cemw4&feature=youtu.be" target="_blank">![](/images/video/susy2-10.png)</a>
+<a href="https://www.youtube.com/watch?v=N9CbX3Cemw4&feature=youtu.be" target="_blank">![](/images/video/susy2-10.png)</a>  
+
+##範例程式碼
+* <a href="http://sassmeister.com/gist/9c24e9b9e2522950bf28" target="_blank">Susy2 - Bootstrap3 RWD Grid</a>
 
 ## Bootstrap3 RWD Grid
 

@@ -1,5 +1,5 @@
-# susy2 - Grid settings(中)
-上個章節講了susy2的簡易設定方式，
+# 2.Grid settings(中)
+上個章節講了Susy2的簡易設定方式，
 接著我們來看它預設的[全域設定](http://susydocs.oddbird.net/en/latest/settings/#global-defaults)，
 
 ##youtube影片教學
@@ -35,7 +35,7 @@ $susy: (
   )
 );
 ```
-只要你載入了susy2以後，
+只要你載入了Susy2以後，
 上面的Global Defaults就會自動載入，
 接著我再來針對一些我個人常用的設定來進行解說
 
@@ -43,7 +43,7 @@ $susy: (
 預設：`ltr`  
 選項：`ltr`、`rtl`
 
-susy2預設是用float:left從左到右來排列Grid，  
+Susy2預設是用float:left從左到右來排列Grid，  
 而susy1也是一樣，  
 如果你希望你的欄是從右邊排到左邊，
 再把設定改為`rtl`即可。
@@ -151,11 +151,11 @@ PS：這裡的last就等於susy1的omega
 預設：`false`    
 選項：`true`、`false`
 
-susy2會自動抓取compass預設的clearfix的mixin，  
-但如果你不希望susy2使用compass的clearfix，  
+Susy2會自動抓取compass預設的clearfix的mixin，  
+但如果你不希望Susy2使用compass的clearfix，  
 你可以在這設定寫true後，  
 自己寫一個名稱為`clearfix`的mixin，
-susy2會優先抓取你的mixin設定
+Susy2會優先抓取你的mixin設定
 
 ***
 

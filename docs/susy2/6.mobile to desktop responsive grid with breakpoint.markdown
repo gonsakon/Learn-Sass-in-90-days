@@ -1,4 +1,4 @@
-# mobile to desktop responsive grid with Breakpoint
+# 6.mobile to desktop responsive grid with Breakpoint
 
 由於我們即將要來介紹如何透過susy2來設計responsive grid，    
 在那之前我想先花一章篇幅來講一下breakpoint這個framework，  
@@ -6,12 +6,12 @@
 所以有必要了解一下他的原理，  
 你才知道該如何透過他來設計你想要的grid出來。  
 
-##程式碼連結
-* [Breakpoint](http://breakpoint-sass.com/)
-* [sassmeister-breakpoint](http://sassmeister.com/gist/652b5171628ad6da1880)
-
 ##youtube影片教學
 <a href="https://www.youtube.com/watch?v=YMX6HlPupsc&feature=youtu.be" target="_blank">![](/images/video/susy2-6.png)</a>
+
+##範例程式碼
+* [Breakpoint](http://breakpoint-sass.com/)
+* [sassmeister-breakpoint](http://sassmeister.com/gist/652b5171628ad6da1880)
 
 我們先到[Breakpoint](http://breakpoint-sass.com/)的官網，  
 其中一個範例如下：  
