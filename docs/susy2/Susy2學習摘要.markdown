@@ -27,7 +27,7 @@ Susy2 Grid systme搭配Compass Vertical Rhythm的組合，
 Grid出來，   
 如果你在以前就有使用過一些Grid system，  
 那就試著透過Susy2把他實踐出來，  
-這樣有助於你對Grid Setting有更加的了解。  
+這樣有助於你對Grid Settings有更加的了解。  
 
 Susy2在透過`Grid settings`設定上相當靈活，
 你在實作中會慢慢發現，  
