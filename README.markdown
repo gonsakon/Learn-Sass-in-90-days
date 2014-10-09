@@ -25,7 +25,7 @@ Susy 2教學手冊
  
 Susy 1教學手冊
 --------------------------
-假使用Susy 2核心，import時須寫`@import "susyone";`。
+假使用Susy 2核心，import時需寫`@import "susyone";`。
 * <a target="_blank" href="http://ithelp.ithome.com.tw/question/10139425">Susy Grid教學(上)</a>
 * <a target="_blank" href="http://ithelp.ithome.com.tw/question/10139587">Susy Grid教學(下)</a>
 * <a target="_blank" href="http://ithelp.ithome.com.tw/question/10139734">Off-Canvas layout with Susy</a>
