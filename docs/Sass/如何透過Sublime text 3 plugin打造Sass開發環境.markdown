@@ -1,7 +1,7 @@
 #如何透過Sublime text 3 plugin打造Sass開發環境
 
 ##youtube影片教學  
-<a href="https://www.youtube.com/watch?v=er2evZqsvbg&feature=youtu.be" target="_blank">![](/images/video/susy2-11.png)</a> 
+<a href="https://www.youtube.com/watch?v=GFzjOzwtcxA&feature=youtu.be" target="_blank">![](/images/sass/20141011-1.png)</a> 
 
 <a href="http://www.sublimetext.com/3" target="_blank">Sublime text 3 網站連結</a>，  
 首先Sublime text 3是沒有提供Sass、Scss語法高亮的，
