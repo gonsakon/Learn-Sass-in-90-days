@@ -1,6 +1,6 @@
 # shorthand(簡寫)
 ##youtube影片教學  
-<a href="https://www.youtube.com/watch?v=er2evZqsvbg&feature=youtu.be" target="_blank">![](/images/video/susy2-11.png)</a>  
+<a href="https://www.youtube.com/watch?v=er2evZqsvbg&feature=youtu.be" target="_blank">![](/images/sass/20141011-1.png)</a>  
 
 ##範例程式碼 
 * <a href="http://susy.readthedocs.org/en/latest/shorthand/" target="_blank">susy2 - shorthand</a>
