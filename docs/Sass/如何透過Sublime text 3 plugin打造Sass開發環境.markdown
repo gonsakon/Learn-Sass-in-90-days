@@ -26,14 +26,15 @@ Sublime預設是沒有支援Sass、Scss的高亮效果的，
 請記得要展開出片段時，  
 要再程式碼最右側按`Tab`鍵來展開：
 ```
-html:5   //展開html5的格式
-link:css //插入一個CSS連結
+html:5     //展開html5的格式
+link:css   //插入一個CSS連結
 script:src //插入一個javscript
-p*3      //三個P段落
-h1+p     // 會編譯成<h1></h1><p></p>
-h1>a     // 會編譯成<h1><a href="#"></a></h1>
+p*3        //三個P段落
+h1+p       // 會編譯成<h1></h1><p></p>
+h1>a       // 會編譯成<h1><a href="#"></a></h1>
 a[href='http://xxx.com'] //在html tag裡面寫屬性
 .box    // 展開為 <div class="box"></div>
+
 
 .box > ul >li*3 >a     //會編譯成下列程式碼：
 <div class="box">
@@ -63,7 +64,7 @@ a[href='http://xxx.com'] //在html tag裡面寫屬性
 * <a href="https://www.youtube.com/watch?v=zKjDFBeIS20">youtube影片2</a>
 
 ### Goto-CSS-Declaration
-<a href="https://sublime.wbond.net/packages/Goto-CSS-Declaration">plugin介紹連結</a>
+<a href="https://sublime.wbond.net/packages/Goto-CSS-Declaration">plugin介紹連結</a>  
 你可以從該連結可以看出，  
 如果你HTML或CSS都有開啟，  
 把游標移動到HTML的Class上輸入熱鍵`Command+right`、`Command+left`，  
