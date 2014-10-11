@@ -11,6 +11,10 @@ Sass 初階功能
 --------------------------
 * [@content](docs/Sass/@content.markdown)
 
+Sass中階功能
+--------------------------
+* <a target="_blank" href="docs/Sass/使用animate.scss提升網頁體驗.markdown">使用animate.scss提升網頁體驗.markdown</a>
+
 SMACSS
 --------------------------
 * [Base、layout](docs/SMACSS/1.markdown)
