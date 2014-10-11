@@ -4,7 +4,7 @@
 
 ##範例程式碼
 * <a href="http://daneden.github.io/animate.css/" target="_blank">animate.css</a>
-* <a href="hhttps://github.com/tgdev/animate-sass" target="_blank">animate sass版本</a>
+* <a href="https://github.com/tgdev/animate-sass" target="_blank">animate sass版本</a>
 *  <a href="https://github.com/gonsakon/animate-sass" target="_blank">Github 範例程式碼</a>
 
 ## 進入主題  
