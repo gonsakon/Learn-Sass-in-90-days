@@ -53,7 +53,7 @@ animate可以自訂動畫過程與什麼時候播放
 
 這裡我則找到一位開發者將他編譯成Sass的格式，  
 Gitghub位置請<a href="https://github.com/tgdev/animate-sass" target="_blank">點此</a> ，  
-請配合此連結再瀏覽下述內容：
+請配合此連結再瀏覽下述內容，
 先來介紹一下他的Sass架構：
 ```
 //_animate.scss檔案
