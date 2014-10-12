@@ -1,4 +1,4 @@
-#使用animate.scss增強網頁瀏覽體驗
+#如何使用Sass來管理你的Bootstrap
 
 <a href="https://www.youtube.com/watch?v=b142GI0s1gU" target="_blank">![](/images/sass/20141013-1.png)</a> 
 
