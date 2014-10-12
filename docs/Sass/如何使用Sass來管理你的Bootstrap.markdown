@@ -34,8 +34,8 @@ Bootstrap的Sass架構如下，
 *  核心CSS(按鈕、表格、表單、格線系統)
 *  組件(下拉選單、頁碼表、麵包屑、navbar、按鈕群組)
 *  JS組件
-*  公用(clearfix、text-hide、RWD)
-##變數
+*  公用(clearfix、text-hide、RWD)  
+## 變數
 Bootstrap所有的設定都可以透過Boostratp的<a href="https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_variables.scss" target="_blank">_variables.scss</a>來設定，  
 Bootstrap的顏色設定則是先設定了一組顏色變數，  
 要使用時，則再透過語意化命名來提取它，例如像這樣子：  
