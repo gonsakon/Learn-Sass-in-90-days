@@ -14,6 +14,8 @@ Sass 初階功能
 Sass中階功能
 --------------------------
 * <a target="_blank" href="docs/Sass/使用animate.scss提升網頁體驗.markdown">使用animate.scss提升網頁體驗.markdown</a>
+* <a target="_blank" href="docs/Sass/如何使用Sass來管理你的Bootstrap.markdown">使用animate.scss提升網頁體驗.markdown</a>
+
 
 SMACSS
 --------------------------
