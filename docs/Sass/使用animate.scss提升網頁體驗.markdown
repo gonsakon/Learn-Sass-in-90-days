@@ -15,6 +15,7 @@ CSS與Sass架構也相當易懂直覺，所以拿它來當範例剛剛好，
 首先我們就來看它<a href="https://github.com/gonsakon/animate-sass" target="_blank">官網Github</a>的教學，  
 要看各個動畫效果可<a href="https://github.com/daneden/animate.css" target="_blank">點此</a>  
 ### 步驟一：載入 animate.css
+
 ```
 <head>
   <link rel="stylesheet" href="animate.min.css">
