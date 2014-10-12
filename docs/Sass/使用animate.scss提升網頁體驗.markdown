@@ -4,7 +4,7 @@
 
 ##範例程式碼
 * <a href="http://daneden.github.io/animate.css/" target="_blank">animate.css</a>
-* <a href="hhttps://github.com/tgdev/animate-sass" target="_blank">animate sass版本</a>
+* <a href="https://github.com/tgdev/animate-sass" target="_blank">animate sass版本</a>
 *  <a href="https://github.com/gonsakon/animate-sass" target="_blank">Github 範例程式碼</a>
 
 ## 進入主題  
@@ -42,8 +42,8 @@ animate可以自訂動畫過程與什麼時候播放
 舉一些例子：  
 * 當欄位輸入不正確時，使用`shake`效果讓他左右搖晃，傳達輸入錯誤的資訊  
 * 點選關閉按鈕時，該HTML元素使用`bounceOutUp`使他往上滑消失不見。
-* 當滑鼠滾輪滾到下面一定位置時，使用`fadeInLeft`讓某元素從左淡入出來
-在我的影片與Github範例檔，  
+* 當滑鼠滾輪滾到下面一定位置時，使用`fadeInLeft`讓某元素從左淡入出來  
+在我的影片與Github範例檔，    
 有介紹如何做一個Login的介面出來，  
 各位也可以從中瀏覽其開發流程。  
 
@@ -54,7 +54,7 @@ animate可以自訂動畫過程與什麼時候播放
 
 這裡我則找到一位開發者將他編譯成Sass的格式，  
 Gitghub位置請<a href="https://github.com/tgdev/animate-sass" target="_blank">點此</a> ，  
-請配合此連結再瀏覽下述內容：
+請配合此連結再瀏覽下述內容，
 先來介紹一下他的Sass架構：
 ```
 //_animate.scss檔案
