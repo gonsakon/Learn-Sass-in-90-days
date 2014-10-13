@@ -2,11 +2,11 @@
 ##youtube影片教學  
 <a href="https://www.youtube.com/watch?v=oZ79Vu4n5MA&feature=youtu.be" target="_blank">![](/images/sass/20141014-1.png)</a>
 ##範例程式碼
-*  <a href="http://sassmeister.com/gist/71f07f3ac51aeb49ea19" target="_blank">sassmeister-程式碼範例</a>
+*  <a href="http://sassmeister.com/gist/603cc93c8b7307bdfee2" target="_blank">sassmeister-程式碼範例</a>
 *  <a href="http://www.sitepoint.com/sass-component-10-minutes/" target="_blank">A Sass Component in 10 Minutes</a>
 
 
-如果你還沒先瀏覽這一篇<a href="http://sassmeister.com/gist/603cc93c8b7307bdfee2" target="_blank">如何使用Sass來管理你的Bootstrap</a>的話，  
+如果你還沒先瀏覽這一篇<a href="https://github.com/gonsakon/Learn-Sass-in-90-days/blob/master/docs/Sass/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8Sass%E4%BE%86%E7%AE%A1%E7%90%86%E4%BD%A0%E7%9A%84Bootstrap.markdown" target="_blank">如何使用Sass來管理你的Bootstrap</a>的話，  
 建議你先瀏覽才可以理解兩者差異在哪裡，  
 
 Bootstrap的Sass結構是先設計一組顏色變數，  
