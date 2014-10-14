@@ -1,6 +1,12 @@
 # SMACSS - Module
 
-Module是一個獨立的CSS組件，
+##youtube影片教學
+<a href="https://www.youtube.com/watch?v=9RSlQgNxVJU&feature=youtu.be" target="_blank">![](/images/video/smacss-1.png)</a>
+
+##程式碼連結
+<a href="https://smacss.com/book/type-module" target="_blank">SMACSS - Module</a>
+
+Module意思是一個獨立的CSS組件或單一元素，
 被設定成模組的CSS組件會是獨立的，  
 不該綁定在`父容器`、`ID選擇器`、`HTML元素`，並同時能靈活套用至各頁面上`。  
 
