@@ -5,7 +5,8 @@ Module是一個獨立的CSS組件，
 不該綁定在`父容器`、`ID選擇器`、`HTML元素`，並同時能靈活套用至各頁面上`。  
 
 ## 不要將CSS直接指定ID與HTML元素
-這裡提出SMACSS所寫的範例Code：  
+這裡提出SMACSS所寫的範例Code，  
+如果今天你很確定在`.fld`裡面只會有一種`span`樣式這樣寫是ok的：  
 ```
 //HTML結構
 <div class="fld">
@@ -19,8 +20,7 @@ Module是一個獨立的CSS組件，
 }
 
 ```
-如果今天你很確定在`.fld`裡面只會有一種`span`樣式這樣寫是ok的，  
-但假使你不能保證之後還會增加其他span樣式，像是這樣子：
+但假使你不能保證之後還會增加其他span樣式的話，像是這樣子：
 ```
 <div class="fld">
     <span>Folder Name</span> 
@@ -38,6 +38,7 @@ Module是一個獨立的CSS組件，
     <span class="fld-name">Folder Name</span> 
     <span class="fld-items">(32 items)</span>
 </div>
+
 //CSS樣式
 .fld{..}
 .fld .fld-name{}
@@ -52,14 +53,14 @@ Module是一個獨立的CSS組件，
 你的span都被該CSS設定所綁定住了，  
 假使今天`.fld`裡面要新增不同樣式的span，  
 你就只能用更高的權重來覆蓋掉他的樣式，  
-例如`.fld div.box{..}`，  
+例如`.fld span.box{..}`，  
 這樣子你的程式碼就會因覆蓋緣故變得更加得臃腫，  
 
 但如果你直接指定class給該元素的話，  
 像是`<span class="fld-name"></span>`  
-好處是你今天新增其他的span標籤就變得很乾淨， 
-也解放了span讓他還是保持單純的inline排版元素，  
-也能夠再新增class在span上都變得相當容易，  
+好處是新增其他的span標籤就變得很乾淨， 
+也解放了span讓它仍保持單純的inline排版元素，  
+新增class在span上都變得相當容易，  
 你也不用再去頭痛權重覆蓋的問題。
 
 ###2.網頁SEO、HTML語意化更動變得更加靈活
@@ -70,8 +71,8 @@ Module是一個獨立的CSS組件，
     <span class="fld-items">(32 items)</span>
 </div>
 ```
-但如果在某一頁上，`.fld`的區塊在這頁佔得權重較高，  
-我們便能夠很輕鬆地把它改成下面的HTML架構：
+假設在某頁上，`.fld`的區塊在這頁佔得權重較高，  
+我們便能夠很輕鬆地把它改成下面的HTML結構：
 ```
 <article class="fld">
 	<h3 class="fld-name">Folder Name</h3>
@@ -80,7 +81,7 @@ Module是一個獨立的CSS組件，
 ```
 看到這裡，  
 相信你就知道為什麼SMACSS不建議你直接將CSS樣式綁定在HTML tag或ID上面了，    
-原因自然是因為直接寫在class上，不論是要更動HTML架構或者新增CSS樣式都變得更加靈活。  
+原因自然是因為直接寫在class上，不論是要更動HTML結構或新增CSS樣式都變得更加靈活。  
 
 ## 子模組(Subclassing Modules) 設計
  
