@@ -202,7 +202,7 @@ SMACSS的`Subclassing Modules` 建議你這樣子寫：
 .row{
 	text-align: center;
 }
-.bottom-btn input{
+.row input{
 	css按鈕樣式程式碼
 }
 ```
@@ -222,7 +222,7 @@ SMACSS的`Subclassing Modules` 建議你這樣子寫：
 
 ```
 //HTML結構
-<div class="bottom-btn">
+<div class="row">
 	<input type="button" class="btn" value="">
 </div>
 
