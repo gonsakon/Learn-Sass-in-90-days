@@ -98,8 +98,8 @@ Module是一個獨立的CSS組件，
     width: 50%; 
 }
 
-//設計到一半後，上面的模組要套用到#sidebar，
-//所以寫成下面這樣子來覆蓋上面模組
+//設計到一半後，上面的模組要套用到#sidebar，且裡面input要改成100%時
+//只好寫成下面這樣子來覆蓋上面模組
 #sidebar .pod input[type=text] { 
     width: 100%; 
 }
