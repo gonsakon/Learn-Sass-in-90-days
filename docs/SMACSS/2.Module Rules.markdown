@@ -193,10 +193,11 @@ SMACSS的`Subclassing Modules` 建議你這樣子寫：
 這個是我自己補充模組的部分，    
 當我還是菜鳥的時候，我會這樣來設計一個按鈕：  
 ```
-//html程式碼
+//HTML結構
 <div class="row">
 	<input type="button" value="">
 </div>
+
 //css程式碼
 .row{
 	text-align: center;
@@ -220,10 +221,11 @@ SMACSS的`Subclassing Modules` 建議你這樣子寫：
 於是乎我就都改寫成這樣的寫法了：  
 
 ```
-//html程式碼
+//HTML結構
 <div class="bottom-btn">
 	<input type="button" class="btn" value="">
 </div>
+
 //css程式碼
 .row{
 	text-align: center;
