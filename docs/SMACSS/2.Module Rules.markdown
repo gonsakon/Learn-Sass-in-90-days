@@ -180,13 +180,12 @@ SMACSS的`Subclassing Modules` 建議你這樣子寫：
 這樣就能夠覆蓋掉`.pod`的input設定。  
 
 如果你的`.pod`的寬度必須調整，  
-那你也可以透過一樣的寬度加上`.pod-callout`，  
+那你也可以透過子模組class`.pod-callout`來覆蓋`.pod`，  
 
 `Subclassing Modules`利用CSS覆蓋、HTML可以載入多個Class的原理，  
-讓我們只要回到模組的class新增子模組滿足其條件來覆蓋即可。  
+讓我們只要回到模組的class新增子模組滿足條件覆蓋樣式。  
 這樣子整個邏輯就可以都依照著`.pod`的模組區塊來延伸子模組，  
 不會又因為其他頁面的class區塊更動了模組設定而猶豫該怎麼寫。
-
 
 
 ## 單一元素模組設定
