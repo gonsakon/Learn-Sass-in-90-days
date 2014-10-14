@@ -1,9 +1,195 @@
 # SMACSS - Module
 
-Module就可稱為模組的意思，  
-以我自己定義SMACSS對於Module的解釋為，
-`被設定成模組的CSS會是獨立的，且不該綁定在父容器上，能夠靈套用至各頁面上`
-我用自己設計CSS的演化史來解釋這個原理，
+Module是一個獨立的CSS組件，
+被設定成模組的CSS組件會是獨立的，  
+不該綁定在`父容器`、`ID選擇器`、`HTML元素`，並同時能靈活套用至各頁面上`。  
+
+## 不要將CSS直接指定ID與HTML元素
+這裡提出SMACSS所寫的範例Code：  
+```
+//HTML結構
+<div class="fld">
+    <span>Folder Name</span>
+</div>
+
+//CSS樣式
+.fld > span {
+    padding-left: 20px;
+    background: url(icon.png);
+}
+
+```
+如果今天你很確定在`.fld`裡面只會有一種`span`樣式這樣寫是ok的，  
+但如果你不能保證未來這頁面還會增加其他span樣式，像是這樣子的話：
+```
+<div class="fld">
+    <span>Folder Name</span> 
+    <span>(32 items)</span>
+</div>
+``` 
+你不就必須再回頭修改你的CSS設定了？  
+如果你今天其他HTML頁面已經套用舊有CSS設定，  
+那更可怕的就是你還必須回頭一一把所有的HTML修改為新的架構，  
+專案越來越大時，程式碼彈性就會變得越來越低，  
+所以SMACSS建議你這樣寫：   
+```
+//HTML結構
+<div class="fld">
+    <span class="fld-name">Folder Name</span> 
+    <span class="fld-items">(32 items)</span>
+</div>
+//CSS樣式
+.fld{..}
+.fld .fld-name{}
+.fld .fld-items{}
+
+```
+所有樣式都指定class給HTML TAG，  
+這樣設計上有兩個好處：
+### 1.不受HTML的全域樣式控制  
+如果你寫`.fld span{..}`的話，  
+意思即是在`.fld`的範圍內，  
+你的span都被該CSS設定所綁定住了，  
+假使今天`.fld`裡面要新增不同樣式的span，  
+你就只能用更高的權重來覆蓋掉他的樣式，  
+例如`.fld div.box{..}`，  
+這樣子你的程式碼就會因覆蓋緣故變得更加得臃腫，  
+
+但如果你直接指定class給該元素的話，  
+像是`<span class="fld-name"></span>`  
+好處是你今天新增其他的span標籤就變得很乾淨， 
+也解放了span讓他還是保持單純的inline排版元素，  
+也能夠再新增class在span上都變得相當容易，  
+你也不用再去頭痛權重覆蓋的問題。
+
+###2.網頁SEO、HTML語意化更動變得更加靈活
+像是上面的HTML結構是長成這樣。
+```
+<div class="fld">
+    <span class="fld-name">Folder Name</span> 
+    <span class="fld-items">(32 items)</span>
+</div>
+```
+但如果在某一頁上，`.fld`的區塊在這頁佔得權重較高，  
+我們便能夠很輕鬆地把它改成下面的HTML架構：
+```
+<article class="fld">
+	<h3 class="fld-name">Folder Name</h3>
+	<span class="fld-items">(32 items)</span>
+</article>
+```
+看到這裡，  
+相信你就知道為什麼SMACSS不建議你直接將CSS樣式綁定在HTML tag或ID上面了，    
+原因自然是因為直接寫在class上，不論是要更動HTML架構或者新增CSS樣式都變得更加靈活。  
+
+## 子模組(Subclassing Modules) 設計
+ 
+在設計CSS模組時，  
+時常會遇到樣式臨時變動或新增的需求，  
+這時候就可以參考SMACSS的`Subclassing Modules`的觀念，  
+我們先來瀏覽下面的程式碼：  
+```
+//設計一個.pod區塊，裡面的文字欄位佔了50%寬度
+.pod { 
+    width: 100%; 
+}
+.pod input[type=text] { 
+    width: 50%; 
+}
+
+//設計到一半後，上面的模組要套用到#sidebar，
+//所以寫成下面這樣子來覆蓋上面模組
+#sidebar .pod input[type=text] { 
+    width: 100%; 
+}
+```  
+這樣子寫法是相當不好的，  
+第一如果我今天不是要放在`#sidebar`，  
+而是要放在`.main`的區塊，設定也是裡面文字欄位是100%寬，    
+那你的Class也會因此越來越肥，如下程式碼：
+```
+#sidebar .pod input[type=text],.main .pod input[type=text] { 
+    width: 100%; 
+}
+```
+更糟糕的事情是，  
+你的程式碼可讀性也會變得非常差，  
+這裡來舉個例子：
+```
+//寫好此模組設定
+.pod { 
+    width: 100%; 
+}
+.pod input[type=text] { 
+    width: 50%; 
+}
+
+//寫到第三百行
+//#sidebar裡面要用到.pod區塊，所以這樣子寫
+#sidebar{..}
+#sidebar a{..}
+.#sidebar .pod input[type=text]{width: 100%; }
+
+
+//又繼續寫了三百行
+//.main又有用到.pod裡面文字欄位要100%時，就又必須回去追code，然後猶豫到底要放到最上面點.pod模組區塊，還是到#sidebar把class合併起來
+//最後決定先在#sidebar那裡合併如下程式碼
+//#sidebar .pod input[type=text],.main .pod input[type=text] { width: 100%; }
+.main{..}
+.main ul{..}
+.main li{..}
+
+//隔天再回來寫程式碼，繼續寫了三百行，.pod裡面的文字欄位又要設定成100%，就又要回想當初是在哪裡有寫過這行程式碼繼續合併，還是不管它再直接寫在.block裡面。
+.block{}
+.block .pod input[type=text] { width: 100%; }
+
+
+//專案第六十天你已經不知道你的CSS在寫些什麼鬼東西了
+
+
+```
+為了避免這樣的事情發生，  
+SMACSS的`Subclassing Modules` 建議你這樣子寫：
+```
+//CSS樣式
+.pod { 
+    width: 100%; 
+} 
+.pod input[type=text] { 
+    width: 50%; 
+}
+.pod-constrained input[type=text] { 
+    width: 100%; 
+}
+.pod-callout { 
+    width: 200px; 
+}
+.pod-callout input[type=text] { 
+    width: 180px; 
+}
+//HTML結構
+<div class="pod pod-constrained">...</div>
+<div class="pod pod-callout">...</div> 
+```
+兩行HTML都載入了`.pod`的class，  
+讓網頁版型先吃到預設樣式，  
+如果今天裡面的按鈕要改成100%，  
+那就再增加子模組class`.pod-constrained `，  
+這樣就能夠覆蓋掉`.pod`的input設定。  
+
+如果你的`.pod`的寬度必須調整，  
+那你也可以透過一樣的寬度加上`.pod-callout`，  
+
+`Subclassing Modules`利用CSS覆蓋、HTML可以載入多個Class的原理，  
+讓我們只要回到模組的class新增子模組滿足其條件來覆蓋即可。  
+這樣子整個邏輯就可以都依照著`.pod`的模組區塊來延伸子模組，  
+不會又因為其他頁面的class區塊更動了模組設定而猶豫該怎麼寫。
+
+
+
+## 單一元素模組設定
+  
+這個是我自己補充模組的部分，    
 當我還是菜鳥的時候，我會這樣來設計一個按鈕：  
 ```
 //html程式碼
@@ -52,30 +238,7 @@ Module就可稱為模組的意思，
 所以今天你要在各個頁面上套用這個按鈕樣式時，  
 就只要在input上面加上btn的class就好。  
 
-這樣就可以做到最上面所提到的觀念，也就是  
-`被設定成模組的CSS會是獨立的，且不該綁定在父容器上，能夠靈活套用至各頁面上`。 
-
-
-## CSS組件模組化  
-組件的意思是`一個以上的HTML元素組合而成的樣式`，  
-如下程式碼：
-```
-<!-- 不好的寫法 -->
-<!-- HTML -->
-<div class="box">
-	<h2></h2>
-	<ul>
-		<li><a href=""></a></li>
-		</ul>
-</div>
-<!-- CSS -->
-.box{..}
-.box h2{..}
-.box ul{..}
-.box li{..}
-```
-
-
-  
-
+這樣就可以做到SMACSS所提倡的觀念，  
+也就是Module要設計為獨立的樣式，
+不該綁定在`父容器`、`ID選擇器`、`HTML元素`，並同時能靈活套用至各頁面上。
 

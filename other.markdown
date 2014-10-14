@@ -22,6 +22,7 @@ Sass中階功能
 SMACSS
 --------------------------
 * [Base、layout](docs/SMACSS/1.markdown)
+* [Module](docs/SMACSS/2.Module Rules.markdown)
 
 Sass心法
 ---------------------------
