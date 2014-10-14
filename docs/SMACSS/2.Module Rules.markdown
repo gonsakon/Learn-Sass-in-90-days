@@ -133,14 +133,15 @@ Module是一個獨立的CSS組件，
 
 
 //又繼續寫了三百行
-//.main又有用到.pod裡面文字欄位要100%時，就又必須回去追code，然後猶豫到底要放到最上面點.pod模組區塊，還是到#sidebar把class合併起來
-//最後決定先在#sidebar那裡合併如下程式碼
-//#sidebar .pod input[type=text],.main .pod input[type=text] { width: 100%; }
+//.main又要設定.pod裡面文字欄位要100%時，就又必須回去追code，
+//然後猶豫到底要放到最上面點.pod模組區塊，還是到#sidebar把class合併起來
+//最後決定先在#sidebar那裡合併程式碼
 .main{..}
 .main ul{..}
 .main li{..}
 
-//隔天再回來寫程式碼，繼續寫了三百行，.pod裡面的文字欄位又要設定成100%，就又要回想當初是在哪裡有寫過這行程式碼繼續合併，還是不管它再直接寫在.block裡面。
+//隔天再來寫code，繼續寫了三百行，又有一樣東西要設定，
+//就還得回想當初是在哪裡有寫過這行程式碼，還是不管它直接寫在.block裡面。
 .block{}
 .block .pod input[type=text] { width: 100%; }
 
