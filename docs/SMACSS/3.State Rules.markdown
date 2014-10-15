@@ -1,0 +1,87 @@
+# SMACSS - State(狀態) Rules
+
+##youtube影片教學
+<a href="https://www.youtube.com/watch?v=9RSlQgNxVJU" target="_blank">![](/images/sass/20141016-1.png)</a>
+
+##程式碼連結
+<a href="https://smacss.com/book/type-state" target="_blank">SMACSS - State</a>  
+<a href="http://codepen.io/liao/pen/aLgwn" target="_blank">codepen 範例程式碼</a>  
+
+
+##進入主題
+State(狀態) Rules能夠滿足以下條件：  
+1.可以使用在`layout`與`module`的區塊。  
+2.狀態樣式需依賴在javascript事件上。  
+
+## global state rules(全域狀態)
+我們先來看一段code：  
+```
+// HTML結構
+<div id="member">
+	<form >
+		帳號：<input type="text" >
+		密碼：<input type="text" >
+		<span >您尚未輸入帳號或密碼</span>
+		<input type="submit" value="登入">
+	</form>
+</div>
+
+// CSS樣式 
+#member span{display:none}
+.is-error{display:block !important}
+```
+上面的範例碼是登入畫面，    
+當使用者點進來這頁時，  
+`span`預設是`display:none`的，  
+假如你沒寫任何資訊就點選登入按鈕的話，  
+`span`就會透過javascript動態載入`is-error`的設定，  
+把提示文字給顯示出來。  
+
+為什麼要用class加上!important的方式來覆蓋樣式的原因是，  
+有些時候你的模組組件會有好幾層架構，  
+我當然也可以寫`#member span.is-error`，  
+但這樣就變成只有該組件專屬的設定，  
+問題是這樣的設定可能不只一個地方會有，  
+這時候就很適合用`!important`來強制覆蓋，  
+把它變成全域的State Rules靈活套用在其他頁面上，  
+也不用擔心`.is-error`加上去結果效果沒出來。  
+
+以我自己來說，最常用也就是：  
+```
+.is-error{display:block !important}
+.is-hidden{display:none !important}
+```  
+當我在寫網頁互動效果時，  
+就能透過這兩個class來讓頁面元素開啟或關閉，  
+有的時候也會依專案性質、網頁樣式來客製化全域樣式狀態。
+
+## Combining State Rules with Modules (將狀態樣式結合在模組區塊)
+有些時候，會因為模組區塊的設計太過獨特，  
+所以狀態樣式就能考慮直接寫在模組區塊裡面， 
+例如像這樣子：  
+```
+.content li{
+	color: #000;
+}
+.content li.active{
+  background: #000;
+  color: #fff;
+  padding: 5px;
+}
+``` 
+當我在點選li的時候，  
+javascript就會在該li上加入`active`的class，  
+這樣使用者就能知道目前我所點選的單元是哪個，  
+就算切換視窗再回來看這頁，也能看到`.active`樣式去辨別所在位置，  
+
+像是Bootstrap的tab就是類似這樣子設計的：  
+<img src="../../images/sass/20141016-2.png" height="229" width="381" alt="">  
+
+## 總結  
+由於javascript快速發展的關係，  
+也讓HTML、CSS、javascript不單單只應用在網頁上而已，  
+像我今年也用了phonegap做了幾款hybrid app，
+想當然爾APP的狀態就又比web端多上了許多，  
+例如當資料沒傳遞到app、user在左右滑動頁面、等待Loading狀態等等，  
+透過State Rule的設計模式，  
+就能夠友善地來管理各種狀態的驅動了。  
