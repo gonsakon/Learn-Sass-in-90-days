@@ -1,0 +1,88 @@
+# SMACSS - theme(主題) Rules
+
+##youtube影片教學
+<a href="https://www.youtube.com/watch?v=8TcnChOIMmg&feature=youtu.be" target="_blank">![](/images/sass/20141017-1.png)</a>
+
+##程式碼連結
+<a href="https://smacss.com/book/type-theme" target="_blank">SMACSS - Theme</a>  
+
+
+## Themes(主題) - 將網站的佈局與樣式抽離
+接著要來提到theme的部份，  
+這個觀念在設計一個網站上有多種主題樣式時，  
+就非常有機會實踐到。   
+跟theme有關係的樣式通常不會在主核心CSS裡面，  
+而是會將樣式給抽離出來，  
+例如`連結顏色`、`文字顏色`、`背景顏色`、`border線條顏色`等等，  
+你可以看得出來都與顏色有相關連，但當然也不只是顏色而已，  
+
+這裡來舉一個常見的案例，  
+假設我是購物網站，裡面賣三種不同產品主題，  
+這時網頁設計師為了強調產品特色，  
+就會因此設計三種theme來客製化版型，  
+像是以SMACSS提出來的範例程式碼如下：  
+```
+// 主架構CSS - all.css
+.mod {
+    border: 1px solid;
+}
+
+// 樣式CSS - theme.css
+.mod {
+    border-color: blue;
+}
+```   
+你可以從中看出來，  
+今天到A主題產品區時，  
+我除了載入主架構CSS的`all.css`外，  
+同時還載入了`theme.css`，  
+如果今天我又到B產品區的時候，  
+就會再設計一個`theme3C.css`，  
+網頁上就會改為載入`all.css`與`theme3C.css`，    
+裡面則是寫：  
+```
+.mod {
+	border-color: red
+}
+```  
+這樣我們就能透過theme的觀念，  
+將樣式給抽離出來成為獨立的CSS，  
+今天如果有新的主題時，  
+就再客製化一個新的theme css即可。  
+
+## Typography  - 不要讓網站上有6種以上的文字大小  
+SMACSS 最後又補充了一個觀念，  
+那就是字體大小建議不要超過六種以上，  
+以免使用者抓不住網站的焦點權重。  
+
+如果你是Sass開發者，  
+可以在初期建立全域變數時，  
+就將字型大小納入規則中，  
+我們來看Bootstrap在字型大小的設定：  
+```
+$font-size-base: 14px !default;
+$font-size-h1: floor(($font-size-base * 2.6)) !default; // ~36px
+$font-size-h2: floor(($font-size-base * 2.15)) !default; // ~30px
+$font-size-h3: ceil(($font-size-base * 1.7)) !default; // ~24px
+$font-size-h4: ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-h5: $font-size-base !default;
+$font-size-h6: ceil(($font-size-base * 0.85)) !default; // ~12px
+```
+floor為`無條件捨去`、ceil為`無條件進入`，  
+首先Bootstrap在預設字型大小設定成`14px`，    
+再來針對標題1~6來編譯出對應的大小，  
+不過個人建議請不要把字型大小預設成14px，  
+因為這個字體大小在很多螢幕解析出來的樣子會很不和諧，  
+所以一般網頁設計師都還是會避到14px這個size，  
+這算是設計上的潛規則了，  
+
+我自己也是這樣來設定字體大小的，  
+像是這樣子：  
+```
+$base-font-size: 16px  //預設字型大小
+$font-l: $base-font-size * 1.2
+$font-m: $base-font-size
+$font-s: $base-font-size * 0.8
+```  
+透過SMACSS Theme的觀念與SASS的變數統一管理，  
+在設計有多種主題的網站性質就容易多了。
