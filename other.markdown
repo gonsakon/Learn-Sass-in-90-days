@@ -24,7 +24,7 @@ SMACSS
 * [Base、layout Rules](docs/SMACSS/1.markdown)
 * [Module Rules](docs/SMACSS/2.Module Rules.markdown)
 * [State Rules](docs/SMACSS/3.State Rules.markdown)
-* [theme Rules](docs/SMACSS/4.theme Rules.markdown)
+* [Theme Rules](docs/SMACSS/4.theme Rules.markdown)
 
 Sass心法
 ---------------------------

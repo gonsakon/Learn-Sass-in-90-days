@@ -1,4 +1,4 @@
-# SMACSS - theme(主題) Rules
+# SMACSS - Theme(主題) Rules
 
 ##youtube影片教學
 <a href="https://www.youtube.com/watch?v=8TcnChOIMmg&feature=youtu.be" target="_blank">![](/images/sass/20141017-1.png)</a>
