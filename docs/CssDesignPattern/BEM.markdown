@@ -10,7 +10,7 @@ BEM由Yandex團隊提出來的一種創新命名Class名稱的設計模式，
 如果你還不熟悉SMACSS或OOCSS章節的話，  
 建議先熟悉那兩個章節再來了解BEM比較不會吃力些。  
 
-BEM的意思是區塊（Block）、元素（Element）、修飾符（Modifier），
+BEM的意思是區塊（Block）、元素（Element）、修飾符（Modifier），  
 它們最大的優勢就是可以光瀏覽class名稱就能夠告訴開發者它們彼此間的依賴關係。  
 在進入BEM的解說前，  
 我們先來聊一下以前在設計CSS容易遇到的狀況，    
