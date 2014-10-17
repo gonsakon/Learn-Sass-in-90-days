@@ -24,14 +24,14 @@ BEM的意思是區塊（Block）、元素（Element）、修飾符（Modifier）
 不論是你看別人的code，  
 或者是你有一兩天沒寫又回頭看時，  
 都會思考著這樣的問題：  
-1.class裡的product與menu是否有互相關聯？例：`.product .menu`
+1.class裡的product與menu是否有互相關聯？例：`.product .menu`  
 2.還是說product是`layout`，menu是`module`，兩者其實並無關係？  
 3.li裡面的active是否為list裡面的範圍域？  
 
 通常網頁設計師碰到這樣的code，  
 自然就會去翻他的CSS，來找出他們的關係，  
 假使有用到Sass的@import功能，  
-要找可能也會找一段時間。
+要找可能也會找一段時間。  
 
 但如果是用BEM命名，  
 class命名規則就會改為：  
@@ -78,17 +78,17 @@ PS：除了HTML tag外，如果是一個CSS組件也可把它視為元素 (Eleme
 所以就會用javascript動態加入class為`.menu__item--active`，  
 所以如果我們要判斷這個class是屬於元素還是修飾符的設定，  
 就只要看class最後面是雙中線`--`還是雙下底線`__`就知道他是屬於哪一種了。  
-<img src="../../images/sass/20141018-5.png" height="135" width="447" alt="">
+<img src="../../images/sass/20141018-5.png" height="135" width="447" alt="">   
 修飾符（Modifier）可以使用的時機非常多，  
 除了狀態更動外，樣式設計也可以放到修飾符內，  
 這裡來舉一些例子：  
-(1)滑鼠點選某個元素(Element)時，動態新增一個`.element--Modifier`來更換元素樣式。
-(2)新增一個新按鈕時，我們可以這樣子設計`btn btn--green clearfix`，就能了解`btn--green`是一個修飾符。
-(3)原本為滿版的搜尋區塊要變成三分之一大小的區塊時，就可以這樣寫：`search search--1of3` 
+(1)滑鼠點選某個元素(Element)時，動態新增一個`.element--Modifier`來更換元素樣式。  
+(2)新增一個新按鈕時，我們可以這樣子設計`btn btn--green clearfix`，就能了解`btn--green`是一個修飾符。  
+(3)原本為滿版的搜尋區塊要變成三分之一大小的區塊時，就可以這樣寫：`search search--1of3`   
 
 所以我們再來看一些程式碼，  
-加深我們對BEM的印象：
-### 一個Block裡面有兩個元素，Block區塊還有個修飾符來更動它的狀態
+加深我們對BEM的印象：  
+### 一個Block裡面有兩個元素，Block區塊還有個修飾符來更動它的狀態  
 ```
 //
 <form class="site-search  site-search--full">
@@ -121,7 +121,7 @@ PS：除了HTML tag外，如果是一個CSS組件也可把它視為元素 (Eleme
 就會把他獨立成一個class名稱提升他的複用性，  
 例如清除浮動就是一個例子，  
 我們可能會在很多的元素上用到這個語法`.clearfix{clear:both}`，  
-或者是置左功能`.pull-left{float:left}`。
+或者是置左功能`.pull-left{float:left}`。  
 
 ### 並不是所有的元素都要遵守BEM的規則  
 假設來說我`.content`裡面有個選單元素，  
