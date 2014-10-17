@@ -97,7 +97,8 @@ PS：除了HTML tag外，如果是一個CSS組件也可把它視為元素 (Eleme
 </form>
 ```
 
-### 下面的程式碼，我們看不懂`.media`和`body`是否有相關聯
+### 下面的程式碼，我們看不懂`.media`和`body`是否有相關聯  
+```
 <div class="media">
     <img src="logo.png" alt="Foo Corp logo" class="img-rev">
     <div class="body">
@@ -105,8 +106,9 @@ PS：除了HTML tag外，如果是一個CSS組件也可把它視為元素 (Eleme
         <p class="lede">Foo Corp is the best, seriously!</p>
     </div>
 </div>
-
+```
 ### 但這樣子寫你就看得出來說，`.media`裡面有一個`.media_body`的元素，不過裡頭的h3與p則是獨立沒有相關聯。
+```
 <div class="media">
     <img src="logo.png" alt="Foo Corp logo" class="media__img--rev">
     <div class="media__body">
@@ -114,7 +116,7 @@ PS：除了HTML tag外，如果是一個CSS組件也可把它視為元素 (Eleme
         <p class="lede">Foo Corp is the best, seriously!</p>
     </div>
 </div>  
-
+```
 ## 什麼時機不會需要用到BEM 
 ### 如果可以獨立成為一個class，可複用到其他地方的CSS  
 當我們網站內容有個CSS設定時常會用到其他地方時，  
