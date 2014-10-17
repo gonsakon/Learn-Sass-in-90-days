@@ -107,7 +107,7 @@ PS：除了HTML tag外，如果是一個CSS組件也可把它視為元素 (Eleme
     </div>
 </div>
 ```
-#### 但這樣子寫你就看得出來說，`.media`裡面有一個`.media_body`的元素，不過裡頭的h3與p則是獨立沒有相關聯。
+#### 但這樣子寫你就看得出來說，`.media`裡面有一個`.media_body`的元素，不過裡頭的h3與p則是獨立沒有關聯。
 ```
 <div class="media">
     <img src="logo.png" alt="Foo Corp logo" class="media__img--rev">
@@ -118,7 +118,7 @@ PS：除了HTML tag外，如果是一個CSS組件也可把它視為元素 (Eleme
 </div>  
 ```
 ## 什麼時機不會需要用到BEM 
-#### 如果可以獨立成為一個class，可複用到其他地方的CSS  
+#### 如果可以獨立成為一個class，具有複用性 
 當我們網站內容有個CSS設定時常會用到其他地方時，  
 就會把他獨立成一個class名稱提升他的複用性，  
 例如清除浮動就是一個例子，  
