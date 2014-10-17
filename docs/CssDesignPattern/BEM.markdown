@@ -2,9 +2,9 @@
 
 ##程式碼連結 & 圖片來源
 
-<a href="http://oocss.org/" target="_blank">BEM</a>   
-<a href="http://bem.info/method/definitions/" target="_blank">What is BEM?</a>   
-<a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/" target="_blank">MindBEMding – getting your head ’round BEM syntax</a>  
+* <a href="http://oocss.org/" target="_blank">BEM</a>   
+* <a href="http://bem.info/method/definitions/" target="_blank">What is BEM?</a> 
+* <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/" target="_blank">MindBEMding – getting your head ’round BEM syntax</a>  
 
 BEM由Yandex團隊提出來的一種創新命名Class名稱的設計模式，  
 如果你還不熟悉SMACSS或OOCSS章節的話，  
