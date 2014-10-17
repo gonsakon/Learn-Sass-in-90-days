@@ -88,7 +88,7 @@ PS：除了HTML tag外，如果是一個CSS組件也可把它視為元素 (Eleme
 
 所以我們再來看一些程式碼，  
 加深我們對BEM的印象：  
-### 一個Block裡面有兩個元素，Block區塊還有個修飾符來更動它的狀態  
+####  一個Block裡面有兩個元素，Block區塊還有個修飾符來更動它的狀態  
 ```
 //
 <form class="site-search  site-search--full">
@@ -97,7 +97,7 @@ PS：除了HTML tag外，如果是一個CSS組件也可把它視為元素 (Eleme
 </form>
 ```
 
-*** 下面的程式碼，我們看不懂`.media`和`body`是否有相關聯  *** 
+#### 下面的程式碼，我們看不懂`.media`和`body`是否有相關聯
 ```
 <div class="media"> //.media
     <img src="logo.png" alt="Foo Corp logo" class="img-rev">
@@ -107,7 +107,7 @@ PS：除了HTML tag外，如果是一個CSS組件也可把它視為元素 (Eleme
     </div>
 </div>
 ```
-***  但這樣子寫你就看得出來說，`.media`裡面有一個`.media_body`的元素，不過裡頭的h3與p則是獨立沒有相關聯。***  
+#### 但這樣子寫你就看得出來說，`.media`裡面有一個`.media_body`的元素，不過裡頭的h3與p則是獨立沒有相關聯。
 ```
 <div class="media">
     <img src="logo.png" alt="Foo Corp logo" class="media__img--rev">
@@ -118,14 +118,14 @@ PS：除了HTML tag外，如果是一個CSS組件也可把它視為元素 (Eleme
 </div>  
 ```
 ## 什麼時機不會需要用到BEM 
-### 如果可以獨立成為一個class，可複用到其他地方的CSS  
+#### 如果可以獨立成為一個class，可複用到其他地方的CSS  
 當我們網站內容有個CSS設定時常會用到其他地方時，  
 就會把他獨立成一個class名稱提升他的複用性，  
 例如清除浮動就是一個例子，  
 我們可能會在很多的元素上用到這個語法`.clearfix{clear:both}`，  
 或者是置左功能`.pull-left{float:left}`。  
 
-**並不是所有的元素都要遵守BEM的規則**  
+#### 並不是所有的元素都要遵守BEM的規則
 假設來說我`.content`裡面有個選單元素，  
 所以你就寫了`.content__menu`，  
 但你必須去了解這個元素是否會在表尾、側欄其他地方出現，  
