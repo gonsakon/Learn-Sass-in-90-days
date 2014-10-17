@@ -19,12 +19,14 @@ Sass中階功能
 * <a target="_blank" href="docs/Sass/@each+Sass Maps批次產生各元素樣式.markdown">@each+Sass Maps批次產生各元素樣式.markdown</a>
 
 
-SMACSS
+CSS 設計模式
 --------------------------
-* [Base、layout Rules](docs/SMACSS/1.markdown)
-* [Module Rules](docs/SMACSS/2.Module Rules.markdown)
-* [State Rules](docs/SMACSS/3.State Rules.markdown)
-* [Theme Rules](docs/SMACSS/4.theme Rules.markdown)
+* [SMACSS - Base、layout Rules](docs/SMACSS/1.markdown)
+* [SMACSS -Module Rules](docs/SMACSS/2.Module Rules.markdown)
+* [SMACSS -State Rules](docs/SMACSS/3.State Rules.markdown)
+* [SMACSS -Theme Rules](docs/SMACSS/4.theme Rules.markdown)
+* [OOCSS](docs/CssDesignPattern/OOCSS.markdown)
+* [BEM](docs/CssDesignPattern/BEM.markdown)
 
 Sass心法
 ---------------------------
