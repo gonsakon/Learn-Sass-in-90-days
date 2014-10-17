@@ -46,7 +46,7 @@ OOCSS的設計模式是鼓勵開發者設計出的CSS複用性能夠達到極致
 也會把他抽離出來拿來套用在版型上，  
 但就不會像上面設計得那麼極端，  
 這裡我就拿Bootstrap設計按鈕的例子來分享：  
-<img src="../../images/sass/20141018-1.png" height="385" width="816" alt="">
+<img src="../../images/sass/20141018-1.png" height="385" width="816" alt="">  
 在上圖的按鈕每個class的用處是：  
 1.`btn`：解決瀏覽器兼容的CSS Hack、撰寫預設按鈕樣式
 2.`btn-promary`：增加`文字顏色`、`背景顏色`、`線條現色`覆蓋預設樣式  
@@ -65,7 +65,7 @@ OOCSS的設計模式是鼓勵開發者設計出的CSS複用性能夠達到極致
 
 像Facebook就是設計成很純粹的OOCSS，  
 我們來看一下他設計的Code：  
-<img src="../../images/sass/20141018-2.png" alt="">
+<img src="../../images/sass/20141018-2.png" alt="">  
 你可以從上圖看得出來，  
 `_5pb8 _5v9u _29h _303`這幾個class各有它的功能，  
 藉由這樣的方式，  
