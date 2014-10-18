@@ -1,4 +1,6 @@
 # BEM
+##youtube影片教學  
+<a href="https://www.youtube.com/watch?v=1koKr0-k8Wc" target="_blank">![](/images/video/20141019-2.png)</a>  
 
 ##程式碼連結 & 圖片來源
 

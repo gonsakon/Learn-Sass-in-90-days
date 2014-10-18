@@ -1,4 +1,6 @@
 # OOCSS  
+##youtube影片教學  
+<a href="https://www.youtube.com/watch?v=woXh2tojH20" target="_blank">![](/images/video/20141019-1.png)</a>
 
 ##程式碼連結
 <a href="http://oocss.org/" target="_blank">OOCSS</a>  
