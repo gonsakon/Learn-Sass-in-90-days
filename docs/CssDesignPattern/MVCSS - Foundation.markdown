@@ -222,7 +222,7 @@ body
 ####Block Content(塊狀內容)    
 在設計Base預設樣式的塊狀HTML tag時，  
 設計原則是：  
-1. 如確定特定HTML tag在全站樣式都長得一樣，可直接在HTML tag寫樣式
+1. 如確定特定HTML tag在全站樣式都長得一樣，可直接在HTML tag寫樣式  
 2. 為了避免外邊界疊加增加複雜度，所以限制垂直Margin為單一方向  
 ```
 ul, p
