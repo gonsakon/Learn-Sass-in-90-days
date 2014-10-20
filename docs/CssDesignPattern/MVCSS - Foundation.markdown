@@ -222,7 +222,7 @@ body
 ####Block Content(塊狀內容)    
 在設計Base預設樣式的塊狀HTML tag時，  
 設計原則是：  
-1. 如確定特定HTML tag在全站樣式都長得一樣，可直接在HTML tag寫樣式
+1. 如確定特定HTML tag在全站樣式都長得一樣，可直接在HTML tag寫樣式  
 2. 為了避免外邊界疊加增加複雜度，所以限制垂直Margin為單一方向  
 ```
 ul, p
@@ -259,10 +259,10 @@ a
 MVCSS的Tools的觀念很像是<a href="https://github.com/gonsakon/Learn-Sass-in-90-days/blob/master/docs/CssDesignPattern/OOCSS.markdown" target="_blank">OOCSS</a>，  
 但又不是純粹的OO，  
 `Tools`的CSS設定都是可以直接指定在HTML tag的class上，  
-例如，下面 card Component裡面的P段落需要用margin-bottom 對齊，所以能夠輕鬆使用一個 Tool的mbf來寫：  
+例如下面 card Component裡面的P段落需要用margin-bottom 對齊，所以能夠輕鬆使用一個 Tool的mbf來寫：  
 ```
 <div class="card">
-  <p class="mbf">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam non dolor eligendi placeat.</p>
+  <p class="mbf">Lorem ipsum</p>
 </div>
 ```
 ####Single Responsibility(單一職責)  
