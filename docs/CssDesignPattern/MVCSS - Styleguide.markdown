@@ -129,7 +129,7 @@ MVCSS有一套基本的撰寫SASS的風格參考：
 
 ## 標記（Markup） 
 1. 需依照Component、Structure、Tool、state、、context來排列class。
-2. 每個模式如果有修飾符（modifier classes），就必須連接在模組class後面。
+2. 每個模式如果有修飾符（modifier classes），就必須連接在模組class後面。  
 這裡如果看不懂沒關係，等到後面一一介紹Component、Structure等功能再回頭看相信便能一目了然。
 ```
 <div class="g collection collection--1of3 bch mtl tci is-active has-dropdown"></div>
