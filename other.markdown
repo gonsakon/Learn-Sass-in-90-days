@@ -28,6 +28,7 @@ CSS 設計模式
 * [OOCSS](docs/CssDesignPattern/OOCSS.markdown)
 * [BEM](docs/CssDesignPattern/BEM.markdown)
 * [MVCSS - Styleguide](docs/CssDesignPattern/MVCSS - Styleguide.markdown)
+* [MVCSS - Foundation](docs/CssDesignPattern/MVCSS - Foundation.markdown)
 
 Sass心法
 ---------------------------
