@@ -22,11 +22,12 @@ Sass中階功能
 CSS 設計模式
 --------------------------
 * [SMACSS - Base、layout Rules](docs/SMACSS/1.markdown)
-* [SMACSS -Module Rules](docs/SMACSS/2.Module Rules.markdown)
-* [SMACSS -State Rules](docs/SMACSS/3.State Rules.markdown)
-* [SMACSS -Theme Rules](docs/SMACSS/4.theme Rules.markdown)
+* [SMACSS - Module Rules](docs/SMACSS/2.Module Rules.markdown)
+* [SMACSS - State Rules](docs/SMACSS/3.State Rules.markdown)
+* [SMACSS - Theme Rules](docs/SMACSS/4.theme Rules.markdown)
 * [OOCSS](docs/CssDesignPattern/OOCSS.markdown)
 * [BEM](docs/CssDesignPattern/BEM.markdown)
+* [MVCSS - Styleguide](docs/CssDesignPattern/MVCSS - Styleguide.markdown)
 
 Sass心法
 ---------------------------
