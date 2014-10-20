@@ -23,10 +23,10 @@ vendor/
 ```
 而foundation的組成如下：
 1. Reset  
-2. Helpers
-3. Config
-4. Base
-5. Tools
+2. Helpers  
+3. Config  
+4. Base  
+5. Tools  
 
 ## Foundation - Reset
 我們在建立專案前，都會先導入Reset css先將所有瀏覽器的預設CSS樣式給清空，  
@@ -37,11 +37,11 @@ MVCSS是使用<a href="http://necolas.github.io/normalize.css/">， Normalize.cs
 ## Foundation - Helpers 
 Helpers是指專案上有用到的`functions`、`@Mixin`、`extend`、`animations`。 
 
-**functions、@mixin**  
+####functions、@mixin  
 Sass、Compass其實就有很多好用的function使用了，  
 但如果你有自己寫functioin與@Mixin那便也可以自行新增。  
 
-**Extends**  
+####Extends  
 在MVCSS的觀念有個很有趣的一點是，  
 應該要盡量避免使用`%`佔位選擇符，  
 MVCSS提出了一個清除浮動的設定來解說：  
@@ -88,7 +88,7 @@ p,li
 .search .title
 	@extend %segoe    
 ```  
-**Animations** 
+####Animations  
 在Helpers中，應把全站的動畫(Animations)設定都集中起來，  
 並可靈活套用於各種模組上，  
 除非是特別的動畫模組才會在該模組下方直接寫Animations，  
@@ -96,20 +96,19 @@ p,li
 
 ## Foundation - Config  
 Config則是拿來設定所有變數與字型的地方。下面的範例將拆解為Base、Colors和Fonts的設定。  
-**@Font-face** 
+####@Font-face  
 MVCSS的範例是引入了Bourbon的`+font-face mixin`提供字體檔案，  
 但如果你已經有使用自己的網頁字體與服務的話，便可留空此段。  
 
-**Variables(變數)**  
+####Variables(變數)  
 MVCSS的變數為了與它們的功能有所相呼應，  
 都會加上前綴詞來了解該變數是屬於`Component(組件)`還是`Structure(結構)`，  
-* ww
 * `$b-*` 基礎變數
 * `$c-` 顏色
 * `g-` RWD斷點(breakpoints)
 * $componentName-* 使用在 `Components(組件)`
 * $structureName-* 使用在 `Structures(結構)`
-```  
+ 
 顏色的部份則是先定義一組顏色變數，  
 再設計一組有語意化的來繼承，  
 不過假使你的專案色系並沒有分到那麼細，  
@@ -220,7 +219,7 @@ body
   font-size: 100%
 ```  
 
-**Block Content(塊狀內容)**    
+####Block Content(塊狀內容)    
 在設計Base預設樣式的塊狀HTML tag時，  
 設計原則是：  
 1. 如確定特定HTML tag在全站樣式都長得一樣，可直接在HTML tag寫樣式
@@ -243,7 +242,7 @@ h4, .h4
   margin-bottom: $b-space-xs
   margin-top: 0
 ```
-**inline Content(行內內容)**    
+####inline Content(行內內容)    
 自然是指行內元素，  
 例如`a`、`strong`、`em`、`code`等等。  
 ```
