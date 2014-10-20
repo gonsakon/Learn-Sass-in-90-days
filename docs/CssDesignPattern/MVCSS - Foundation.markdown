@@ -21,7 +21,7 @@ components/
 structures/
 vendor/
 ```
-而foundation的組成如下，下面我們會一一介紹：
+而foundation的組成如下，下面我們會一一介紹：  
 1. Reset  
 2. Helpers  
 3. Config  
