@@ -143,11 +143,11 @@ $c-warning: $gold
 
 // ----- Components ----- //
 
-// 範例：$row--a-background: $c-highlight
+// Example：$row--a-background: $c-highlight
 
 // ----- Structures ----- //
 
-// 範例：$dropdown-link-color: $c-subdue
+// Example：$dropdown-link-color: $c-subdue
 
 // -------------------------------------  
 //   Base  
