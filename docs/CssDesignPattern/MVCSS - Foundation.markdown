@@ -95,7 +95,7 @@ p,li
 否則都應整合在Helpers的Animations裡面。  
 
 ## 3.Foundation - Config  
-Config則是拿來設定所有變數與字型的地方。下面的範例將拆解為Base、Colors和Fonts的設定。  
+Config則是拿來設定所有變數與字型的地方，下面的範例將拆解為Base、Colors和Fonts的設定。  
 ####@Font-face  
 MVCSS的範例是引入了Bourbon的`+font-face mixin`提供字體檔案，  
 但如果你已經有使用自己的網頁字體與服務的話，便可留空此段。  
