@@ -31,6 +31,7 @@ CSS 設計模式
 * [MVCSS - Styleguide](docs/CssDesignPattern/MVCSS - Styleguide.markdown)
 * [MVCSS - Foundation](docs/CssDesignPattern/MVCSS - Foundation.markdown)
 * [MVCSS - Components、Structures](docs/CssDesignPattern/MVCSS - Components、Structures.markdown)
+* [MVCSS - Manifest、Vendor](docs/CssDesignPattern/MVCSS - Manifest、Vendor.markdown)
 
 Sass心法
 ---------------------------
