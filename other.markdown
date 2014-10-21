@@ -21,6 +21,7 @@ Sass中階功能
 
 CSS 設計模式
 --------------------------
+* [這麼多SASS/CSS設計模式，究竟該如何逐步學習？](docs/CssDesignPattern/這麼多SASS/CSS設計模式，究竟該如何逐步學習？.markdown)
 * [SMACSS - Base、layout Rules](docs/SMACSS/1.markdown)
 * [SMACSS - Module Rules](docs/SMACSS/2.Module Rules.markdown)
 * [SMACSS - State Rules](docs/SMACSS/3.State Rules.markdown)
@@ -29,6 +30,7 @@ CSS 設計模式
 * [BEM](docs/CssDesignPattern/BEM.markdown)
 * [MVCSS - Styleguide](docs/CssDesignPattern/MVCSS - Styleguide.markdown)
 * [MVCSS - Foundation](docs/CssDesignPattern/MVCSS - Foundation.markdown)
+* [MVCSS - Components、Structures](docs/CssDesignPattern/MVCSS - Components、Structures.markdown)
 
 Sass心法
 ---------------------------
