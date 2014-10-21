@@ -21,20 +21,20 @@ components/
 structures/
 vendor/
 ```
-而foundation的組成如下：
+而foundation的組成如下，下面我們會一一介紹：  
 1. Reset  
 2. Helpers  
 3. Config  
 4. Base  
 5. Tools  
 
-## Foundation - Reset
+## 1.Foundation - Reset
 我們在建立專案前，都會先導入Reset css先將所有瀏覽器的預設CSS樣式給清空，  
 MVCSS是使用<a href="http://necolas.github.io/normalize.css/">， Normalize.css</a>，如果你不習慣它的Reset.css，也可以考慮使用 Eric Meyer 的 <a href="http://meyerweb.com/eric/tools/css/reset/reset.css" target="_blank">Reset CSS </a>。  
 關於各種版本的Reset CSS差異性，   
 我也寫過一篇<a href="http://ithelp.ithome.com.tw/question/10129547" target="_blank">文章</a>，各位可以從中評估並挑選自己上手的即可。  
 
-## Foundation - Helpers 
+## 2.Foundation - Helpers 
 Helpers是指專案上有用到的`functions`、`@Mixin`、`extend`、`animations`。 
 
 ####functions、@mixin  
@@ -94,8 +94,8 @@ p,li
 除非是特別的動畫模組才會在該模組下方直接寫Animations，  
 否則都應整合在Helpers的Animations裡面。  
 
-## Foundation - Config  
-Config則是拿來設定所有變數與字型的地方。下面的範例將拆解為Base、Colors和Fonts的設定。  
+## 3.Foundation - Config  
+Config則是拿來設定所有變數與字型的地方，下面的範例將拆解為Base、Colors和Fonts的設定。  
 ####@Font-face  
 MVCSS的範例是引入了Bourbon的`+font-face mixin`提供字體檔案，  
 但如果你已經有使用自己的網頁字體與服務的話，便可留空此段。  
@@ -143,11 +143,11 @@ $c-warning: $gold
 
 // ----- Components ----- //
 
-// 範例：$row--a-background: $c-highlight
+// Example：$row--a-background: $c-highlight
 
 // ----- Structures ----- //
 
-// 範例：$dropdown-link-color: $c-subdue
+// Example：$dropdown-link-color: $c-subdue
 
 // -------------------------------------  
 //   Base  
@@ -196,7 +196,7 @@ $g-l: em(1024px)
 
 // example：$dropdown-width: em(200px)
 ```  
-## Foundation - Base 
+## 4.Foundation - Base 
 Base則是針對HTML TAG直接寫全域CSS樣式，  
 以避免每個不同區塊的HTML TAG都還必須重新設定一次，  
 因為HTML TAG太多，所以通常只會針對重點來設計樣式。  
@@ -255,7 +255,7 @@ a
     border-bottom-color: $c-highlight
     color: $c-subdue
 ```    
-##Foundation - Tools  
+##5.Foundation - Tools  
 MVCSS的Tools的觀念很像是<a href="https://github.com/gonsakon/Learn-Sass-in-90-days/blob/master/docs/CssDesignPattern/OOCSS.markdown" target="_blank">OOCSS</a>，  
 但又不是純粹的OO，  
 `Tools`的CSS設定都是可以直接指定在HTML tag的class上，  
