@@ -53,7 +53,7 @@ OOCSS的設計模式是鼓勵開發者設計出的CSS複用性能夠達到極致
 1.`btn`：解決瀏覽器兼容的CSS Hack、撰寫預設按鈕樣式  
 2.`btn-promary`：增加`文字顏色`、`背景顏色`、`線條現色`覆蓋預設樣式  
 3.`btn-lg`：增加`文字大小`、`padding留白`，覆蓋預設樣式  
-像是Bootstrap 就有導入一些OOCSS的觀念，  
+像是Bootstrap 就有導入一些OOCSS與SMACSS - Module的觀念，  
 每一個Class都有他的任務存在。  
 
 所以你在設計網頁時，  
