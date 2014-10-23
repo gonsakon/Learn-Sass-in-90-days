@@ -32,7 +32,7 @@ a:hover {color: #03F;}
 這樣就不必在每個區塊上再寫一次連結顏色設定。  
 
 而Pure - Base所使用的CSS Reset是Normalize，  
-最下面加上了Pure自己客製化的兩個全域code：  
+另外Base的CSS在最下面加上了Pure自己客製化的兩個全域code：  
 ```
 [hidden] {
     display: none !important;
@@ -59,7 +59,7 @@ img{
 	display: block;
 }
 ```
-###<a href="http://purecss.io/base/" target="_blank">Pure - Table</a> 
+###<a href="http://purecss.io/tables/" target="_blank">Pure - Table</a> 
 提到這章節主要是了解如何新增子模組的流程，  
 這觀念同時也參考了SMACSS - Module的 <a href="#">子模組(Subclassing Modules)</a> 觀念。 
 首先我們來看Pure的table：  
