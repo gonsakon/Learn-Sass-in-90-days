@@ -6,9 +6,9 @@
 * <a href="http://Bem.info/" target="_blank">BEM</a>
 * <a href="http://mvcss.github.io/" target="_blank">MVCSS</a>
 
-常見的前端框架有：
-* Bootstrap 
-* Pure 
+較常見的前端框架有：
+* <a href="http://getbootstrap.com/" target="_blank">Bootstrap</a>
+* <a href="http://purecss.io/" target="_blank">Pure</a>
 
 我個人建議的學習途徑是：
 SMACSS>Pure>OOCSS>Bootstrap Sass>Bem>MVCSS
