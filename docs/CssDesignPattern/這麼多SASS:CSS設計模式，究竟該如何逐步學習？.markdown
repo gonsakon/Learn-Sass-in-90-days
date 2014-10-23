@@ -1,9 +1,9 @@
-# 這麼多Sass/css設計模式，究竟該如何逐步學習？  
+# 這麼多Sass/CSS設計模式，究竟該如何逐步學習？  
 
 以目前台灣比較熱門的CSS設計模式有： 
 * <a href="https://smacss.com/" target="_blank">SMACSS</a>
 * <a href="http://oocss.org/" target="_blank">OOCSS</a>
-* <a href="http://Bem.info/" target="_blank">BEM</a>
+* <a href="http://Bem.info/" target="_blank">BEM</a> (較少人用，但觀念時常被提起)
 * <a href="http://mvcss.github.io/" target="_blank">MVCSS</a>
 
 較常見的前端框架有：
