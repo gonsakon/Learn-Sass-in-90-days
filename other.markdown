@@ -17,11 +17,11 @@ Sass中階功能
 * <a target="_blank" href="docs/Sass/如何使用Sass來管理你的Bootstrap.markdown">如何使用Sass來管理你的Bootstrap</a>
 
 * <a target="_blank" href="docs/Sass/@each+Sass Maps批次產生各元素樣式.markdown">@each+Sass Maps批次產生各元素樣式.markdown</a>
-
+* <a target="_blank" href="docs/Sass/@each+Sass Maps批次產生各元素樣式.markdown">sass-globbing - 輕鬆鬆import資料夾內所有sass檔</a>
 
 CSS 設計模式
 --------------------------
-* [這麼多SASS/CSS設計模式，究竟該如何逐步學習？](docs/CssDesignPattern/這麼多SASS/CSS設計模式，究竟該如何逐步學習？.markdown)
+
 * [SMACSS - Base、layout Rules](docs/SMACSS/1.markdown)
 * [SMACSS - Module Rules](docs/SMACSS/2.Module Rules.markdown)
 * [SMACSS - State Rules](docs/SMACSS/3.State Rules.markdown)
