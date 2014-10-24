@@ -17,7 +17,7 @@ SMACSS>Pure>OOCSS>Bootstrap Sass>Bem>MVCSS
 開始面臨到撰寫的CSS CODE 靈活性、可維護性遇到瓶頸時，    
 那麼我個人建議先學習`Smacss`與`Pure`這兩個會比較好，  
 尤其Pure更是以`Smacss`設計模式來延伸的，  
-再加上它較輕量，也會在寫註解讓你知道他如何設計結構。  
+再加上它較輕量，也會寫註解讓你知道他如何設計結構。  
 這裡就來舉出兩個Pure的的設計手法，
 
 ###<a href="http://purecss.io/base/" target="_blank">Pure - Base </a> 
