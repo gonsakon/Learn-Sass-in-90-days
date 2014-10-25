@@ -5,7 +5,7 @@
 * [SMACSS - Layout](https://smacss.com/book/type-layout)
 
 ##youtube影片教學
-<a href="https://www.youtube.com/watch?v=O3g9DK6DQS0&feature=youtu.be" target="_blank">![](/images/video/smacss-1.png)</a>
+<a href="https://www.youtube.com/watch?v=7HQg94jxTwM&list=UU7A-C1EwjVfGbCOK5u8AlwA" target="_blank">![](/images/video/smacss-1.png)</a>
 
 [SMACSS](https://smacss.com/)是Jonathan Snook所發表的一個CSS/SASS的設計模式，  
 就連我自己開發CSS的過程中，  
