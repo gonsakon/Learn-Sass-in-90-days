@@ -18,7 +18,7 @@
 而這個章節，  
 就要來講到有關於歷史上頗為知名的Grid system，960 Grid，  
 ##youtube影片教學
-<a href="https://www.youtube.com/watch?v=xegzBNxbZkY&feature=youtu.be" target="_blank">![](/images/video/susy2-4-1.png)</a>  
+<a href="https://www.youtube.com/watch?v=o-r3lVqWorU" target="_blank">![](/images/video/susy2-4-1.png)</a>  
 
 ##範例程式碼
 * [susy2文件 - span mixin](http://susydocs.oddbird.net/en/latest/toolkit/#span-mixin)
