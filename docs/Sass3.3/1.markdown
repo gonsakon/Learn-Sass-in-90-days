@@ -1,6 +1,6 @@
 # 參考父選擇符：&
 ##youtube影片教學
-<a href="https://www.youtube.com/watch?v=ieW3NN6qX8I&feature=youtu.be" target="_blank">![](/images/video/sass3.3-1.png)</a>
+<a href="https://www.youtube.com/watch?v=pIUTpzHjcdA" target="_blank">![](/images/video/sass3.3-1.png)</a>
 先來介紹以前Sass3.2的語法，  
 ```
 //scss
