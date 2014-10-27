@@ -1,0 +1,181 @@
+# SMACSS -  結構規劃與其它補充 
+
+## Minimizing the Depth(最小化深度)  
+有的時候我們設計模組時常會因為需求變動而新增元素，  
+一個區塊內可能就會新增一些元素，像是`li`、`p`、`h2`等等， 
+就會寫這樣的程式碼：
+```
+.pod{
+    border: 1px solid #333;
+}
+.pod > ul {
+	color: blue
+    margin-bottom: 5px;
+}
+.pod > li {
+	background: #000
+    margin-bottom: 5px;
+}
+.pod > h3 {
+	margin-bottom: 5px
+}
+```  
+你可以看到上面在`.pod`的子元素`margin-bottom`都是相同的，  
+所以就可以改寫成這樣：  
+```
+.pod{
+    border: 1px solid #333;
+}
+//程式碼合併
+.pod > ul,.pod >li,.pod > h3{
+	margin-bottom: 5px;
+}
+.pod > ul {
+	color: blue
+}
+.pod > li {
+	background: #000
+    
+}
+```
+這樣子程式碼確實簡短許多，  
+但會有一個潛在問題是又有許多元素新增進來時，  
+class命名也會變得臃腫：  
+```
+.pod > ul,.pod >li,.pod > h3,.pod > div,.pod > span,.pod > em,.pod > nav{
+	margin-bottom: 5px;
+}
+```
+SMACSS建議你可以這樣子寫：  
+```
+//CSS程式碼
+.pod{
+    border: 1px solid #333;
+}
+.pod-body {
+    margin-bottom: 5px;
+}
+//HTML程式碼
+<div class="pod">
+	<h2 class="pod-body">標題</h2>
+	<ul>
+		<li></li>
+		<li></li>
+	</ul>
+</div>
+```  
+這樣的寫法是將功能給抽象命名出來，  
+有用到這個功能就直接在HTML TAG加上class，  
+這樣便能省掉不少CSS空間，樣式結構上也變得較為彈性。  
+
+## HTML5 與 SMACSS  
+SMACSS不會因為你使用了HTML5 TAG導致排版上容易出問題，  
+因為SMACSS主要設計核心為：  
+1. 提升CSS語意化並套用至HTML與內容中
+2. 減少特定HTML結構  
+HTML5新增了不少的HTML TAG(nav、article、nav)，  
+目的是為了讓網頁能夠更聚焦地描述內容，  
+舉個例子來說一個網站有很多的li清單，  
+但像是chrome、yahoo搜尋引擎不曉得你哪個清單才是最重要的內容， 
+所以這時就可以使用`nav`來進行告知動作：  
+```
+<nav class="nav-primary">
+	<h2>title</h2>
+	<ul>
+		..
+	</ul>
+</nav>
+<nav class="nav-secondary">
+	<h2>title</h2>
+	<ul>
+		..
+	</ul>
+</nav>
+
+```
+依上面的code，假設`.nav-primary`是水平列選單，  
+`.nav-secondary`是垂直列選單，  
+你直覺上可能就會想要這樣子寫：  
+```
+nav.nav-primary li { 
+    display: inline-block; 
+}
+
+nav.nav-secondary li {
+    display: block;
+}
+```  
+但上面這樣的寫法會把特定的HTML元素綁死，  
+今天如果因為商業策略上並不打算把那裡的選單區塊從nav改為div時，  
+這樣子你就必須HTML與CSS都必須改，  
+所以SMACSS建議這樣子寫：  
+```
+.l-inline li { 
+    display: inline-block;
+}
+
+.l-stacked li {
+    display: block;
+}
+```  
+`l`是layout的前綴，  
+同樣也是使用抽象命名的觀念，  
+這樣寫就能靈活套用在各HTML TAG上。  
+
+從上面例子你可以看出SMACSS希望CSS能保持簡單，  
+避免選擇器變得過於複雜，且在HTML上是可以理解的。  
+
+最後總結兩個SMACSS結論：  
+1. 提升網頁語意化
+2. 減少對HTML TAG的依賴(例：nav.nav-primary)    
+
+## 參考SMACSS設計Sass @import 結構  
+下面這個結構是SMACSS所推薦的：  
+```
+@import
+   "site-settings",
+   "mixins",
+   "base",
+   "states",
+   "layout/grid",
+   "module/btn",
+   "module/bookmarks",
+   "module/callout";
+```
+site-setting的部份是基礎變數設定，  
+接續下來是mixins、base、states，  
+Grid的設定時常會建立在Layout上，  
+所以會有一個Grid的檔案統一管理，  
+再來Module就放你的獨立化的模組。  
+
+另外我們再看其中一種以SMACSS為基礎設計的結構：  
+```
+scss/
+|- _base/
+|  |- _config.scss
+|  |- _presets.scss
+|  |- _headings.scss
+|  |- ...
+ 
+|- _layouts/
+|  |- _l-base.scss
+|  |- _l-grid.scss
+ 
+|- _modules/
+|  |- _m-buttons.scss
+|  |- _m-tabs.scss
+ 
+|- _states/
+|  |- _s-buttons.scss
+|  |- _s-tabs.scss
+|- application.scss
+ 
+stylesheets/
+|- application.css
+```  
+與前者的差異性是檔案多了前綴，  
+在搜尋上變得更加容易，  
+
+SMACSS對於SASS初學者來說算是一個蠻不錯的學習門檻，   
+你可以先學SMACSS再來去試著納入其他設計模式，  
+並努力朝著讓自己HTML、CSS越來越乾淨維護為出發點一起努力嘍！

@@ -27,6 +27,7 @@ CSS 設計模式
 * [SMACSS - Module Rules](docs/SMACSS/2.Module Rules.markdown)
 * [SMACSS - State Rules](docs/SMACSS/3.State Rules.markdown)
 * [SMACSS - Theme Rules](docs/SMACSS/4.theme Rules.markdown)
+* [SMACSS - 結構規劃與其它補充](docs/SMACSS/5.結構規劃與其它補充.markdown)
 * [OOCSS](docs/CssDesignPattern/OOCSS.markdown)
 * [BEM](docs/CssDesignPattern/BEM.markdown)
 * [MVCSS - Styleguide](docs/CssDesignPattern/MVCSS - Styleguide.markdown)
