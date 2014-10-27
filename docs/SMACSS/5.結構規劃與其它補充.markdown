@@ -126,7 +126,7 @@ nav.nav-secondary li {
 避免選擇器變得過於複雜，且在HTML上是可以理解的。  
 
 最後總結兩個SMACSS結論：  
-1. 提升網頁語意化
+1. 提升網頁語意化  
 2. 減少對HTML TAG的依賴(例：nav.nav-primary)    
 
 ## 參考SMACSS設計Sass @import 結構  
