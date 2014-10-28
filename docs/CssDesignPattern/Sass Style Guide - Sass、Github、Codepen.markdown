@@ -1,4 +1,4 @@
-# Sass Style Guide - Sass、Github、Codepen.markdown
+# Sass Style Guide - Sass、Github、Codepen
 
 ## 相關連結
 * <a href="http://sass-lang.com/styleguide" target="_blank">Sass styleguide</a>
