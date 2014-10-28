@@ -1,7 +1,7 @@
 # Sass Style Guide - Sass、Github、Codepen.markdown
 
 ## 相關連結
-* <a href="" target="_blank">http://sass-lang.com/styleguide</a>
+* <a href="http://sass-lang.com/styleguide" target="_blank">Sass styleguide</a>
 * <a href="https://github.com/styleguide/css" target="_blank">github Styleguide</a>
 * <a href="" target="_blank">CodePen's CSS</a>
 
@@ -146,13 +146,13 @@ Codepen是一個線上網路寫程式碼的服務，
 12. What the future might be like for us.  
 
 在codepen上，作者有使用這些 Sass功能：  
-1. @import
-2. @mixin
-3. nesting
-4. variables
-5. @extend
-6. math
-7. loops
+1. @import  
+2. @mixin  
+3. nesting  
+4. variables  
+5. @extend  
+6. math  
+7. loops  
 
 作者提到說以前他也是有在用Compass，  
 但後來發現它也只有在用CSS3 Mixin的功能，  
