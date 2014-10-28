@@ -7,11 +7,11 @@
 
 ##進入主題  
 當你所在的組織是一個團隊的時候，  
-為了讓大家的程式碼都能保持一致得風格來設計，  
-所以都會一同討論並建立Style Guide出來， 
+為了讓大家的程式碼都能保持一致得風格來設計，都會一同討論並建立Style Guide出來，   
 觀察別人的Style Guide也有助於提升自己對程式碼的風格建立，  
+在閱讀這個章節前，你可以先瀏覽這份相當完整的<a href="https://github.com/doggy8088/CSS-Guidelines" target="_blank">CSS-Guidelines</a>，  
+相信可以獲得不少撰寫風格上的改善，  
 這一次我則是挑了三個的不錯的Style Guide供大家參考：  
-
 
 ## Sass 官網  
 你現在看到的<a href="http://sass-lang.com/" target="_blank">Sass官網</a>其實已經是改版過的了，    
