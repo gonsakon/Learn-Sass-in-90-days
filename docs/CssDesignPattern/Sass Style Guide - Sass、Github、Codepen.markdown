@@ -3,7 +3,7 @@
 ## 相關連結
 * <a href="http://sass-lang.com/styleguide" target="_blank">Sass styleguide</a>
 * <a href="https://github.com/styleguide/css" target="_blank">github Styleguide</a>
-* <a href="" target="_blank">CodePen's CSS</a>
+* <a href="http://codepen.io/chriscoyier/blog/codepens-css" target="_blank">CodePen's CSS</a>
 
 ##進入主題  
 當你所在的組織是一個團隊的時候，  
