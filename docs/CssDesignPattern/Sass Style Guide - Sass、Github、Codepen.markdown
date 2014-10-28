@@ -201,9 +201,9 @@ inbox的觀念是如果有還不是很了解團隊Sass結構的人，
 另外較有趣的數據是，codepen總共有160個獨立SCSS文件，  
 但作者從來不怕找不到檔案，因為sublime有很強大的搜尋功能。  
 最後提供codepen scss檔案的容量大小：  
-1. SCSS文件共13345行
-2. global.css文件11.8k
-3. page.css文件5.5k
-4. editor.css文件6.2k
+1. SCSS文件共13345行  
+2. global.css文件11.8k  
+3. page.css文件5.5k  
+4. editor.css文件6.2k  
 
 除此之外codepen下方還有針對`撰寫風格`、`Media Queries`做詳細的解說，有興趣的朋友可以再到最上面的連結瀏覽。  
