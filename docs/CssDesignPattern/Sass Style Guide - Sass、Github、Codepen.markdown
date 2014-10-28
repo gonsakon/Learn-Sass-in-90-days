@@ -10,11 +10,11 @@
 為了讓大家的程式碼都能保持一致得風格來設計，  
 所以都會一同討論並建立Style Guide出來， 
 觀察別人的Style Guide也有助於提升自己對程式碼的風格建立，  
-這一次我則是挑了三個的不錯的Style Guide供大家參考：
+這一次我則是挑了三個的不錯的Style Guide供大家參考：  
 
 
 ## Sass 官網  
-你現在看到的<a href="http://sass-lang.com/" target="_blank">Sass官網</a>其實已經是改版過的了，  
+你現在看到的<a href="http://sass-lang.com/" target="_blank">Sass官網</a>其實已經是改版過的了，    
 這次Sass官網也釋出了他們的stylecode，  
 
 #### Typography 
@@ -45,17 +45,17 @@ $font-family-code: source-code-pro, Consolas, 'Andale Mono WT', 'Andale Mono', '
 
 #### 撰寫習慣  
 1. HTML預處理器是`haml`、`erb`、`md`來混用
-2. HTML都是用小寫來標記元素和屬性，Self-close empty elements也會用結尾斜線`<br />`。
+2. HTML都是用小寫來標記元素和屬性，Self-close empty elements也會用結尾斜線`<br />`。  
 3.使用的Framework有`Compass`、`Susy`、`Breakpoint`  
 
 使用到`Susy`的話基本上都會載入`Breakpoint`，  
-因為`Susy`的RWD @mixin會使用到`Breakpoint`的功能。
+因為`Susy`的RWD @mixin會使用到`Breakpoint`的功能。  
 
 #### Code Style Guide 撰寫風格  
-1. 用連接符連接區塊底下的元素：（snake_case）
-2. 在class命名上使用一般到具體的作法，可瀏覽此篇<a href="http://webdesign.tutsplus.com/tutorials/quick-tip-name-your-sass-variables-modularly--webdesign-13364" target="_blank">文章</a>。
-3. 避免嵌套太深 (.nav ul li a span)
-4. Write comma-delimited selectors on separate lines.  
+1. 用連接符連接區塊底下的元素：（snake_case）  
+2. 在class命名上使用一般到具體的作法，可瀏覽此篇<a href="http://webdesign.tutsplus.com/tutorials/quick-tip-name-your-sass-variables-modularly--webdesign-13364" target="_blank">文章</a>。  
+3. 避免嵌套太深 (.nav ul li a span)  
+4. Write comma-delimited selectors on separate lines.    
 
 #### RWD 斷點
 ```
@@ -86,7 +86,7 @@ Github的CSS也是使用SCSS來設計的，
 3. 用//來取代/**/ 註解  
 4. 不要將@import架構擴展到三層以上  
 5. 公用的變數與@mixin放在`global`資料夾。  
-6. 使用顏色變數時用hex color`#000`，除非是使用rgba()
+6. 使用顏色變數時用hex color`#000`，除非是使用rgba()  
 
 再來Github的SCSS結構長得像是如下：  
 ```
@@ -132,18 +132,18 @@ Codepen是一個線上網路寫程式碼的服務，
 我們也來看看它們的CSS寫法，  
 有些內容我看不懂意思就直接提供英文內容了。：  
 
-1. 使用SCSS
-2. 使用Autoprefixer(是一個瀏覽器前綴兼容plugin，在sublime上也有)
-3. 使用 Rails Asset Pipeline(JS與CSS壓縮工具)
-4. The SCSS file that represents the CSS file that actually gets loaded is just a table of contents.
-5. codepen有一個風格樣式，但大多數只是因為一致性看起來不錯
-6. 不用任何特別的結構，除了use classes a bunch ”以外
-7. 在每個頁面上只會使用2~3個CSS檔案
-8. 是使用`@mixin`來寫RWD效果，以方便隨時關閉。
-9. 有在程式碼裡面使用註解
-10. 一些統計數據  
-11. CSS部分只有作者一人來設計，總共三人合作開發
-12. What the future might be like for us.
+1. 使用SCSS  
+2. 使用Autoprefixer(是一個瀏覽器前綴兼容plugin，在sublime上也有)  
+3. 使用 Rails Asset Pipeline(JS與CSS壓縮工具)  
+4. The SCSS file that represents the CSS file that actually gets loaded is just a table of contents.  
+5. codepen有一個風格樣式，但大多數只是因為一致性看起來不錯  
+6. 不用任何特別的結構，除了use classes a bunch ”以外  
+7. 在每個頁面上只會使用2~3個CSS檔案  
+8. 是使用`@mixin`來寫RWD效果，以方便隨時關閉。  
+9. 有在程式碼裡面使用註解  
+10. 一些統計數據    
+11. CSS部分只有作者一人來設計，總共三人合作開發  
+12. What the future might be like for us.  
 
 在codepen上，作者有使用這些 Sass功能：  
 1. @import
@@ -187,9 +187,9 @@ Codepen的SCSS結構：
 ```
 比較特別的地方是作者把Layout的區塊放在`area`，  
 將表頭與表尾的設計獨立成一個scss檔案，  
-針對文字排版(typography)、表單、`modals`、按鈕有個別作設定。
-另外作者提到有時候會因為一些意外狀況，  
-所以設計了一個`shame`的scss檔案，將程式碼暫時放在這裡：  
+針對文字排版(typography)、表單、`modals`、按鈕有個別作設定。  
+另外作者提到有時候會因為一些意外狀況，    
+所以設計了一個`shame`的scss檔案，將程式碼暫時放在這裡：    
 ```
 @import "shame";
 ```  
@@ -206,4 +206,4 @@ inbox的觀念是如果有還不是很了解團隊Sass結構的人，
 3. page.css文件5.5k
 4. editor.css文件6.2k
 
-除此之外codepen下方還有針對`撰寫風格`、`Media Queries`做詳細的解說，有興趣的朋友可以再到最上面的連結瀏覽。
+除此之外codepen下方還有針對`撰寫風格`、`Media Queries`做詳細的解說，有興趣的朋友可以再到最上面的連結瀏覽。  
