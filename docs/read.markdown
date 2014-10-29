@@ -34,7 +34,7 @@
 Fire.app的用法之前我也曾寫過一篇<a href="https://www.youtube.com/watch?v=Z_CmIMAiSiI" target="_blank">文章</a>，設計師們也可以前往參考。  
 如果你是工程師，那就可以考慮使用Command-line來安裝，  
 Windows可以參考<a href="http://ithelp.ithome.com.tw/question/10128634" target="_blank">這篇</a>，  Mac可以參考<a href="http://ithelp.ithome.com.tw/question/10157016">這篇</a>，Susy的部份請跳過。   
-如果你暫時不想在你的電腦安裝任何軟體，想先嘗試看看Sass寫法的話，  
+如果你暫時不想在電腦安裝任何軟體，想先嘗試Sass寫法的話，  
 可以到<a href="http://codepen.io/" target="_blank">Codepen</a>、<a href="Sassmeister.com" target="_blank">Sassmeister</a>、<a href="http://jsbin.com/" target="_blank">JS Bin</a>的線上程式碼服務玩玩看，它們都有提供Sass格式的開發功能。  
 
 這個教學手冊主要都是使用Sublime text 3來進行開發，  
