@@ -8,8 +8,12 @@
 這個章節主要是逐步教你如何掌握Sass。  
 
 在你決定要學Sass前，  
-你可以先瀏覽「第一章 Sass介紹」，  
-來評估這個語言適不適合現在的你，  
+你可以先瀏覽這兩篇文章，  
+來評估這個語言適不適合現在的你，
+1. <a href="http://ithelp.ithome.com.tw/question/10126703" target="_blank">http://ithelp.ithome.com.tw/question/10126703</a>  
+2. <a href="http://ithelp.ithome.com.tw/question/10126905" target="_blank">SASS該怎麼寫？會和純CSS寫法差很多嗎？</a>  
+
+
 以我自己的經驗，最好是設計過幾個網站再來碰Sass會比較好些，  
 至少要知道`css reset`、了解`box-model`、行內塊狀的觀念，  
 會使用`float`、`position`來排版，    
@@ -44,7 +48,7 @@ Windows可以參考<a href="http://ithelp.ithome.com.tw/question/10128634" targe
 
 ## 究竟要學到哪個階段，才有辦法把CSS專案導入Sass  
 這個問題也是許多網頁設計師詢問率相當高的，  
-我第一個Sass專案實際上只有學「Sass初階功能」的章節就開始寫了，  
+我第一個Sass專案實際上只有學一些基本功能就開始寫了，  
 至少你要懂得
 <a href="http://ithelp.ithome.com.tw/question/10127206" target="_blank">變數</a>、
 <a href="http://ithelp.ithome.com.tw/question/10127521" target="_blank">計算</a>、
