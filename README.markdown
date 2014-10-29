@@ -1,6 +1,6 @@
 # Sass & Susy教學手冊
 
-假使您剛接觸Sass沒多久，請先閱讀 這本[Sass教學手冊導讀](docs/read.markdown)，進以了解如何逐步學習Sass。  
+假使您剛接觸Sass沒多久，請先閱讀此篇<a href="docs/read.markdown" target="_blank">Sass教學手冊導讀</a>，進以了解如何逐步學習Sass。  
 
 Sass介紹
 --------------------------
