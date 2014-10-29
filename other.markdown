@@ -1,3 +1,6 @@
+* [Sass教學手冊導讀](docs/read.markdown)
+
+
 Sass安裝環境
 --------------------------
 * [如何透過Sublime text 3 plugin打造Sass開發環境](docs/Sass/如何透過Sublime text 3 plugin打造Sass開發環境.markdown)
