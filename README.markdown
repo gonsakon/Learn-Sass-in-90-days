@@ -1,5 +1,6 @@
-* [Sass教學手冊導讀](docs/read.markdown)
+# Sass & Susy教學手冊
 
+假使您剛接觸Sass沒多久，請先閱讀 這本[Sass教學手冊導讀](docs/read.markdown)，進以了解如何逐步學習Sass。  
 
 Sass介紹
 --------------------------
@@ -39,29 +40,31 @@ Sass初階功能
 * <a href="http://ithelp.ithome.com.tw/question/10159726" target="_blank">@each+Sass Maps批次新增各元素樣式</a><span style="color: #e69138;">[new!]</span>
 * <a href="http://ithelp.ithome.com.tw/question/10161305" target="_blank">sass-globbing - 輕鬆鬆import資料夾內所有sass檔</a><span style="color: #e69138;">[new!]</span>
 
-
-
-Sass 3.3
---------------------------
-* [參考父選擇符：&](docs/Sass3.3/1.markdown)
-* [Source Maps](docs/Sass3.3/Source Maps.markdown)
-* [Sass Maps](docs/Sass3.3/SassMaps.markdown)
-
-Sass 初階功能
---------------------------
-* [@content](docs/Sass/@content.markdown)
-
 Sass中階功能
 --------------------------
+* <a href="http://ithelp.ithome.com.tw/question/10131473" target="_blank">如何透過Sass&amp;Compass支援CSS3動畫效果</a>
+* <a href="http://ithelp.ithome.com.tw/question/10133611" target="_blank">利用@Mixin與Sass運算建立Grid System</a>
+* <a href="http://ithelp.ithome.com.tw/question/10133236" target="_blank">Sass @Mixin and Compass結合運用範例</a>
+* <a href="http://ithelp.ithome.com.tw/question/10136259" target="_blank">如何讓你的CSS動畫更具動態效果</a>
+* <a href="http://ithelp.ithome.com.tw/question/10137007" target="_blank">Compass圖片合併功能(CSS Sprite)</a>
+* <a href="http://ithelp.ithome.com.tw/question/10137464" target="_blank">@for+random()創造無限可能</a>
+* <a href="http://ithelp.ithome.com.tw/question/10135991" target="_blank">透過index()與nth()來設計網站版本樣式控制管理</a>
 * <a target="_blank" href="docs/Sass/使用animate.scss提升網頁體驗.markdown">使用animate.scss提升網頁體驗</a>
 * <a target="_blank" href="docs/Sass/如何使用Sass來管理你的Bootstrap.markdown">如何使用Sass來管理你的Bootstrap</a>
-
 * <a target="_blank" href="docs/Sass/@each+Sass Maps批次產生各元素樣式.markdown">@each+Sass Maps批次產生各元素樣式.markdown</a>
 * <a target="_blank" href="docs/Sass/@each+Sass Maps批次產生各元素樣式.markdown">sass-globbing - 輕鬆鬆import資料夾內所有sass檔</a>
+ 
+Sass心法
+---------------------------
+* <a href="http://ithelp.ithome.com.tw/question/10131877" target="_blank">如何將別人撰寫的CSS Framework轉換成Sass格式</a>
+* <a href="http://ithelp.ithome.com.tw/question/10132821" target="_blank">規劃你的Sass結構</a>
+* <a href="http://ithelp.ithome.com.tw/question/10135467" target="_blank">淺談Sass協作流程分享</a>
+* <a href="http://ithelp.ithome.com.tw/question/10139186" target="_blank">如何逐步整合自己的Sass資料夾</a>
+* [@extend 與 @Mixin的差異性與使用時機](docs/Sass/@extend與@Mixin的使用時機.markdown)
+* [Sass開發經驗分享](docs/Sass/Sass開發經驗分享.markdown)
 
 CSS 設計模式
 --------------------------
-
 * [SMACSS - Base、layout Rules](docs/SMACSS/1.markdown)
 * [SMACSS - Module Rules](docs/SMACSS/2.Module Rules.markdown)
 * [SMACSS - State Rules](docs/SMACSS/3.State Rules.markdown)
@@ -75,11 +78,11 @@ CSS 設計模式
 * [MVCSS - Manifest、Vendor](docs/CssDesignPattern/MVCSS - Manifest、Vendor.markdown)
 * [Sass Style Guide - Sass、Github、Codepen](docs/CssDesignPattern/Sass Style Guide - Sass、Github、Codepen.markdown)
 
-Sass心法
----------------------------
-* [@extend 與 @Mixin的差異性與使用時機](docs/Sass/@extend與@Mixin的使用時機.markdown)
-* [Sass開發經驗分享](docs/Sass/Sass開發經驗分享.markdown)
-
+Sass 3.3
+--------------------------
+* [參考父選擇符：&](docs/Sass3.3/1.markdown)
+* [Source Maps](docs/Sass3.3/Source Maps.markdown)
+* [Sass Maps](docs/Sass3.3/SassMaps.markdown)
 
 Susy 2教學手冊
 --------------------------
@@ -102,9 +105,6 @@ Susy 2教學手冊
 * <a target="_blank" href="docs/susy2/15.Susy2 語法速記表.markdown">15.Susy2 語法速記表</a>
 * <a target="_blank" href="docs/susy2/16.Susy2 網路教學資源.markdown">16.Susy2 網路教學資源</a>
 * <a target="_blank" href="docs/susy2/17.使用Susy2前，你必須要懂的CSS觀念.markdown">17.使用Susy2前，你必須要懂的CSS觀念</a>
-
-
-
  
 Susy 1教學手冊
 --------------------------
