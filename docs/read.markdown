@@ -229,6 +229,6 @@ Susy2的教學連結如下，記得要從第一章慢慢看起，
 
 ##結論  
 相信透過這樣一系列的導讀，  
-就能找到自己學習Sass的流程，  
+你就能找到屬於自己學習Sass的流程，  
 有些連結沒有列上的部份你可以再到<a href="http://sam0512.blogspot.tw/2013/10/sass.html" target="_blank">Sass教學手冊目錄連結</a>來瀏覽。  
 遇到問題的話也歡迎透過<a href="https://www.facebook.com/sfismy" target="_blank">Facebook</a>聯繫我嘍^_^
