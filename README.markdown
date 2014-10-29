@@ -12,7 +12,7 @@ Sass安裝環境
 --------------------------
 * <a href="https://www.youtube.com/watch?v=Z_CmIMAiSiI" target="_blank">使用fire.app開始sass&amp;compass專案</a>(強力推薦)
 * <a href="http://ithelp.ithome.com.tw/question/10128634" target="_blank">Sass、Compass環境安裝流程教學</a>
-* <a href="http://ithelp.ithome.com.tw/question/10159247" target="_blank">如何透過Sublime text 3 plugin打造Sass開發</a>&nbsp;<span style="color: #e69138;">[new!]</span>
+* <a href="http://ithelp.ithome.com.tw/question/10159247" target="_blank">如何透過Sublime text 3 plugin打造Sass開發</a>
 
 Sass初階功能
 --------------------------
@@ -35,10 +35,10 @@ Sass初階功能
 * <a href="http://ithelp.ithome.com.tw/question/10137007" target="_blank">Compass圖片合併功能(CSS Sprite)</a>                               
 * <a href="http://ithelp.ithome.com.tw/question/10137464" target="_blank">@for+random()創造無限可能</a>                              
 * <a href="http://ithelp.ithome.com.tw/question/10135991" target="_blank">透過index()與nth()來設計網站版本樣式控制管理</a>                           
-* <a href="http://ithelp.ithome.com.tw/question/10159400" target="_blank">使用animate.scss增強網頁瀏覽體驗</a><span style="color: #e69138;">[new!]</span>
-* <a href="http://ithelp.ithome.com.tw/question/10159555" target="_blank">如何使用Sass來管理你的Bootstrap</a><span style="color: #e69138;">[new!]</span>
-* <a href="http://ithelp.ithome.com.tw/question/10159726" target="_blank">@each+Sass Maps批次新增各元素樣式</a><span style="color: #e69138;">[new!]</span>
-* <a href="http://ithelp.ithome.com.tw/question/10161305" target="_blank">sass-globbing - 輕鬆鬆import資料夾內所有sass檔</a><span style="color: #e69138;">[new!]</span>
+* <a href="http://ithelp.ithome.com.tw/question/10159400" target="_blank">使用animate.scss增強網頁瀏覽體驗</a>
+* <a href="http://ithelp.ithome.com.tw/question/10159555" target="_blank">如何使用Sass來管理你的Bootstrap</a>
+* <a href="http://ithelp.ithome.com.tw/question/10159726" target="_blank">@each+Sass Maps批次新增各元素樣式</a>
+* <a href="http://ithelp.ithome.com.tw/question/10161305" target="_blank">sass-globbing - 輕鬆鬆import資料夾內所有sass檔</a>
 
 Sass中階功能
 --------------------------
