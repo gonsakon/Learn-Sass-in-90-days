@@ -9,9 +9,9 @@
 
 在你決定要學Sass前，  
 你可以先瀏覽這兩篇文章，  
-來評估這個語言適不適合現在的你，
+來評估這個語言適不適合現在的你：  
 1. <a href="http://ithelp.ithome.com.tw/question/10126703" target="_blank">http://ithelp.ithome.com.tw/question/10126703</a>  
-2. <a href="http://ithelp.ithome.com.tw/question/10126905" target="_blank">SASS該怎麼寫？會和純CSS寫法差很多嗎？</a>  
+2. <a href="http://ithelp.ithome.com.tw/question/10126905" target="_blank">SASS該怎麼寫？會和純CSS寫法差很多嗎？</a>   
 
 
 以我自己的經驗，最好是設計過幾個網站再來碰Sass會比較好些，  
