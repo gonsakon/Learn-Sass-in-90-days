@@ -52,7 +52,7 @@ Sass中階功能
 * <a target="_blank" href="docs/Sass/使用animate.scss提升網頁體驗.markdown">使用animate.scss提升網頁體驗</a>
 * <a target="_blank" href="docs/Sass/如何使用Sass來管理你的Bootstrap.markdown">如何使用Sass來管理你的Bootstrap</a>
 * <a target="_blank" href="docs/Sass/@each+Sass Maps批次產生各元素樣式.markdown">@each+Sass Maps批次產生各元素樣式.markdown</a>
-* <a target="_blank" href="docs/Sass/@each+Sass Maps批次產生各元素樣式.markdown">sass-globbing - 輕鬆鬆import資料夾內所有sass檔</a>
+* <a target="_blank" href="docs/Sass/sass-globbing - 輕鬆鬆import資料夾內所有sass檔.markdown">sass-globbing - 輕鬆鬆import資料夾內所有sass檔</a>
  
 Sass心法
 ---------------------------
