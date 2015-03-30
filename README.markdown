@@ -6,9 +6,9 @@
 透過它來了解後端版型邏輯，並清楚理解如何與後端工程師合作，
 第二天最後一小時也會分享自己現階段的前端開發心法，希望能讓大家滿載而歸:D
 
-高雄場(5/2~5/3)報名網址：<a href="http://kaohsiung-frontend-class.kktix.cc/events/dadcf603" target="_blank">活動連結</a>
-台北場(5/9~5/10)報名網址：<a href="http://kaohsiung-frontend-class.kktix.cc/events/dadcf603-9b53f0" target="_blank">活動連結</a>
-台中場(5/30~5/31)報名網址：<a href="http://kaohsiung-frontend-class.kktix.cc/events/dadcf603-d5550e" target="_blank">活動連結</a>
+* 高雄場(5/2~5/3)報名網址：<a href="http://kaohsiung-frontend-class.kktix.cc/events/dadcf603" target="_blank">活動連結</a>
+* 台北場(5/9~5/10)報名網址：<a href="http://kaohsiung-frontend-class.kktix.cc/events/dadcf603-9b53f0" target="_blank">活動連結</a>
+* 台中場(5/30~5/31)報名網址：<a href="http://kaohsiung-frontend-class.kktix.cc/events/dadcf603-d5550e" target="_blank">活動連結</a>
 
 # Sass & Susy教學手冊
 
