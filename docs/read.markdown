@@ -29,11 +29,7 @@
 
 ## 環境建立  
 要開始寫Sass前，不免俗地要建立Sass開發環境，  
-如果你是設計師，那就相當建議你購買<a href="http://fireapp.kkbox.com/" target="_blank">Fire.app</a>、<a href="http://incident57.com/codekit/" target="_blank">codekit</a>，  
-這些軟體內建就有SASS、COMPASS開發環境，可省下你搞環境的流程，  
-Fire.app的用法之前我也曾寫過一篇<a href="https://www.youtube.com/watch?v=Z_CmIMAiSiI" target="_blank">文章</a>，設計師們也可以前往參考。  
-如果你是工程師，那就可以考慮使用Command-line來安裝，  
-Windows可以參考<a href="http://ithelp.ithome.com.tw/question/10128634" target="_blank">這篇</a>，  Mac可以參考<a href="http://ithelp.ithome.com.tw/question/10157016">這篇</a>，Susy的部份請跳過。   
+如果你是設計師，那就相當建議你使用 prepos ， 
 如果你暫時不想在電腦安裝任何軟體，想先嘗試Sass寫法的話，  
 可以到<a href="http://codepen.io/" target="_blank">Codepen</a>、<a href="Sassmeister.com" target="_blank">Sassmeister</a>、<a href="http://jsbin.com/" target="_blank">JS Bin</a>的線上程式碼服務玩玩看，它們都有提供Sass格式的開發功能。  
 
@@ -54,16 +50,14 @@ Windows可以參考<a href="http://ithelp.ithome.com.tw/question/10128634" targe
 <a href="http://ithelp.ithome.com.tw/question/10127521" target="_blank">計算</a>、
 <a href="http://ithelp.ithome.com.tw/question/10127832" target="_blank">@import</a>、
 <a href="http://ithelp.ithome.com.tw/question/10128138" target="_blank">@Mixin</a>、
-<a href="http://ithelp.ithome.com.tw/question/10128359" target="_blank">@extend</a>、的功能，  
+的功能，  
 是每位開發者都一定會碰到的基礎核心功能，   
 尤其是`@import`能夠讓你將程式碼切割成好幾份，  
 讓你能夠聚焦瀏覽你想要關注的code，  
 像我第一個使用Sass的專案，Sass結構長成這樣子：  
 
-	@import "compass";
 	@import "mixin"; // 放置所有全域變數與Mixin
 	@import "reset"; // reset.css
-	@import "extend"; // 都放@extend用的檔案
 	@import "index"; // 首頁
 	@import "page.."; // 內頁
 
@@ -71,9 +65,7 @@ Windows可以參考<a href="http://ithelp.ithome.com.tw/question/10128634" targe
 可參考這樣的結果試著寫第一個Sass專案，  
 而掌握要領則是：  
 1. 試著將時常需要寫到的設定用成Variable(變數)  
-2. 共通網頁樣式使用extend進行合併  
-3. 嘗試使用<a href="http://ithelp.ithome.com.tw/question/10131159" target="_blank">Compass CSS3 Mixin</a>  
-4. 將各單元CSS切割出來Import  
+2. 將各單元CSS切割出來Import  
 
 先試著用這樣的架構寫寫看，  
 學新東西最缺乏的就是踏出第一步，  
@@ -84,9 +76,6 @@ Windows可以參考<a href="http://ithelp.ithome.com.tw/question/10128634" targe
 在設計過程中，你可以閱讀下表的連結來建立自己撰寫CSS的風格習慣：  
 1. <a href="https://github.com/doggy8088/CSS-Guidelines" target="_blank">CSS-Guidelines</a>  
 2. <a href="http://ithelp.ithome.com.tw/question/10161666" target="_blank">Sass Style Guide(樣式指南) - Sass、Github、Codepen</a>  
-
-一開始碰觸`@mixin`跟`@extend`的時候，兩者可能容易搞不清楚使用時機，  
-你可以瀏覽此篇<a href="http://ithelp.ithome.com.tw/question/10157149" target="_blank">文章</a>來釐清觀念。
 
 如果你不曉得到底該如何開始，  
 這裡也提供我個人的一步步上手Sass的教學流程提供參考：  
@@ -99,7 +88,6 @@ Windows可以參考<a href="http://ithelp.ithome.com.tw/question/10128634" targe
 在以前寫CSS時，  
 為了遵守一些設計模式時常會增加開發時間，  
 程式碼會變得越來越難維護。  
-但Sass內建的功能再加上Compass讓我們要導入設計模式就變得相當容易了。  
 
 當你嘗試寫了一個Sass專案後，  
 你可以開始學習SMACSS設計模式，  
@@ -137,8 +125,7 @@ Grid的設定時常會建立在Layout上，
 
 	@import "compass";
 	@import "mixin";  // 所有全域變數與Mixin  
-	@import "reset";  // reset.css  
-	@import "extend"; // 都放@extend用的檔案  
+	@import "reset";  // reset.css 
 	@import "layout"; // 共同框架,第一層
 	@import "module"; //button,form,table   
 	@import "pages/index、pages1、pages2 ";     
